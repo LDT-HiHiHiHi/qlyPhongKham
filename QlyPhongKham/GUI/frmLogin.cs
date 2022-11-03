@@ -21,5 +21,37 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            ////Kiểm tra rỗng
+            if (string.IsNullOrEmpty(txtTDN.Texts.Trim()))
+            {
+                Program.AlertMessage("Vui lòng nhập " + lbTDN.Text.ToLower(), MessageBoxIcon.Warning);
+                txtTDN.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(txtMK.Texts.Trim()))
+            {
+                Program.AlertMessage("Vui lòng nhập " + label1.Text.ToLower(), MessageBoxIcon.Warning);
+                txtMK.Focus();
+                return;
+            }
+            new frmMain().ShowDialog();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+            this.KeyDown += frmLogin_KeyDown;
+        }
+
+        void frmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
+        }
     }
 }
