@@ -1,5 +1,4 @@
 # qlyPhongKham
 Quản lý phòng khám
 
-web icon: 
-https://www.flaticon.com/
+icon: https://www.flaticon.com/
