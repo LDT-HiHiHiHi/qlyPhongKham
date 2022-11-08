@@ -1,1 +1,10 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_PHONGKHAM" Class="qlyPhongKhamDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QL_PHONGKHAMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PW" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

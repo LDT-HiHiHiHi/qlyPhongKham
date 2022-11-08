@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
+using BUS;
 namespace GUI
 {
     public partial class frmLogin : Form
     {
+        BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
         public frmLogin()
         {
             InitializeComponent();
@@ -37,6 +39,17 @@ namespace GUI
                 txtMK.Focus();
                 return;
             }
+
+            //Kiểm tra đăng nhập
+            string tennd = txtTDN.Texts;
+            string mk = txtMK.Texts;
+            if (!bus_tk.dangNhap(tennd, mk))
+            {
+                Program.AlertMessage("Đăng nhập không hợp lệ !", MessageBoxIcon.Error);
+                txtTDN.Focus();
+                return;
+            }
+            Program.AlertMessage("Xin chào !", MessageBoxIcon.Information);
             new frmMain().ShowDialog();
         }
 

@@ -47,7 +47,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(406, 34);
+            this.label3.Location = new System.Drawing.Point(406, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(222, 72);
             this.label3.TabIndex = 10;
@@ -156,7 +156,7 @@
             this.txtMK.BackColor = System.Drawing.SystemColors.Window;
             this.txtMK.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.txtMK.BorderFocusColor = System.Drawing.Color.Aqua;
-            this.txtMK.BorderSize = 2;
+            this.txtMK.BorderSize = 1;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.ForeColor = System.Drawing.Color.Black;
             this.txtMK.Location = new System.Drawing.Point(486, 195);
@@ -169,7 +169,7 @@
             this.txtMK.TabIndex = 15;
             this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMK.Texts = "";
-            this.txtMK.UnderlinedStyle = false;
+            this.txtMK.UnderlinedStyle = true;
             // 
             // txtTDN
             // 
@@ -177,8 +177,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTDN.BackColor = System.Drawing.SystemColors.Window;
             this.txtTDN.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtTDN.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.txtTDN.BorderSize = 2;
+            this.txtTDN.BorderFocusColor = System.Drawing.Color.Red;
+            this.txtTDN.BorderSize = 1;
             this.txtTDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTDN.ForeColor = System.Drawing.Color.Black;
             this.txtTDN.Location = new System.Drawing.Point(486, 135);
@@ -191,7 +191,7 @@
             this.txtTDN.TabIndex = 14;
             this.txtTDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTDN.Texts = "";
-            this.txtTDN.UnderlinedStyle = false;
+            this.txtTDN.UnderlinedStyle = true;
             // 
             // frmLogin
             // 

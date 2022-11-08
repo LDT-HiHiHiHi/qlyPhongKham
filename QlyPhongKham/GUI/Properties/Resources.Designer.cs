@@ -83,6 +83,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hinh_nen_may_tinh_toi_gian {
+            get {
+                object obj = ResourceManager.GetObject("Hinh-nen-may-tinh-toi-gian", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hospital {
             get {
                 object obj = ResourceManager.GetObject("hospital", resourceCulture);
@@ -146,6 +156,17 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap pexels_eberhard_grossgasteiger_844297 {
             get {
                 object obj = ResourceManager.GetObject("pexels-eberhard-grossgasteiger-844297", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_campus_spring_disease_prevention_exhibition_board_background_material_image_126970 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-campus-spring-disease-prevention-exhibition-board-background-material-ima" +
+                        "ge_126970", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
