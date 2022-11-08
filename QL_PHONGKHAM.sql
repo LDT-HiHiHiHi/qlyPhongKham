@@ -9,11 +9,37 @@ GO
 USE QL_PHONGKHAM
 GO
 -- TẠO BẢNG 
+CREATE TABLE QUYEN
+(
+    MaQuyen int not null primary key,
+    TenQuyen nvarchar(50),
+    Code char(2)
+)
+
+CREATE TABLE MANHINH
+(
+    Id varchar(15) not null primary key,
+    TenMH nvarchar(50)
+)
+
+CREATE TABLE QL_PHANQUYEN
+(
+    MaQuyen int references QUYEN(MaQuyen) not null,
+    Id_MH varchar(15) references MANHINH(Id) not null,
+    CoQuyen bit not null,
+    constraint PK_PQ primary key (MaQuyen, ID_MH)
+)
 CREATE TABLE TAIKHOAN (
     ID VARCHAR(15) NOT NULL, -- CREATE AUTO
     USERNAME VARCHAR(50), -- CHECK USERNAME THEO GROUP
     PW VARCHAR(50),
     CONSTRAINT PK_TK PRIMARY KEY (ID)
+)
+CREATE TABLE NHOMNGUOIDUNG
+(
+    Id_q int references QUYEN(MaQuyen),
+    Id_tk varchar(15) references TAIKHOAN(ID),
+    constraint PK_NND primary key (Id_q, Id_tk)
 )
 CREATE TABLE NHOMCHUYENNGANH(
 	MACN VARCHAR(10) NOT NULL PRIMARY KEY,
