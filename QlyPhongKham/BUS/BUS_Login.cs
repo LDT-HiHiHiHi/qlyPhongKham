@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DTO;
 using DAL;
 namespace BUS
 {
-    public class BUS_TaiKhoan
+    public class BUS_Login
     {
-        DAL_TaiKhoan dal_tk = new DAL_TaiKhoan();
+        DAL_Login dal_lg = new DAL_Login();
 
         public bool dangNhap(string tennd, string matkhau)
         {
-            return dal_tk.dangNhap(tennd, matkhau);
+            return dal_lg.dangNhap(tennd, matkhau);
         }
     }
 }

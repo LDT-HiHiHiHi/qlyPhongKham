@@ -5,15 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DTO;
 using BUS;
+
 namespace GUI
 {
     public partial class frmLogin : Form
     {
-        BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
+        public static string USERNAME;
+        BUS_Login bus_lg = new BUS_Login();
         public frmLogin()
         {
             InitializeComponent();
@@ -43,20 +45,29 @@ namespace GUI
             //Kiểm tra đăng nhập
             string tennd = txtTDN.Texts;
             string mk = txtMK.Texts;
-            if (!bus_tk.dangNhap(tennd, mk))
+            if (!bus_lg.dangNhap(tennd, mk))
             {
                 Program.AlertMessage("Đăng nhập không hợp lệ !", MessageBoxIcon.Error);
                 txtTDN.Focus();
                 return;
             }
+            USERNAME = tennd;
             Program.AlertMessage("Xin chào !", MessageBoxIcon.Information);
-            new frmMain().ShowDialog();
+            Thread t = new Thread(new ThreadStart(ThreadLogin));
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+            this.Dispose();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.KeyPreview = true;
             this.KeyDown += frmLogin_KeyDown;
+        }
+
+        private void ThreadLogin()
+        {
+            Application.Run(new frmMain());
         }
 
         void frmLogin_KeyDown(object sender, KeyEventArgs e)

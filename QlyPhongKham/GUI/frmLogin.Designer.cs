@@ -142,7 +142,7 @@
             this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangNhap.Location = new System.Drawing.Point(412, 261);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(224, 40);
+            this.btnDangNhap.Size = new System.Drawing.Size(221, 40);
             this.btnDangNhap.TabIndex = 16;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.TextColor = System.Drawing.Color.White;
@@ -165,7 +165,7 @@
             this.txtMK.Name = "txtMK";
             this.txtMK.Padding = new System.Windows.Forms.Padding(7);
             this.txtMK.PasswordChar = true;
-            this.txtMK.Size = new System.Drawing.Size(224, 35);
+            this.txtMK.Size = new System.Drawing.Size(224, 31);
             this.txtMK.TabIndex = 15;
             this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMK.Texts = "";
@@ -187,7 +187,7 @@
             this.txtTDN.Name = "txtTDN";
             this.txtTDN.Padding = new System.Windows.Forms.Padding(7);
             this.txtTDN.PasswordChar = false;
-            this.txtTDN.Size = new System.Drawing.Size(224, 35);
+            this.txtTDN.Size = new System.Drawing.Size(224, 31);
             this.txtTDN.TabIndex = 14;
             this.txtTDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTDN.Texts = "";

@@ -5,6 +5,48 @@
       <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="PW" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TAIKHOAN_NHOMNGUOIDUNG" Member="NHOMNGUOIDUNGs" ThisKey="ID" OtherKey="ID_TK" Type="NHOMNGUOIDUNG" />
     </Type>
   </Table>
+  <Table Name="dbo.QL_PHANQUYEN" Member="QL_PHANQUYENs">
+    <Type Name="QL_PHANQUYEN">
+      <Column Name="MAQUYEN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_MH" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="COQUYEN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="QUYEN_QL_PHANQUYEN" Member="QUYEN" ThisKey="MAQUYEN" OtherKey="MAQUYEN" Type="QUYEN" IsForeignKey="true" />
+      <Association Name="MANHINH_QL_PHANQUYEN" Member="MANHINH" ThisKey="ID_MH" OtherKey="ID" Type="MANHINH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QUYEN" Member="QUYENs">
+    <Type Name="QUYEN">
+      <Column Name="MAQUYEN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENQUYEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CODE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Association Name="QUYEN_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="MAQUYEN" OtherKey="MAQUYEN" Type="QL_PHANQUYEN" />
+      <Association Name="QUYEN_NHOMNGUOIDUNG" Member="NHOMNGUOIDUNGs" ThisKey="MAQUYEN" OtherKey="ID_Q" Type="NHOMNGUOIDUNG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHOMNGUOIDUNG" Member="NHOMNGUOIDUNGs">
+    <Type Name="NHOMNGUOIDUNG">
+      <Column Name="ID_Q" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_TK" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TAIKHOAN_NHOMNGUOIDUNG" Member="TAIKHOAN" ThisKey="ID_TK" OtherKey="ID" Type="TAIKHOAN" IsForeignKey="true" />
+      <Association Name="QUYEN_NHOMNGUOIDUNG" Member="QUYEN" ThisKey="ID_Q" OtherKey="MAQUYEN" Type="QUYEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MANHINH" Member="MANHINHs">
+    <Type Name="MANHINH">
+      <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MANHINH_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="ID" OtherKey="ID_MH" Type="QL_PHANQUYEN" />
+    </Type>
+  </Table>
+  <Function Name="dbo.fn_PhanQuyen" Method="fn_PhanQuyen" IsComposable="true">
+    <Parameter Name="idGR" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fn_PhanQuyenResult">
+      <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TENMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="COQUYEN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

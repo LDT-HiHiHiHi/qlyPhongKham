@@ -11,24 +11,25 @@ GO
 -- TẠO BẢNG 
 CREATE TABLE QUYEN
 (
-    MaQuyen int not null primary key,
-    TenQuyen nvarchar(50),
-    Code char(2)
+    MAQUYEN INT IDENTITY NOT NULL PRIMARY KEY,
+    TENQUYEN NVARCHAR(50),
+    CODE CHAR(2)
 )
 
 CREATE TABLE MANHINH
 (
-    Id varchar(15) not null primary key,
-    TenMH nvarchar(50)
+    ID VARCHAR(15) NOT NULL PRIMARY KEY,
+    TENMH NVARCHAR(50)
 )
 
 CREATE TABLE QL_PHANQUYEN
 (
-    MaQuyen int references QUYEN(MaQuyen) not null,
-    Id_MH varchar(15) references MANHINH(Id) not null,
-    CoQuyen bit not null,
-    constraint PK_PQ primary key (MaQuyen, ID_MH)
+    MAQUYEN INT REFERENCES QUYEN(MAQUYEN) NOT NULL,
+    ID_MH VARCHAR(15) REFERENCES MANHINH(ID) NOT NULL,
+    COQUYEN BIT NOT NULL,
+    CONSTRAINT PK_PQ PRIMARY KEY (MAQUYEN, ID_MH)
 )
+
 CREATE TABLE TAIKHOAN (
     ID VARCHAR(15) NOT NULL, -- CREATE AUTO
     USERNAME VARCHAR(50), -- CHECK USERNAME THEO GROUP
@@ -37,10 +38,11 @@ CREATE TABLE TAIKHOAN (
 )
 CREATE TABLE NHOMNGUOIDUNG
 (
-    Id_q int references QUYEN(MaQuyen),
-    Id_tk varchar(15) references TAIKHOAN(ID),
-    constraint PK_NND primary key (Id_q, Id_tk)
+    ID_Q INT REFERENCES QUYEN(MAQUYEN),
+    ID_TK VARCHAR(15) REFERENCES TAIKHOAN(ID),
+    CONSTRAINT PK_NND PRIMARY KEY (ID_Q, ID_TK)
 )
+
 CREATE TABLE NHOMCHUYENNGANH(
 	MACN VARCHAR(10) NOT NULL PRIMARY KEY,
 	TENCN NVARCHAR(50)
@@ -137,12 +139,82 @@ CREATE TABLE CHITIETCD(
 	CONSTRAINT PK_CTDONDV PRIMARY KEY (MACD, MADV)
 )
 
+GO
+CREATE FUNCTION fn_PhanQuyen(@idGR INT)
+RETURNS TABLE
+AS
+	RETURN SELECT ID, TENMH, COQUYEN
+	FROM MANHINH MH LEFT JOIN QL_PHANQUYEN PQ
+		ON MH.ID = PQ.ID_MH AND MAQUYEN = @idGR
+GO
+
 --DATA
 INSERT TAIKHOAN
 VALUES
-('TK001','admin','123')
+('TK001','admin','123'),
+('TK002','bacsi','123'),
+('TK003','nhanvientn','123'),
+('TK004','nvthungan','123'),
+('TK005','bacsidv','123')
 
+-- BẢNG TB_GRTK
+INSERT QUYEN VALUES(N'ADMIN', '00')
+INSERT QUYEN VALUES(N'USER', '01')
+INSERT QUYEN VALUES(N'BACSI', '02')
 
+INSERT MANHINH VALUES('M1', N'Quản lý bệnh nhân')
+INSERT MANHINH VALUES('M2', N'Kê toa thuốc')
+INSERT MANHINH VALUES('M3', N'Quản lý tài khoản')
+INSERT MANHINH VALUES('M4', N'Thực hiện dịch vụ')
+INSERT MANHINH VALUES('M5', N'Xem thông tin cá nhân')
+INSERT MANHINH VALUES('M6', N'Phân quyền') 
+INSERT MANHINH VALUES('M7', N'Quản lý nhóm người dùng') 
+INSERT MANHINH VALUES('M8', N'Thêm người dùng vào nhóm')
+INSERT MANHINH VALUES('M9', N'Khám bệnh')
+INSERT MANHINH VALUES('MMH', N'Quản lý màn hình')
 
+INSERT NHOMNGUOIDUNG VALUES ('1','TK001')
+INSERT NHOMNGUOIDUNG VALUES ('3','TK002')
+INSERT NHOMNGUOIDUNG VALUES ('2','TK003')
+INSERT NHOMNGUOIDUNG VALUES ('2','TK004')
+INSERT NHOMNGUOIDUNG VALUES ('3','TK005')
 
+-- bảng phân quyền
+-- phân quyền cho admin
+INSERT QL_PHANQUYEN VALUES 
+(1, 'M1', 1),
+(1, 'M2', 0),
+(1, 'M3', 1),
+(1, 'M4', 0),
+(1, 'M5', 0),
+(1, 'M6', 1),
+(1, 'M7', 1),
+(1, 'M8', 1),
+(1, 'M9', 0),
+(1, 'MMH', 1)
 
+-- phân quyền cho bác sĩ
+INSERT QL_PHANQUYEN VALUES 
+(3, 'M1', 0),
+(3, 'M2', 1),
+(3, 'M3', 0),
+(3, 'M4', 1),
+(3, 'M5', 1),
+(3, 'M6', 0),
+(3, 'M7', 0),
+(3, 'M8', 0),
+(3, 'M9', 1),
+(3, 'MMH', 0)
+
+-- phân quyền cho nhân viên
+INSERT QL_PHANQUYEN VALUES 
+(2, 'M1', 1),
+(2, 'M2', 0),
+(2, 'M3', 0),
+(2, 'M4', 0),
+(2, 'M5', 1),
+(2, 'M6', 0),
+(2, 'M7', 0),
+(2, 'M8', 0),
+(2, 'M9', 0),
+(2, 'MMH', 0)

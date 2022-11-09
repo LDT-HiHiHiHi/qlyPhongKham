@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-    public class DAL_TaiKhoan
+    public class DAL_Login
     {
         qlyPhongKhamDataContext qlpk = new qlyPhongKhamDataContext();
 

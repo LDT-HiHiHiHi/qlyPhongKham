@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL_TaiKhoan.cs" />
+    <Compile Include="DAL_Login.cs" />
+    <Compile Include="DAL_PhanQuyen.cs" />
+    <Compile Include="DAL_QLTK.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
