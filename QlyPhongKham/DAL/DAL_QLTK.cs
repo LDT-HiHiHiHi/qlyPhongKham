@@ -30,6 +30,13 @@ namespace DAL
                 CoQuyen = pq.COQUYEN
             }).ToList();
         }
-        
+        public List<TaiKhoan> getDSNhomTK(int pQuyen)
+        {
+            return db.NHOMNGUOIDUNGs.Where(nnd => nnd.ID_Q == pQuyen).Select(nnd => new TaiKhoan
+            {
+                IdTK = nnd.TAIKHOAN.ID,
+                Username = nnd.TAIKHOAN.USERNAME
+            }).ToList();
+        }
     }
 }

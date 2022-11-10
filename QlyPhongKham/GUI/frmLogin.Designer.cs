@@ -132,13 +132,12 @@
             this.btnDangNhap.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnDangNhap.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.btnDangNhap.BorderColor = System.Drawing.Color.Blue;
-            this.btnDangNhap.BorderRadius = 0;
+            this.btnDangNhap.BorderRadius = 5;
             this.btnDangNhap.BorderSize = 0;
             this.btnDangNhap.FlatAppearance.BorderSize = 0;
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Image = global::GUI.Properties.Resources.enter__1_;
             this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangNhap.Location = new System.Drawing.Point(412, 261);
             this.btnDangNhap.Name = "btnDangNhap";
@@ -156,7 +155,7 @@
             this.txtMK.BackColor = System.Drawing.SystemColors.Window;
             this.txtMK.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.txtMK.BorderFocusColor = System.Drawing.Color.Aqua;
-            this.txtMK.BorderSize = 1;
+            this.txtMK.BorderSize = 2;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.ForeColor = System.Drawing.Color.Black;
             this.txtMK.Location = new System.Drawing.Point(486, 195);
@@ -165,7 +164,7 @@
             this.txtMK.Name = "txtMK";
             this.txtMK.Padding = new System.Windows.Forms.Padding(7);
             this.txtMK.PasswordChar = true;
-            this.txtMK.Size = new System.Drawing.Size(224, 31);
+            this.txtMK.Size = new System.Drawing.Size(224, 35);
             this.txtMK.TabIndex = 15;
             this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMK.Texts = "";
@@ -178,7 +177,7 @@
             this.txtTDN.BackColor = System.Drawing.SystemColors.Window;
             this.txtTDN.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.txtTDN.BorderFocusColor = System.Drawing.Color.Red;
-            this.txtTDN.BorderSize = 1;
+            this.txtTDN.BorderSize = 3;
             this.txtTDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTDN.ForeColor = System.Drawing.Color.Black;
             this.txtTDN.Location = new System.Drawing.Point(486, 135);
@@ -187,7 +186,7 @@
             this.txtTDN.Name = "txtTDN";
             this.txtTDN.Padding = new System.Windows.Forms.Padding(7);
             this.txtTDN.PasswordChar = false;
-            this.txtTDN.Size = new System.Drawing.Size(224, 31);
+            this.txtTDN.Size = new System.Drawing.Size(224, 35);
             this.txtTDN.TabIndex = 14;
             this.txtTDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTDN.Texts = "";

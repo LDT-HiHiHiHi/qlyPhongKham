@@ -77,5 +77,14 @@ namespace GUI
             t.Start();
             this.Dispose();
         }
+
+        private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPhanQuyen frm = new frmPhanQuyen();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
+
     }
 }
