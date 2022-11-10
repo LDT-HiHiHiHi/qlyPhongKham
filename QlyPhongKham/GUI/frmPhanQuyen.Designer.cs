@@ -99,7 +99,7 @@
             this.MAQUYEN.Name = "MAQUYEN";
             this.MAQUYEN.ReadOnly = true;
             this.MAQUYEN.Visible = false;
-            this.MAQUYEN.Width = 81;
+            this.MAQUYEN.Width = 125;
             // 
             // Column5
             // 
@@ -148,6 +148,7 @@
             this.ID_PQ,
             this.Column2,
             this.COQUYEN});
+            this.drvPhanQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.drvPhanQuyen.EnableHeadersVisualStyles = false;
             this.drvPhanQuyen.Location = new System.Drawing.Point(3, 23);
             this.drvPhanQuyen.Name = "drvPhanQuyen";
@@ -173,7 +174,7 @@
             this.ID_PQ.MinimumWidth = 6;
             this.ID_PQ.Name = "ID_PQ";
             this.ID_PQ.Visible = false;
-            this.ID_PQ.Width = 32;
+            this.ID_PQ.Width = 125;
             // 
             // Column2
             // 
@@ -214,7 +215,7 @@
             this.btnLuu.BorderSize = 0;
             this.btnLuu.FlatAppearance.BorderSize = 0;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Image = global::GUI.Properties.Resources.diskette__3_;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
