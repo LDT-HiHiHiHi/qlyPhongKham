@@ -65,6 +65,7 @@
             // 
             this.drvNhomNguoiDung.AllowUserToAddRows = false;
             this.drvNhomNguoiDung.AllowUserToDeleteRows = false;
+            this.drvNhomNguoiDung.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,6 +136,7 @@
             // 
             this.drvPhanQuyen.AllowUserToAddRows = false;
             this.drvPhanQuyen.AllowUserToDeleteRows = false;
+            this.drvPhanQuyen.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
