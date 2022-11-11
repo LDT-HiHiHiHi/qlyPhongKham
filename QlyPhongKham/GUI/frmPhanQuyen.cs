@@ -55,7 +55,7 @@ namespace GUI
         {
             foreach (DataGridViewRow pq in drvPhanQuyen.Rows)
             {
-                pq.Cells["CoQuyen"].Value = ckAll.Checked;
+                pq.Cells["COQUYEN"].Value = ckAll.Checked;
             }
         }
 

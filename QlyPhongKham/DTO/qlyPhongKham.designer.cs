@@ -45,6 +45,9 @@ namespace DTO
     partial void InsertMANHINH(MANHINH instance);
     partial void UpdateMANHINH(MANHINH instance);
     partial void DeleteMANHINH(MANHINH instance);
+    partial void InsertMANHINH1(MANHINH1 instance);
+    partial void UpdateMANHINH1(MANHINH1 instance);
+    partial void DeleteMANHINH1(MANHINH1 instance);
     #endregion
 		
 		public qlyPhongKhamDataContext() : 
@@ -114,6 +117,14 @@ namespace DTO
 			get
 			{
 				return this.GetTable<MANHINH>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MANHINH1> MANHINH1s
+		{
+			get
+			{
+				return this.GetTable<MANHINH1>();
 			}
 		}
 		
@@ -278,6 +289,8 @@ namespace DTO
 		
 		private EntityRef<MANHINH> _MANHINH;
 		
+		private EntityRef<MANHINH1> _MANHINH1;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -294,6 +307,7 @@ namespace DTO
 		{
 			this._QUYEN = default(EntityRef<QUYEN>);
 			this._MANHINH = default(EntityRef<MANHINH>);
+			this._MANHINH1 = default(EntityRef<MANHINH1>);
 			OnCreated();
 		}
 		
@@ -332,7 +346,7 @@ namespace DTO
 			{
 				if ((this._ID_MH != value))
 				{
-					if (this._MANHINH.HasLoadedOrAssignedValue)
+					if ((this._MANHINH.HasLoadedOrAssignedValue || this._MANHINH1.HasLoadedOrAssignedValue))
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -429,6 +443,40 @@ namespace DTO
 						this._ID_MH = default(string);
 					}
 					this.SendPropertyChanged("MANHINH");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MANHINH1_QL_PHANQUYEN", Storage="_MANHINH1", ThisKey="ID_MH", OtherKey="ID", IsForeignKey=true)]
+		public MANHINH1 MANHINH1
+		{
+			get
+			{
+				return this._MANHINH1.Entity;
+			}
+			set
+			{
+				MANHINH1 previousValue = this._MANHINH1.Entity;
+				if (((previousValue != value) 
+							|| (this._MANHINH1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MANHINH1.Entity = null;
+						previousValue.QL_PHANQUYENs.Remove(this);
+					}
+					this._MANHINH1.Entity = value;
+					if ((value != null))
+					{
+						value.QL_PHANQUYENs.Add(this);
+						this._ID_MH = value.ID;
+					}
+					else
+					{
+						this._ID_MH = default(string);
+					}
+					this.SendPropertyChanged("MANHINH1");
 				}
 			}
 		}
@@ -899,6 +947,120 @@ namespace DTO
 		{
 			this.SendPropertyChanging();
 			entity.MANHINH = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MANHINH")]
+	public partial class MANHINH1 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID;
+		
+		private string _TENMH;
+		
+		private EntitySet<QL_PHANQUYEN> _QL_PHANQUYENs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(string value);
+    partial void OnIDChanged();
+    partial void OnTENMHChanging(string value);
+    partial void OnTENMHChanged();
+    #endregion
+		
+		public MANHINH1()
+		{
+			this._QL_PHANQUYENs = new EntitySet<QL_PHANQUYEN>(new Action<QL_PHANQUYEN>(this.attach_QL_PHANQUYENs), new Action<QL_PHANQUYEN>(this.detach_QL_PHANQUYENs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENMH", DbType="NVarChar(50)")]
+		public string TENMH
+		{
+			get
+			{
+				return this._TENMH;
+			}
+			set
+			{
+				if ((this._TENMH != value))
+				{
+					this.OnTENMHChanging(value);
+					this.SendPropertyChanging();
+					this._TENMH = value;
+					this.SendPropertyChanged("TENMH");
+					this.OnTENMHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MANHINH1_QL_PHANQUYEN", Storage="_QL_PHANQUYENs", ThisKey="ID", OtherKey="ID_MH")]
+		public EntitySet<QL_PHANQUYEN> QL_PHANQUYENs
+		{
+			get
+			{
+				return this._QL_PHANQUYENs;
+			}
+			set
+			{
+				this._QL_PHANQUYENs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_QL_PHANQUYENs(QL_PHANQUYEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.MANHINH1 = this;
+		}
+		
+		private void detach_QL_PHANQUYENs(QL_PHANQUYEN entity)
+		{
+			this.SendPropertyChanging();
+			entity.MANHINH1 = null;
 		}
 	}
 	

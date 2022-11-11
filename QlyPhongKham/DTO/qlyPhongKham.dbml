@@ -15,6 +15,7 @@
       <Column Name="COQUYEN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="QUYEN_QL_PHANQUYEN" Member="QUYEN" ThisKey="MAQUYEN" OtherKey="MAQUYEN" Type="QUYEN" IsForeignKey="true" />
       <Association Name="MANHINH_QL_PHANQUYEN" Member="MANHINH" ThisKey="ID_MH" OtherKey="ID" Type="MANHINH" IsForeignKey="true" />
+      <Association Name="MANHINH1_QL_PHANQUYEN" Member="MANHINH1" ThisKey="ID_MH" OtherKey="ID" Type="MANHINH1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.QUYEN" Member="QUYENs">
@@ -39,6 +40,13 @@
       <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TENMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="MANHINH_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="ID" OtherKey="ID_MH" Type="QL_PHANQUYEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MANHINH" Member="MANHINH1s">
+    <Type Name="MANHINH1">
+      <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MANHINH1_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="ID" OtherKey="ID_MH" Type="QL_PHANQUYEN" />
     </Type>
   </Table>
   <Function Name="dbo.fn_PhanQuyen" Method="fn_PhanQuyen" IsComposable="true">

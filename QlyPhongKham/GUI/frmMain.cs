@@ -72,15 +72,32 @@ namespace GUI
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(ThreadLogout));
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-            this.Dispose();
+             DialogResult r;
+            r = MessageBox.Show("Bạn có chắc chắn muốn thoát ? ", "Thông báo",
+
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1);
+
+            if (r == DialogResult.Yes)
+            {
+                Thread t = new Thread(new ThreadStart(ThreadLogout));
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                this.Dispose();
+            }
         }
 
         private void phânQuyềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPhanQuyen frm = new frmPhanQuyen();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
+
+        private void quảnLýMànHìnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManHinh frm = new frmManHinh();
             frm.MdiParent = this;
 
             frm.Show();

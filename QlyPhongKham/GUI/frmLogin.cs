@@ -52,7 +52,7 @@ namespace GUI
                 return;
             }
             USERNAME = tennd;
-            Program.AlertMessage("Xin chào !", MessageBoxIcon.Information);
+            Program.AlertMessage("Chúc bạn một ngày tốt lành !", MessageBoxIcon.Information);
             Thread t = new Thread(new ThreadStart(ThreadLogin));
             t.SetApartmentState(ApartmentState.STA);
             t.Start();

@@ -66,6 +66,7 @@
             this.drvNhomNguoiDung.AllowUserToAddRows = false;
             this.drvNhomNguoiDung.AllowUserToDeleteRows = false;
             this.drvNhomNguoiDung.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.drvNhomNguoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,13 +101,13 @@
             this.MAQUYEN.Name = "MAQUYEN";
             this.MAQUYEN.ReadOnly = true;
             this.MAQUYEN.Visible = false;
-            this.MAQUYEN.Width = 125;
+            this.MAQUYEN.Width = 81;
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.DataPropertyName = "TENQUYEN";
-            this.Column5.HeaderText = "Tên nhóm quyền";
+            this.Column5.HeaderText = "Tên nhóm";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -130,13 +131,14 @@
             this.groupBox2.Size = new System.Drawing.Size(578, 422);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Quyền";
+            this.groupBox2.Text = "Màn hình";
             // 
             // drvPhanQuyen
             // 
             this.drvPhanQuyen.AllowUserToAddRows = false;
             this.drvPhanQuyen.AllowUserToDeleteRows = false;
             this.drvPhanQuyen.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.drvPhanQuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,13 +178,13 @@
             this.ID_PQ.MinimumWidth = 6;
             this.ID_PQ.Name = "ID_PQ";
             this.ID_PQ.Visible = false;
-            this.ID_PQ.Width = 125;
+            this.ID_PQ.Width = 32;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.DataPropertyName = "TENMH";
-            this.Column2.HeaderText = "Màn hình";
+            this.Column2.HeaderText = "Tên màn hình";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -219,7 +221,7 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Image = global::GUI.Properties.Resources.diskette__3_;
+            this.btnLuu.Image = global::GUI.Properties.Resources.diskette__4_;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.Location = new System.Drawing.Point(753, 460);
             this.btnLuu.Name = "btnLuu";
@@ -262,16 +264,16 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView drvNhomNguoiDung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAQUYEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView drvPhanQuyen;
+        private System.Windows.Forms.CheckBox ckAll;
+        private CustomButton btnLuu;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PQ;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn COQUYEN;
-        private System.Windows.Forms.CheckBox ckAll;
-        private CustomButton btnLuu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAQUYEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 
     }
 }
