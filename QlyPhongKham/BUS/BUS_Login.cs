@@ -12,7 +12,14 @@ namespace BUS
 
         public bool dangNhap(string tennd, string matkhau)
         {
-            return dal_lg.dangNhap(tennd, matkhau);
+            try 
+            {
+                return dal_lg.dangNhap(tennd, matkhau);
+            }
+            catch (Exception e)
+            {
+                throw e; // lỗi cấu hình || server
+            }
         }
     }
 }

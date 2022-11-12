@@ -21,6 +21,7 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
         }
+
         public static void AlertMessage(string pMessage, MessageBoxIcon icon = MessageBoxIcon.Warning)
         {
             MessageBox.Show(pMessage, "Thông báo", MessageBoxButtons.OK, icon, MessageBoxDefaultButton.Button1);

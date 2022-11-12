@@ -45,18 +45,31 @@ namespace GUI
             //Kiểm tra đăng nhập
             string tennd = txtTDN.Texts;
             string mk = txtMK.Texts;
-            if (!bus_lg.dangNhap(tennd, mk))
+            try
             {
-                Program.AlertMessage("Đăng nhập không hợp lệ !", MessageBoxIcon.Error);
-                txtTDN.Focus();
-                return;
+                if (!bus_lg.dangNhap(tennd, mk))
+                {
+                    Program.AlertMessage("Đăng nhập không hợp lệ !", MessageBoxIcon.Error);
+                    txtTDN.Focus();
+                    return;
+                }
+                USERNAME = tennd;
+                Program.AlertMessage("Chúc bạn một ngày tốt lành !", MessageBoxIcon.Information);
+                Thread t = new Thread(new ThreadStart(ThreadLogin));
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                this.Dispose();
             }
-            USERNAME = tennd;
-            Program.AlertMessage("Chúc bạn một ngày tốt lành !", MessageBoxIcon.Information);
-            Thread t = new Thread(new ThreadStart(ThreadLogin));
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-            this.Dispose();
+            catch (Exception err)
+            {
+                Program.AlertMessage(err.Message);
+                new frmConfig().ShowDialog();
+                Thread t = new Thread(new ThreadStart(ThreadLogin_ReLoad));
+                t.SetApartmentState(ApartmentState.STA);
+                t.Start();
+                this.Dispose();
+            }
+            
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -68,6 +81,11 @@ namespace GUI
         private void ThreadLogin()
         {
             Application.Run(new frmMain());
+        }
+
+        private void ThreadLogin_ReLoad()
+        {
+            Application.Run(new frmLogin());
         }
 
         void frmLogin_KeyDown(object sender, KeyEventArgs e)

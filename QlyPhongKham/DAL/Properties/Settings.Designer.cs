@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DTO.Properties {
+namespace DAL.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -25,13 +25,13 @@ namespace DTO.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa;Password=1233")]
-        public string QL_PHONGKHAMConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI-PC;Initial Catalog=QLDT_LK;User ID=sa;Password=sa1233")]
+        public string SQLConnect {
             get {
-                return ((string)(this["QL_PHONGKHAMConnectionString"]));
+                return ((string)(this["SQLConnect"]));
             }
             set {
-                this["QL_PHONGKHAMConnectionString"] = value;
+                this["SQLConnect"] = value;
             }
         }
     }

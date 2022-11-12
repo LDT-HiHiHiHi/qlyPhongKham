@@ -21,7 +21,7 @@ namespace DAL
             }
             catch (Exception e)
             {
-                return false;
+                throw e; // lỗi cấu hình -> yếu cầu cấu hình lại
             }
         }
     }
