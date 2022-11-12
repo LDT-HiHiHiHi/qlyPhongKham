@@ -60,6 +60,7 @@
             this.dgvManHinh.Name = "dgvManHinh";
             this.dgvManHinh.ReadOnly = true;
             this.dgvManHinh.RowHeadersVisible = false;
+            this.dgvManHinh.RowHeadersWidth = 51;
             this.dgvManHinh.RowTemplate.Height = 24;
             this.dgvManHinh.Size = new System.Drawing.Size(554, 284);
             this.dgvManHinh.TabIndex = 18;
@@ -67,35 +68,37 @@
             // 
             // IDMH
             // 
-            this.IDMH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.IDMH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.IDMH.DataPropertyName = "ID";
             this.IDMH.HeaderText = "ID MÀN HÌNH";
+            this.IDMH.MinimumWidth = 6;
             this.IDMH.Name = "IDMH";
             this.IDMH.ReadOnly = true;
-            this.IDMH.Width = 107;
             // 
             // TENMH
             // 
             this.TENMH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TENMH.DataPropertyName = "TENMH";
             this.TENMH.HeaderText = "TÊN MÀN HÌNH";
+            this.TENMH.MinimumWidth = 6;
             this.TENMH.Name = "TENMH";
             this.TENMH.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xóaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(107, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 30);
             // 
             // xóaToolStripMenuItem
             // 
-            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.delete;
+            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.delete__1_;
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
-            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // label3
@@ -172,8 +175,8 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.Gold;
-            this.btnLuu.BackgroundColor = System.Drawing.Color.Gold;
+            this.btnLuu.BackColor = System.Drawing.Color.Orange;
+            this.btnLuu.BackgroundColor = System.Drawing.Color.Orange;
             this.btnLuu.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnLuu.BorderRadius = 5;
             this.btnLuu.BorderSize = 0;
@@ -208,9 +211,11 @@
             this.Controls.Add(this.txtIDMH);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 600);
+            this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "frmManHinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmManHinh";
+            this.Text = "Màn hình";
             this.Load += new System.EventHandler(this.frmManHinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvManHinh)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

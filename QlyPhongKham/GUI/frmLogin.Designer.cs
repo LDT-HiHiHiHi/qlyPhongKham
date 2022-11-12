@@ -33,12 +33,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.customButton1 = new GUI.CustomButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbTDN = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangNhap = new GUI.CustomButton();
             this.txtMK = new GUI.textBoxCustom();
             this.txtTDN = new GUI.textBoxCustom();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbTDN = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(25, 25);
             this.customButton1.TabIndex = 16;
+            this.customButton1.TabStop = false;
             this.customButton1.Text = "X";
             this.customButton1.TextColor = System.Drawing.Color.White;
             this.customButton1.UseVisualStyleBackColor = false;
@@ -92,40 +93,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(754, 31);
             this.panel2.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::GUI.Properties.Resources.padlock;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(306, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 35);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Mật khẩu";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbTDN
-            // 
-            this.lbTDN.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTDN.Image = global::GUI.Properties.Resources.user;
-            this.lbTDN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTDN.Location = new System.Drawing.Point(308, 135);
-            this.lbTDN.Name = "lbTDN";
-            this.lbTDN.Size = new System.Drawing.Size(171, 35);
-            this.lbTDN.TabIndex = 12;
-            this.lbTDN.Text = "Tên đăng nhập";
-            this.lbTDN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.medical_team__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // btnDangNhap
             // 
@@ -192,6 +159,40 @@
             this.txtTDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTDN.Texts = "";
             this.txtTDN.UnderlinedStyle = true;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::GUI.Properties.Resources.padlock;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(306, 195);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 35);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Mật khẩu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbTDN
+            // 
+            this.lbTDN.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTDN.Image = global::GUI.Properties.Resources.user;
+            this.lbTDN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbTDN.Location = new System.Drawing.Point(308, 135);
+            this.lbTDN.Name = "lbTDN";
+            this.lbTDN.Size = new System.Drawing.Size(171, 35);
+            this.lbTDN.TabIndex = 12;
+            this.lbTDN.Text = "Tên đăng nhập";
+            this.lbTDN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.medical_team__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 

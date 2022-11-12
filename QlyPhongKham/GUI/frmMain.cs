@@ -103,5 +103,17 @@ namespace GUI
             frm.Show();
         }
 
+        private void thêmNgườiDùngVàoNhómToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void quảnLýNhómNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhomNguoiDung frm = new frmNhomNguoiDung();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
     }
 }
