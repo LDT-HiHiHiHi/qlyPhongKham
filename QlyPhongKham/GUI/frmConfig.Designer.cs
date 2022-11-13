@@ -28,138 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig));
+            this.customButton2 = new GUI.CustomButton();
+            this.btnLuu = new GUI.CustomButton();
+            this.cbDb = new NoteWrapper.FlatCombobox();
+            this.cbServername = new NoteWrapper.FlatCombobox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbServername = new NoteWrapper.FlatCombobox();
             this.txtUsername = new GUI.textBoxCustom();
             this.txtPw = new GUI.textBoxCustom();
-            this.cbDb = new NoteWrapper.FlatCombobox();
-            this.btnLuu = new GUI.CustomButton();
-            this.customButton2 = new GUI.CustomButton();
             this.SuspendLayout();
             // 
-            // label4
+            // customButton2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 165);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Database:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(23, 120);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Password:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(23, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "User name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Server name:";
-            // 
-            // cbServername
-            // 
-            this.cbServername.BorderColor = System.Drawing.Color.White;
-            this.cbServername.ButtonColor = System.Drawing.Color.Black;
-            this.cbServername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbServername.FormattingEnabled = true;
-            this.cbServername.Location = new System.Drawing.Point(152, 18);
-            this.cbServername.Name = "cbServername";
-            this.cbServername.Size = new System.Drawing.Size(300, 28);
-            this.cbServername.TabIndex = 30;
-            this.cbServername.DropDown += new System.EventHandler(this.cbServername_DropDown);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.BorderColor = System.Drawing.Color.White;
-            this.txtUsername.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtUsername.BorderSize = 2;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(152, 63);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsername.Multiline = false;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Padding = new System.Windows.Forms.Padding(7);
-            this.txtUsername.PasswordChar = false;
-            this.txtUsername.Size = new System.Drawing.Size(300, 35);
-            this.txtUsername.TabIndex = 31;
-            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUsername.Texts = "";
-            this.txtUsername.UnderlinedStyle = false;
-            // 
-            // txtPw
-            // 
-            this.txtPw.BackColor = System.Drawing.Color.White;
-            this.txtPw.BorderColor = System.Drawing.Color.White;
-            this.txtPw.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPw.BorderSize = 2;
-            this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPw.Location = new System.Drawing.Point(152, 111);
-            this.txtPw.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPw.Multiline = false;
-            this.txtPw.Name = "txtPw";
-            this.txtPw.Padding = new System.Windows.Forms.Padding(7);
-            this.txtPw.PasswordChar = true;
-            this.txtPw.Size = new System.Drawing.Size(300, 35);
-            this.txtPw.TabIndex = 31;
-            this.txtPw.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPw.Texts = "";
-            this.txtPw.UnderlinedStyle = false;
-            // 
-            // cbDb
-            // 
-            this.cbDb.BorderColor = System.Drawing.Color.White;
-            this.cbDb.ButtonColor = System.Drawing.Color.Black;
-            this.cbDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDb.FormattingEnabled = true;
-            this.cbDb.Location = new System.Drawing.Point(152, 160);
-            this.cbDb.Name = "cbDb";
-            this.cbDb.Size = new System.Drawing.Size(300, 28);
-            this.cbDb.TabIndex = 30;
-            this.cbDb.DropDown += new System.EventHandler(this.cbDb_DropDown);
+            this.customButton2.BackColor = System.Drawing.Color.White;
+            this.customButton2.BackgroundColor = System.Drawing.Color.White;
+            this.customButton2.BorderColor = System.Drawing.Color.Navy;
+            this.customButton2.BorderRadius = 5;
+            this.customButton2.BorderSize = 2;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.customButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButton2.ForeColor = System.Drawing.Color.Navy;
+            this.customButton2.Location = new System.Drawing.Point(302, 222);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(150, 43);
+            this.customButton2.TabIndex = 32;
+            this.customButton2.Text = "Hủy";
+            this.customButton2.TextColor = System.Drawing.Color.Navy;
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLuu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLuu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLuu.BackColor = System.Drawing.Color.Navy;
+            this.btnLuu.BackgroundColor = System.Drawing.Color.Navy;
+            this.btnLuu.BorderColor = System.Drawing.Color.White;
             this.btnLuu.BorderRadius = 5;
-            this.btnLuu.BorderSize = 0;
+            this.btnLuu.BorderSize = 2;
             this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Location = new System.Drawing.Point(137, 222);
             this.btnLuu.Name = "btnLuu";
@@ -170,25 +84,129 @@
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // customButton2
+            // cbDb
             // 
-            this.customButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.customButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton2.BorderRadius = 5;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(302, 222);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(150, 43);
-            this.customButton2.TabIndex = 32;
-            this.customButton2.Text = "Hủy";
-            this.customButton2.TextColor = System.Drawing.Color.White;
-            this.customButton2.UseVisualStyleBackColor = false;
-            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
+            this.cbDb.BorderColor = System.Drawing.Color.White;
+            this.cbDb.ButtonColor = System.Drawing.Color.Black;
+            this.cbDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDb.FormattingEnabled = true;
+            this.cbDb.Location = new System.Drawing.Point(177, 160);
+            this.cbDb.Name = "cbDb";
+            this.cbDb.Size = new System.Drawing.Size(300, 28);
+            this.cbDb.TabIndex = 30;
+            this.cbDb.DropDown += new System.EventHandler(this.cbDb_DropDown);
+            // 
+            // cbServername
+            // 
+            this.cbServername.BorderColor = System.Drawing.Color.White;
+            this.cbServername.ButtonColor = System.Drawing.Color.Black;
+            this.cbServername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbServername.FormattingEnabled = true;
+            this.cbServername.Location = new System.Drawing.Point(177, 18);
+            this.cbServername.Name = "cbServername";
+            this.cbServername.Size = new System.Drawing.Size(300, 28);
+            this.cbServername.TabIndex = 1;
+            this.cbServername.DropDown += new System.EventHandler(this.cbServername_DropDown);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Image = global::GUI.Properties.Resources.database;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(23, 165);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 20);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Database:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Image = global::GUI.Properties.Resources.key;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(27, 120);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 20);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Password:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Image = global::GUI.Properties.Resources.user__1_;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(27, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "User name:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Image = global::GUI.Properties.Resources.server;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(23, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Server name:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.Color.White;
+            this.txtUsername.BorderColor = System.Drawing.Color.Navy;
+            this.txtUsername.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtUsername.BorderRadius = 5;
+            this.txtUsername.BorderSize = 2;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(174, 60);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Multiline = false;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Padding = new System.Windows.Forms.Padding(7);
+            this.txtUsername.PasswordChar = false;
+            this.txtUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.Size = new System.Drawing.Size(303, 35);
+            this.txtUsername.TabIndex = 33;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.Texts = "";
+            this.txtUsername.UnderlinedStyle = false;
+            // 
+            // txtPw
+            // 
+            this.txtPw.BackColor = System.Drawing.Color.White;
+            this.txtPw.BorderColor = System.Drawing.Color.Navy;
+            this.txtPw.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPw.BorderRadius = 5;
+            this.txtPw.BorderSize = 2;
+            this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPw.Location = new System.Drawing.Point(173, 109);
+            this.txtPw.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPw.Multiline = false;
+            this.txtPw.Name = "txtPw";
+            this.txtPw.Padding = new System.Windows.Forms.Padding(7);
+            this.txtPw.PasswordChar = true;
+            this.txtPw.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPw.PlaceholderText = "";
+            this.txtPw.Size = new System.Drawing.Size(304, 35);
+            this.txtPw.TabIndex = 34;
+            this.txtPw.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPw.Texts = "";
+            this.txtPw.UnderlinedStyle = false;
             // 
             // frmConfig
             // 
@@ -196,22 +214,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(501, 284);
-            this.Controls.Add(this.customButton2);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtPw);
             this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.customButton2);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.cbDb);
             this.Controls.Add(this.cbServername);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(519, 331);
+            this.MinimumSize = new System.Drawing.Size(519, 331);
             this.Name = "frmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConfig";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -222,10 +242,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private NoteWrapper.FlatCombobox cbServername;
-        private textBoxCustom txtUsername;
-        private textBoxCustom txtPw;
         private NoteWrapper.FlatCombobox cbDb;
         private CustomButton btnLuu;
         private CustomButton customButton2;
+        private textBoxCustom txtUsername;
+        private textBoxCustom txtPw;
     }
 }

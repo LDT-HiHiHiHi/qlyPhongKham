@@ -19,6 +19,7 @@ namespace GUI
         public frmLogin()
         {
             InitializeComponent();
+            
         }
 
         private void customButton1_Click(object sender, EventArgs e)
@@ -31,13 +32,13 @@ namespace GUI
             ////Kiểm tra rỗng
             if (string.IsNullOrEmpty(txtTDN.Texts.Trim()))
             {
-                Program.AlertMessage("Vui lòng nhập " + lbTDN.Text.ToLower(), MessageBoxIcon.Warning);
+                Program.AlertMessage("Vui lòng nhập tên đăng nhập ", MessageBoxIcon.Warning);
                 txtTDN.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(txtMK.Texts.Trim()))
             {
-                Program.AlertMessage("Vui lòng nhập " + label1.Text.ToLower(), MessageBoxIcon.Warning);
+                Program.AlertMessage("Vui lòng nhập mật khẩu", MessageBoxIcon.Warning);
                 txtMK.Focus();
                 return;
             }

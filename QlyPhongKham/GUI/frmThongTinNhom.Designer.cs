@@ -37,8 +37,8 @@ namespace GUI
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.Blue;
-            this.btnXacNhan.BackgroundColor = System.Drawing.Color.Blue;
+            this.btnXacNhan.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.MediumBlue;
             this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnXacNhan.BorderRadius = 10;
             this.btnXacNhan.BorderSize = 0;
@@ -58,11 +58,11 @@ namespace GUI
             // txtTenNhom
             // 
             this.txtTenNhom.BackColor = System.Drawing.Color.White;
-            this.txtTenNhom.BorderColor = System.Drawing.Color.Navy;
-            this.txtTenNhom.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTenNhom.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtTenNhom.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtTenNhom.BorderSize = 2;
             this.txtTenNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNhom.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTenNhom.ForeColor = System.Drawing.Color.Black;
             this.txtTenNhom.Location = new System.Drawing.Point(139, 27);
             this.txtTenNhom.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNhom.Multiline = false;

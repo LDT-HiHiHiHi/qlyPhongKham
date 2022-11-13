@@ -25,7 +25,7 @@ namespace DTO.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa;Password=1233")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa;Password=123")]
         public string QL_PHONGKHAMConnectionString {
             get {
                 return ((string)(this["QL_PHONGKHAMConnectionString"]));

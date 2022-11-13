@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="QL_PHONGKHAMConnectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=MSI\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa;Password=1233</Value>
+      <Value Profile="(Default)">Data Source=MSI\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa;Password=123</Value>
     </Setting>
   </Settings>
 </SettingsFile>

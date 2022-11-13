@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.ComponentModel;
+
 namespace NoteWrapper
 {
     internal class FlatCombobox : ComboBox
@@ -40,6 +44,7 @@ namespace NoteWrapper
                 }
             }
         }
+
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == WM_PAINT && DropDownStyle != ComboBoxStyle.Simple)

@@ -25,7 +25,7 @@ namespace DAL.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI-PC;Initial Catalog=QLDT_LK;User ID=sa;Password=sa1233")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa;Password=123")]
         public string SQLConnect {
             get {
                 return ((string)(this["SQLConnect"]));

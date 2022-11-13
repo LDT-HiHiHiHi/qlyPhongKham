@@ -1,12 +1,6 @@
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\GUI.exe.config
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\GUI.exe
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\GUI.pdb
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\BUS.dll
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\DTO.dll
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\DAL.dll
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\BUS.pdb
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\DTO.pdb
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\DAL.pdb
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmManHinh.resources
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmNhomNguoiDung.resources
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmPhanQuyen.resources
@@ -18,5 +12,9 @@ C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.textBoxCustom
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.exe
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.pdb
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmConfig.resources
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\RestSharp.xml
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.Fody.CopyLocal.cache
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
