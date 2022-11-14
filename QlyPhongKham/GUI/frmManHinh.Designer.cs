@@ -32,25 +32,27 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManHinh));
             this.dgvManHinh = new System.Windows.Forms.DataGridView();
-            this.IDMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtTenMH = new GUI.textBoxCustom();
             this.txtIDMH = new GUI.textBoxCustom();
             this.btnLuu = new GUI.CustomButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.IDMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManHinh)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvManHinh
             // 
             this.dgvManHinh.AllowUserToAddRows = false;
             this.dgvManHinh.AllowUserToDeleteRows = false;
-            this.dgvManHinh.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dgvManHinh.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dgvManHinh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -65,33 +67,15 @@
             this.IDMH,
             this.TENMH});
             this.dgvManHinh.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvManHinh.Location = new System.Drawing.Point(12, 64);
+            this.dgvManHinh.Location = new System.Drawing.Point(1, 64);
             this.dgvManHinh.Name = "dgvManHinh";
             this.dgvManHinh.ReadOnly = true;
             this.dgvManHinh.RowHeadersVisible = false;
             this.dgvManHinh.RowHeadersWidth = 51;
             this.dgvManHinh.RowTemplate.Height = 24;
-            this.dgvManHinh.Size = new System.Drawing.Size(554, 284);
+            this.dgvManHinh.Size = new System.Drawing.Size(581, 293);
             this.dgvManHinh.TabIndex = 18;
             this.dgvManHinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManHinh_CellClick);
-            // 
-            // IDMH
-            // 
-            this.IDMH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IDMH.DataPropertyName = "ID";
-            this.IDMH.HeaderText = "ID MÀN HÌNH";
-            this.IDMH.MinimumWidth = 6;
-            this.IDMH.Name = "IDMH";
-            this.IDMH.ReadOnly = true;
-            // 
-            // TENMH
-            // 
-            this.TENMH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TENMH.DataPropertyName = "TENMH";
-            this.TENMH.HeaderText = "TÊN MÀN HÌNH";
-            this.TENMH.MinimumWidth = 6;
-            this.TENMH.Name = "TENMH";
-            this.TENMH.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -102,11 +86,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(176, 30);
             // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.delete__1_;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 459);
+            this.label3.Location = new System.Drawing.Point(85, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 19);
             this.label3.TabIndex = 17;
@@ -116,7 +108,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 401);
+            this.label2.Location = new System.Drawing.Point(88, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 19);
             this.label2.TabIndex = 16;
@@ -134,14 +126,6 @@
             this.label1.Text = "MÀN HÌNH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.delete__1_;
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
-            // 
             // txtTenMH
             // 
             this.txtTenMH.BorderColor = System.Drawing.Color.Navy;
@@ -149,7 +133,7 @@
             this.txtTenMH.BorderRadius = 0;
             this.txtTenMH.BorderSize = 1;
             this.txtTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenMH.Location = new System.Drawing.Point(204, 443);
+            this.txtTenMH.Location = new System.Drawing.Point(208, 68);
             this.txtTenMH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenMH.Multiline = false;
             this.txtTenMH.Name = "txtTenMH";
@@ -170,7 +154,7 @@
             this.txtIDMH.BorderRadius = 0;
             this.txtIDMH.BorderSize = 1;
             this.txtIDMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDMH.Location = new System.Drawing.Point(204, 386);
+            this.txtIDMH.Location = new System.Drawing.Point(208, 11);
             this.txtIDMH.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDMH.Multiline = false;
             this.txtIDMH.Name = "txtIDMH";
@@ -197,7 +181,7 @@
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Image = global::GUI.Properties.Resources.diskette__4_;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(416, 501);
+            this.btnLuu.Location = new System.Drawing.Point(410, 133);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnLuu.Size = new System.Drawing.Size(150, 40);
@@ -207,18 +191,45 @@
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtIDMH);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtTenMH);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnLuu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 363);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(582, 190);
+            this.panel1.TabIndex = 22;
+            // 
+            // IDMH
+            // 
+            this.IDMH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IDMH.DataPropertyName = "ID";
+            this.IDMH.HeaderText = "ID MÀN HÌNH";
+            this.IDMH.MinimumWidth = 6;
+            this.IDMH.Name = "IDMH";
+            this.IDMH.ReadOnly = true;
+            // 
+            // TENMH
+            // 
+            this.TENMH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TENMH.DataPropertyName = "TENMH";
+            this.TENMH.HeaderText = "TÊN MÀN HÌNH";
+            this.TENMH.MinimumWidth = 6;
+            this.TENMH.Name = "TENMH";
+            this.TENMH.ReadOnly = true;
+            // 
             // frmManHinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(582, 553);
-            this.Controls.Add(this.txtTenMH);
-            this.Controls.Add(this.txtIDMH);
-            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvManHinh);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -230,8 +241,9 @@
             this.Load += new System.EventHandler(this.frmManHinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvManHinh)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -244,9 +256,10 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
         private CustomButton btnLuu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDMH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TENMH;
         private textBoxCustom txtIDMH;
         private textBoxCustom txtTenMH;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDMH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENMH;
     }
 }

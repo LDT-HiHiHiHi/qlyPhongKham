@@ -59,7 +59,8 @@ namespace GUI
             // 
             this.txtTenNhom.BackColor = System.Drawing.Color.White;
             this.txtTenNhom.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtTenNhom.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtTenNhom.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTenNhom.BorderRadius = 0;
             this.txtTenNhom.BorderSize = 2;
             this.txtTenNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNhom.ForeColor = System.Drawing.Color.Black;
@@ -69,6 +70,8 @@ namespace GUI
             this.txtTenNhom.Name = "txtTenNhom";
             this.txtTenNhom.Padding = new System.Windows.Forms.Padding(7);
             this.txtTenNhom.PasswordChar = false;
+            this.txtTenNhom.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTenNhom.PlaceholderText = "";
             this.txtTenNhom.Size = new System.Drawing.Size(164, 35);
             this.txtTenNhom.TabIndex = 4;
             this.txtTenNhom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

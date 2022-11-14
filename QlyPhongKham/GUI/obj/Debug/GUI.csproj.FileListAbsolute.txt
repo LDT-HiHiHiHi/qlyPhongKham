@@ -17,4 +17,7 @@ C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\Bunifu.UI.WinForm
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\RestSharp.xml
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.Fody.CopyLocal.cache
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\DTO.dll.config
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.CopyComplete

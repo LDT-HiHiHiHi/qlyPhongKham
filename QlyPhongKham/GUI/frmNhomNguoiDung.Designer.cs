@@ -51,7 +51,7 @@ namespace GUI
             // drvThongTinNhom
             // 
             this.drvThongTinNhom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.drvThongTinNhom.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.drvThongTinNhom.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.drvThongTinNhom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;

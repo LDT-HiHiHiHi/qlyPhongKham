@@ -85,7 +85,7 @@
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangNhap.Location = new System.Drawing.Point(298, 259);
+            this.btnDangNhap.Location = new System.Drawing.Point(298, 260);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(150, 40);
             this.btnDangNhap.TabIndex = 16;
@@ -109,7 +109,7 @@
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(150, 40);
             this.customButton1.TabIndex = 19;
-            this.customButton1.Text = "Hủy";
+            this.customButton1.Text = "Đóng";
             this.customButton1.TextColor = System.Drawing.Color.DeepSkyBlue;
             this.customButton1.UseVisualStyleBackColor = false;
             this.customButton1.Click += new System.EventHandler(this.customButton1_Click);

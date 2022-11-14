@@ -31,6 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanQuyen));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.drvNhomNguoiDung = new System.Windows.Forms.DataGridView();
@@ -53,7 +56,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.drvNhomNguoiDung);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(310, 492);
@@ -65,7 +68,7 @@
             // 
             this.drvNhomNguoiDung.AllowUserToAddRows = false;
             this.drvNhomNguoiDung.AllowUserToDeleteRows = false;
-            this.drvNhomNguoiDung.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.drvNhomNguoiDung.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.drvNhomNguoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -80,11 +83,27 @@
             this.MAQUYEN,
             this.Column5,
             this.Column6});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.drvNhomNguoiDung.DefaultCellStyle = dataGridViewCellStyle2;
             this.drvNhomNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.drvNhomNguoiDung.EnableHeadersVisualStyles = false;
             this.drvNhomNguoiDung.Location = new System.Drawing.Point(3, 23);
             this.drvNhomNguoiDung.Name = "drvNhomNguoiDung";
             this.drvNhomNguoiDung.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.drvNhomNguoiDung.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.drvNhomNguoiDung.RowHeadersVisible = false;
             this.drvNhomNguoiDung.RowHeadersWidth = 51;
             this.drvNhomNguoiDung.RowTemplate.Height = 24;
@@ -101,6 +120,7 @@
             this.MAQUYEN.Name = "MAQUYEN";
             this.MAQUYEN.ReadOnly = true;
             this.MAQUYEN.Visible = false;
+            this.MAQUYEN.Width = 125;
             // 
             // Column5
             // 
@@ -124,7 +144,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.drvPhanQuyen);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(328, 11);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(578, 422);
@@ -136,33 +156,41 @@
             // 
             this.drvPhanQuyen.AllowUserToAddRows = false;
             this.drvPhanQuyen.AllowUserToDeleteRows = false;
-            this.drvPhanQuyen.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.drvPhanQuyen.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.drvPhanQuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.drvPhanQuyen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.drvPhanQuyen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.drvPhanQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.drvPhanQuyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_PQ,
             this.Column2,
             this.COQUYEN});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.drvPhanQuyen.DefaultCellStyle = dataGridViewCellStyle5;
             this.drvPhanQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.drvPhanQuyen.EnableHeadersVisualStyles = false;
             this.drvPhanQuyen.Location = new System.Drawing.Point(3, 23);
             this.drvPhanQuyen.Name = "drvPhanQuyen";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.drvPhanQuyen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.drvPhanQuyen.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.drvPhanQuyen.RowHeadersVisible = false;
             this.drvPhanQuyen.RowHeadersWidth = 51;
             this.drvPhanQuyen.RowTemplate.Height = 24;
@@ -177,6 +205,7 @@
             this.ID_PQ.MinimumWidth = 6;
             this.ID_PQ.Name = "ID_PQ";
             this.ID_PQ.Visible = false;
+            this.ID_PQ.Width = 125;
             // 
             // Column2
             // 
@@ -259,8 +288,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView drvNhomNguoiDung;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView drvPhanQuyen;
@@ -272,6 +299,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MAQUYEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
