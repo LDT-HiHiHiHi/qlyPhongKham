@@ -115,5 +115,13 @@ namespace GUI
 
             frm.Show();
         }
+
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTaiKhoan frm = new frmTaiKhoan();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
     }
 }

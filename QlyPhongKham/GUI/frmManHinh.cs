@@ -82,6 +82,5 @@ namespace GUI
             txtIDMH.Texts = dgvManHinh.CurrentRow.Cells["IDMH"].Value.ToString();
             txtTenMH.Texts = dgvManHinh.CurrentRow.Cells["TENMH"].Value.ToString();
         }
-
     }
 }

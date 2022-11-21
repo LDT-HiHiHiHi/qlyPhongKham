@@ -94,6 +94,7 @@ namespace GUI
             this.drvThongTinNhom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.drvThongTinNhom.Size = new System.Drawing.Size(582, 553);
             this.drvThongTinNhom.TabIndex = 1;
+            this.drvThongTinNhom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drvThongTinNhom_CellClick);
             this.drvThongTinNhom.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.drvThongTinNhom_CellMouseDown);
             this.drvThongTinNhom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drvThongTinNhom_MouseDown);
             // 

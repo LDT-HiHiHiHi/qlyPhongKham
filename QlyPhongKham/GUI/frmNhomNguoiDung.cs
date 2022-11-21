@@ -39,6 +39,7 @@ namespace GUI
 
         private void frmNhomNguoiDung_Load(object sender, EventArgs e)
         {
+            btnSua.Enabled = btnXoa.Enabled = false;
             drvThongTinNhom.DataSource = bus_qlnnd.getGrs();
         }
 
@@ -100,6 +101,11 @@ namespace GUI
                 bus_qlnnd.chinhSua(int.Parse(drvThongTinNhom.CurrentRow.Cells["ID"].Value.ToString()), frm.TenNhom);
                 this.OnLoad(e);
             }
+        }
+
+        private void drvThongTinNhom_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnSua.Enabled = btnXoa.Enabled = true;
         }
     }
 }

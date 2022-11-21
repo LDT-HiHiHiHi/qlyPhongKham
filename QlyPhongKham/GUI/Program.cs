@@ -31,5 +31,10 @@ namespace GUI
         {
             return MessageBox.Show(pMessage, "Thông báo", MessageBoxButtons.YesNo, icon, MessageBoxDefaultButton.Button1);
         }
+
+        public static string phatSinhMaTuDong()
+        {
+            return DateTime.Today.Day.ToString() + DateTime.Today.Month.ToString() + DateTime.Today.Year.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString();
+        }
     }
 }

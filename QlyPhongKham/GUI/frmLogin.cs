@@ -16,6 +16,7 @@ namespace GUI
     {
         public static string USERNAME;
         BUS_Login bus_lg = new BUS_Login();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -32,13 +33,11 @@ namespace GUI
             ////Kiểm tra rỗng
             if (string.IsNullOrEmpty(txtTDN.Texts.Trim()))
             {
-                Program.AlertMessage("Vui lòng nhập tên đăng nhập ", MessageBoxIcon.Warning);
                 txtTDN.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(txtMK.Texts.Trim()))
             {
-                Program.AlertMessage("Vui lòng nhập mật khẩu", MessageBoxIcon.Warning);
                 txtMK.Focus();
                 return;
             }
@@ -95,6 +94,29 @@ namespace GUI
             {
                 btnDangNhap.PerformClick();
             }
+        }
+
+        private void txtTDN_Leave(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtTDN.Texts))
+            {
+                errorProvider1.SetError(txtTDN, "Vui lòng nhập tên đăng nhâp");
+                txtTDN.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+        }
+
+        private void txtMK_Leave(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(txtMK.Texts))
+            {
+                errorProvider2.SetError(txtMK, "Vui lòng nhập mật khẩu");
+                txtMK.Focus();
+                return;
+            }
+            errorProvider2.Clear();
         }
     }
 }

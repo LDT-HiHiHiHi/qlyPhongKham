@@ -66,7 +66,5 @@ namespace GUI
         {
             this.Close();
         }
-
-        
     }
 }
