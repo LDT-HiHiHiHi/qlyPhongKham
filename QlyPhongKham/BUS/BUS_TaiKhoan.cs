@@ -23,5 +23,13 @@ namespace BUS
         {
             return dal_tk.checkTenDangNhap(pTenDN);
         }
+        public string getTenDangNhap(string pid)
+        {
+            return dal_tk.getTenDangNhap(pid);
+        }
+        public bool updateMatKhau(string pUser, string pMatKhau)
+        {
+            return dal_tk.updateMatKhau(pUser, pMatKhau);
+        }
     }
 }

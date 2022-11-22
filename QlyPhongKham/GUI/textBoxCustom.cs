@@ -379,5 +379,10 @@ namespace GUI
         }
         ///::::+
         #endregion
+
+        public void SelectAll()
+        {
+            textBox1.SelectAll();
+        }
     }
 }

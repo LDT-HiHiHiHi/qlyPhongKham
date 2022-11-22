@@ -24,7 +24,7 @@ namespace GUI
         {
             if (string.IsNullOrEmpty(txtRPW.Texts))
             {
-                errorProvider1.SetError(txtTenDN, "Vui lòng nhập xác nhận mật khẩu");
+                errorProvider1.SetError(txtRPW, "Vui lòng nhập xác nhận mật khẩu");
                 txtRPW.Focus();
                 return;
             }
@@ -67,8 +67,9 @@ namespace GUI
 
             if (bus_tk.checkTenDangNhap(txtTenDN.Texts) > 0)
             {
-                errorProvider1.SetError(txtTenDN, "Trùng tên đăng nhập");
+                errorProvider1.SetError(txtTenDN, "Tên đăng nhập đã tồn tại !");
                 txtTenDN.Focus();
+                txtTenDN.SelectAll();
                 return;
             }
             errorProvider1.Clear();
