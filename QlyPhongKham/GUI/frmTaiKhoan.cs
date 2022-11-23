@@ -37,6 +37,10 @@ namespace GUI
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             đổiMậtKhẩuToolStripMenuItem.Enabled = xóaTàiKhoảnToolStripMenuItem.Enabled = đặtLạiMậtKhẩuToolStripMenuItem.Enabled = true;
+            if(dgvTaiKhoan.CurrentRow.Cells["ID"].Value.ToString().Equals("TK001"))
+            {
+                đổiMậtKhẩuToolStripMenuItem.Enabled = xóaTàiKhoảnToolStripMenuItem.Enabled = false;
+            }    
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
