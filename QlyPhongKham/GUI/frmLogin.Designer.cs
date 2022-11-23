@@ -202,6 +202,7 @@
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
+            this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
             // 
             // frmLogin
             // 

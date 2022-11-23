@@ -24,7 +24,7 @@ namespace GUI
 
         private void frmTaiKhoan_Load(object sender, EventArgs e)
         {
-            đổiMậtKhẩuToolStripMenuItem.Enabled= xóaTàiKhoảnToolStripMenuItem.Enabled = false;
+            đổiMậtKhẩuToolStripMenuItem.Enabled= xóaTàiKhoảnToolStripMenuItem.Enabled = đặtLạiMậtKhẩuToolStripMenuItem.Enabled = false;
             dgvTaiKhoan.DataSource = bus_tk.getListTK();
         }
 
@@ -36,7 +36,7 @@ namespace GUI
 
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            đổiMậtKhẩuToolStripMenuItem.Enabled = xóaTàiKhoảnToolStripMenuItem.Enabled = true;
+            đổiMậtKhẩuToolStripMenuItem.Enabled = xóaTàiKhoảnToolStripMenuItem.Enabled = đặtLạiMậtKhẩuToolStripMenuItem.Enabled = true;
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +67,20 @@ namespace GUI
             {
                 t.Text = (string)dgvTaiKhoan.SelectedCells[0].Value.ToString();
             }
+        }
+
+        private void đặtLạiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string id = dgvTaiKhoan.CurrentRow.Cells["ID"].Value.ToString();
+            string mk = "123";
+            string tendn = bus_tk.getTenDangNhap(id);
+            if (bus_tk.updateMatKhau(tendn, mk))
+            {
+                Program.AlertMessage("Đặt lại mật khẩu thành công !\nMật khẩu mặc định là "+mk, MessageBoxIcon.Information);
+                this.OnLoad(e);
+                return;
+            }
+            Program.AlertMessage("Đã xảy ra lỗi !", MessageBoxIcon.Error);
         }
     }
 }

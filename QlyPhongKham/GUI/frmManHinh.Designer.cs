@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManHinh));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvManHinh = new System.Windows.Forms.DataGridView();
             this.IDMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +57,15 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xóaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 30);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 58);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.delete__1_;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -70,19 +78,11 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.60976F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.56097F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.69565F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(638, 514);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(682, 653);
             this.tableLayoutPanel1.TabIndex = 22;
-            // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.delete__1_;
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // dgvManHinh
             // 
@@ -110,7 +110,7 @@
             this.dgvManHinh.RowHeadersVisible = false;
             this.dgvManHinh.RowHeadersWidth = 51;
             this.dgvManHinh.RowTemplate.Height = 24;
-            this.dgvManHinh.Size = new System.Drawing.Size(632, 238);
+            this.dgvManHinh.Size = new System.Drawing.Size(676, 404);
             this.dgvManHinh.TabIndex = 25;
             this.dgvManHinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManHinh_CellClick);
             // 
@@ -138,7 +138,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(632, 80);
+            this.label1.Size = new System.Drawing.Size(676, 80);
             this.label1.TabIndex = 26;
             this.label1.Text = "Quản lý màn hình";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,22 +146,22 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.09722F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.90278F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtIDMH, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtTenMH, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnLuu, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 327);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 493);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(632, 184);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(676, 157);
             this.tableLayoutPanel2.TabIndex = 27;
             // 
             // label2
@@ -170,7 +170,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 43);
+            this.label2.Size = new System.Drawing.Size(332, 43);
             this.label2.TabIndex = 23;
             this.label2.Text = "ID Màn hình";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -183,7 +183,7 @@
             this.txtIDMH.BorderSize = 1;
             this.txtIDMH.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtIDMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDMH.Location = new System.Drawing.Point(282, 4);
+            this.txtIDMH.Location = new System.Drawing.Point(342, 4);
             this.txtIDMH.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDMH.Multiline = false;
             this.txtIDMH.Name = "txtIDMH";
@@ -203,7 +203,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(272, 43);
+            this.label3.Size = new System.Drawing.Size(332, 43);
             this.label3.TabIndex = 27;
             this.label3.Text = "Tên màn hình";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -216,7 +216,7 @@
             this.txtTenMH.BorderSize = 1;
             this.txtTenMH.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenMH.Location = new System.Drawing.Point(282, 47);
+            this.txtTenMH.Location = new System.Drawing.Point(342, 47);
             this.txtTenMH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenMH.Multiline = false;
             this.txtTenMH.Name = "txtTenMH";
@@ -244,7 +244,7 @@
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Image = global::GUI.Properties.Resources.diskette__4_;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(441, 96);
+            this.btnLuu.Location = new System.Drawing.Point(485, 96);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 10, 30, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -253,13 +253,14 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextColor = System.Drawing.Color.White;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // frmManHinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(638, 514);
+            this.ClientSize = new System.Drawing.Size(682, 653);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmManHinh";

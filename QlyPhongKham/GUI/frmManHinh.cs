@@ -48,20 +48,20 @@ namespace GUI
             {
                 if(bus_mh.suaManHinh(txtIDMH.Texts,txtTenMH.Texts))
                 {
-                    MessageBox.Show("Sửa màn hình " + txtIDMH.Texts + " thành công !", "Thông báo");
+                    Program.AlertMessage("Sửa màn hình " + txtIDMH.Texts + " thành công !",MessageBoxIcon.Information);
                     this.OnLoad(e);
                     return;
                 }
-                MessageBox.Show("Đã xãy ra lỗi !", "Thông báo");
+                Program.AlertMessage("Đã xãy ra lỗi !", MessageBoxIcon.Error);
             }
 
             if (bus_mh.themManHinh(txtIDMH.Texts, txtTenMH.Texts))
             {
-                MessageBox.Show("Thêm màn hình " + txtIDMH.Texts + " thành công !", "Thông báo");
+                Program.AlertMessage("Thêm màn hình " + txtIDMH.Texts + " thành công !", MessageBoxIcon.Information);
                 this.OnLoad(e);
                 return;
             }
-            MessageBox.Show("Đã xãy ra lỗi !", "Thông báo");
+            Program.AlertMessage("Đã xãy ra lỗi !", MessageBoxIcon.Error);
         }
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,11 +69,11 @@ namespace GUI
             string idmh = dgvManHinh.CurrentRow.Cells["IDMH"].Value.ToString();
             if (bus_mh.xoaManHinh(idmh))
             {
-                MessageBox.Show("Xóa màn hình " + txtIDMH.Texts + " thành công !", "Thông báo");
+                Program.AlertMessage("Xóa màn hình " + txtIDMH.Texts + " thành công !", MessageBoxIcon.Information);
                 this.OnLoad(e);
                 return;
             }
-            MessageBox.Show("Đã xãy ra lỗi !", "Thông báo");
+            Program.AlertMessage("Đã xãy ra lỗi !", MessageBoxIcon.Error);
         }
 
         private void dgvManHinh_CellClick(object sender, DataGridViewCellEventArgs e)

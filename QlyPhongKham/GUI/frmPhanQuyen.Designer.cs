@@ -123,7 +123,7 @@
             this.MAQUYEN.Name = "MAQUYEN";
             this.MAQUYEN.ReadOnly = true;
             this.MAQUYEN.Visible = false;
-            this.MAQUYEN.Width = 125;
+            this.MAQUYEN.Width = 81;
             // 
             // Column5
             // 
@@ -154,8 +154,8 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(319, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.Size = new System.Drawing.Size(633, 539);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
@@ -207,7 +207,6 @@
             this.drvPhanQuyen.RowTemplate.Height = 24;
             this.drvPhanQuyen.Size = new System.Drawing.Size(621, 396);
             this.drvPhanQuyen.TabIndex = 0;
-            this.drvPhanQuyen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drvNhomNguoiDung_CellClick);
             // 
             // ID_PQ
             // 
@@ -217,7 +216,7 @@
             this.ID_PQ.MinimumWidth = 6;
             this.ID_PQ.Name = "ID_PQ";
             this.ID_PQ.Visible = false;
-            this.ID_PQ.Width = 125;
+            this.ID_PQ.Width = 32;
             // 
             // Column2
             // 
