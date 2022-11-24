@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,22 @@ namespace BUS
         public bool updateMatKhau(string pUser, string pMatKhau)
         {
             return dal_tk.updateMatKhau(pUser, pMatKhau);
+        }
+        public DataTable timKiemTaiKhoan(string pUser)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add(new DataColumn("ID", typeof(string)));
+            dt.Columns.Add(new DataColumn("USERNAME", typeof(string)));
+            dt.Columns.Add(new DataColumn("PW", typeof(string)));
+            dal_tk.timKiemTaiKhoan(pUser).ForEach(tk =>
+            {
+                DataRow r = dt.NewRow();
+                r["ID"] = tk.ID;
+                r["USERNAME"] = tk.USERNAME;
+                r["PW"] = tk.PW;
+                dt.Rows.Add(r);
+            });
+            return dt;
         }
     }
 }

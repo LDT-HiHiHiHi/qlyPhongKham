@@ -123,7 +123,7 @@
             this.MAQUYEN.Name = "MAQUYEN";
             this.MAQUYEN.ReadOnly = true;
             this.MAQUYEN.Visible = false;
-            this.MAQUYEN.Width = 81;
+            this.MAQUYEN.Width = 125;
             // 
             // Column5
             // 
@@ -216,7 +216,7 @@
             this.ID_PQ.MinimumWidth = 6;
             this.ID_PQ.Name = "ID_PQ";
             this.ID_PQ.Visible = false;
-            this.ID_PQ.Width = 32;
+            this.ID_PQ.Width = 125;
             // 
             // Column2
             // 

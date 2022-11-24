@@ -86,5 +86,17 @@ namespace GUI
             }
             Program.AlertMessage("Đã xảy ra lỗi !", MessageBoxIcon.Error);
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string user = txtTimKiem.Texts;
+            if (string.IsNullOrEmpty(user))
+            {
+                txtTimKiem.Focus();
+                this.OnLoad(e);
+                return;
+            }
+            dgvTaiKhoan.DataSource = bus_tk.timKiemTaiKhoan(user);
+        }
     }
 }

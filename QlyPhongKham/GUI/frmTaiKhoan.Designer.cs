@@ -71,51 +71,51 @@ namespace GUI
             this.toolStripSeparator3,
             this.đặtLạiMậtKhẩuToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 154);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(192, 126);
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Image = global::GUI.Properties.Resources.reset_password;
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
             // 
             // thêmTàiKhoảnToolStripMenuItem
             // 
             this.thêmTàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.add;
             this.thêmTàiKhoảnToolStripMenuItem.Name = "thêmTàiKhoảnToolStripMenuItem";
-            this.thêmTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.thêmTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.thêmTàiKhoảnToolStripMenuItem.Text = "Thêm tài khoản";
             this.thêmTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thêmTàiKhoảnToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(188, 6);
             // 
             // xóaTàiKhoảnToolStripMenuItem
             // 
             this.xóaTàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.delete__1_;
             this.xóaTàiKhoảnToolStripMenuItem.Name = "xóaTàiKhoảnToolStripMenuItem";
-            this.xóaTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.xóaTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.xóaTàiKhoảnToolStripMenuItem.Text = "Xóa tài khoản";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(211, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(188, 6);
             // 
             // đặtLạiMậtKhẩuToolStripMenuItem
             // 
             this.đặtLạiMậtKhẩuToolStripMenuItem.Image = global::GUI.Properties.Resources.reset;
             this.đặtLạiMậtKhẩuToolStripMenuItem.Name = "đặtLạiMậtKhẩuToolStripMenuItem";
-            this.đặtLạiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.đặtLạiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.đặtLạiMậtKhẩuToolStripMenuItem.Text = "Đặt lại mật khẩu";
             this.đặtLạiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đặtLạiMậtKhẩuToolStripMenuItem_Click);
             // 
@@ -218,6 +218,7 @@ namespace GUI
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.TextColor = System.Drawing.Color.White;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // dgvTaiKhoan
             // 

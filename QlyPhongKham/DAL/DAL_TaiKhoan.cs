@@ -53,5 +53,9 @@ namespace DAL
                 return false;
             }
         }
+        public List<TAIKHOAN> timKiemTaiKhoan(string pUser)
+        {
+            return db.TAIKHOANs.Where(t => t.USERNAME.Contains(pUser)).ToList();
+        }
     }
 }
