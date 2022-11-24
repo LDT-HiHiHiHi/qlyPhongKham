@@ -48,5 +48,9 @@ namespace BUS
             });
             return dt;
         }
+        public bool themQuyenChoND(string pID)
+        {
+            return dal_tk.themQuyenChoND(pID);
+        }
     }
 }

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_PHONGKHAM" Class="qlyPhongKhamDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI\SQLEXPRESS;Initial Catalog=QL_PHONGKHAM;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QL_PHONGKHAMConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
     <Type Name="TAIKHOAN">
       <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="PW" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="TAIKHOAN_NHOMNGUOIDUNG" Member="NHOMNGUOIDUNGs" ThisKey="ID" OtherKey="ID_TK" Type="NHOMNGUOIDUNG" />
+      <Association Name="TAIKHOAN_THONGTINTAIKHOAN" Member="THONGTINTAIKHOANs" ThisKey="ID" OtherKey="ID_TAIKHOAN" Type="THONGTINTAIKHOAN" />
     </Type>
   </Table>
   <Table Name="dbo.QL_PHANQUYEN" Member="QL_PHANQUYENs">
@@ -15,7 +15,6 @@
       <Column Name="COQUYEN" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="QUYEN_QL_PHANQUYEN" Member="QUYEN" ThisKey="MAQUYEN" OtherKey="MAQUYEN" Type="QUYEN" IsForeignKey="true" />
       <Association Name="MANHINH_QL_PHANQUYEN" Member="MANHINH" ThisKey="ID_MH" OtherKey="ID" Type="MANHINH" IsForeignKey="true" />
-      <Association Name="MANHINH1_QL_PHANQUYEN" Member="MANHINH1" ThisKey="ID_MH" OtherKey="ID" Type="MANHINH1" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.QUYEN" Member="QUYENs">
@@ -42,11 +41,32 @@
       <Association Name="MANHINH_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="ID" OtherKey="ID_MH" Type="QL_PHANQUYEN" />
     </Type>
   </Table>
-  <Table Name="dbo.MANHINH" Member="MANHINH1s">
-    <Type Name="MANHINH1">
-      <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENMH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="MANHINH1_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="ID" OtherKey="ID_MH" Type="QL_PHANQUYEN" />
+  <Table Name="dbo.TOATHUOC" Member="TOATHUOCs">
+    <Type Name="TOATHUOC">
+      <Column Name="MATT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TONGTIENTT" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DMTHUOC" Member="DMTHUOCs">
+    <Type Name="DMTHUOC">
+      <Column Name="MAT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENTHUOC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HSD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DONVITINH" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THONGTINTAIKHOAN" Member="THONGTINTAIKHOANs">
+    <Type Name="THONGTINTAIKHOAN">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GTINH" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="DCHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_TAIKHOAN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="TAIKHOAN_THONGTINTAIKHOAN" Member="TAIKHOAN" ThisKey="ID_TAIKHOAN" OtherKey="ID" Type="TAIKHOAN" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.fn_PhanQuyen" Method="fn_PhanQuyen" IsComposable="true">

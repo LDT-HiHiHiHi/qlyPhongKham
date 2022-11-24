@@ -33,15 +33,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDangNhap = new GUI.CustomButton();
-            this.customButton1 = new GUI.CustomButton();
-            this.txtTDN = new GUI.textBoxCustom();
-            this.txtMK = new GUI.textBoxCustom();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtMK = new GUI.textBoxCustom();
+            this.txtTDN = new GUI.textBoxCustom();
+            this.customButton1 = new GUI.CustomButton();
+            this.btnDangNhap = new GUI.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,92 +77,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(653, 10);
             this.panel2.TabIndex = 18;
-            // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDangNhap.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.btnDangNhap.BorderColor = System.Drawing.Color.White;
-            this.btnDangNhap.BorderRadius = 5;
-            this.btnDangNhap.BorderSize = 1;
-            this.btnDangNhap.FlatAppearance.BorderSize = 0;
-            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangNhap.Location = new System.Drawing.Point(298, 260);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(150, 40);
-            this.btnDangNhap.TabIndex = 16;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.TextColor = System.Drawing.Color.White;
-            this.btnDangNhap.UseVisualStyleBackColor = false;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.White;
-            this.customButton1.BackgroundColor = System.Drawing.Color.White;
-            this.customButton1.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.customButton1.BorderRadius = 5;
-            this.customButton1.BorderSize = 1;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.customButton1.Location = new System.Drawing.Point(458, 260);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(150, 40);
-            this.customButton1.TabIndex = 19;
-            this.customButton1.TabStop = false;
-            this.customButton1.Text = "Đóng";
-            this.customButton1.TextColor = System.Drawing.Color.DeepSkyBlue;
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
-            // 
-            // txtTDN
-            // 
-            this.txtTDN.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtTDN.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTDN.BorderRadius = 0;
-            this.txtTDN.BorderSize = 1;
-            this.txtTDN.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTDN.Location = new System.Drawing.Point(354, 135);
-            this.txtTDN.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTDN.Multiline = false;
-            this.txtTDN.Name = "txtTDN";
-            this.txtTDN.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTDN.PasswordChar = false;
-            this.txtTDN.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTDN.PlaceholderText = "Tên đăng nhập";
-            this.txtTDN.Size = new System.Drawing.Size(224, 34);
-            this.txtTDN.TabIndex = 20;
-            this.txtTDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTDN.Texts = "";
-            this.txtTDN.UnderlinedStyle = true;
-            this.txtTDN.Leave += new System.EventHandler(this.txtTDN_Leave);
-            // 
-            // txtMK
-            // 
-            this.txtMK.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtMK.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtMK.BorderRadius = 0;
-            this.txtMK.BorderSize = 1;
-            this.txtMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(354, 196);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMK.Multiline = false;
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Padding = new System.Windows.Forms.Padding(7);
-            this.txtMK.PasswordChar = true;
-            this.txtMK.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtMK.PlaceholderText = "Mật khẩu";
-            this.txtMK.Size = new System.Drawing.Size(224, 34);
-            this.txtMK.TabIndex = 21;
-            this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtMK.Texts = "";
-            this.txtMK.UnderlinedStyle = true;
-            this.txtMK.Leave += new System.EventHandler(this.txtMK_Leave);
             // 
             // pictureBox3
             // 
@@ -203,6 +117,92 @@
             // 
             this.errorProvider2.ContainerControl = this;
             this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
+            // 
+            // txtMK
+            // 
+            this.txtMK.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtMK.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMK.BorderRadius = 0;
+            this.txtMK.BorderSize = 1;
+            this.txtMK.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.Location = new System.Drawing.Point(354, 196);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMK.Multiline = false;
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Padding = new System.Windows.Forms.Padding(7);
+            this.txtMK.PasswordChar = true;
+            this.txtMK.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMK.PlaceholderText = "Mật khẩu";
+            this.txtMK.Size = new System.Drawing.Size(224, 36);
+            this.txtMK.TabIndex = 21;
+            this.txtMK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMK.Texts = "";
+            this.txtMK.UnderlinedStyle = true;
+            this.txtMK._TextChanged += new System.EventHandler(this.txtMK__TextChanged);
+            // 
+            // txtTDN
+            // 
+            this.txtTDN.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtTDN.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTDN.BorderRadius = 0;
+            this.txtTDN.BorderSize = 1;
+            this.txtTDN.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTDN.Location = new System.Drawing.Point(354, 135);
+            this.txtTDN.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTDN.Multiline = false;
+            this.txtTDN.Name = "txtTDN";
+            this.txtTDN.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTDN.PasswordChar = false;
+            this.txtTDN.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTDN.PlaceholderText = "Tên đăng nhập";
+            this.txtTDN.Size = new System.Drawing.Size(224, 36);
+            this.txtTDN.TabIndex = 20;
+            this.txtTDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTDN.Texts = "";
+            this.txtTDN.UnderlinedStyle = true;
+            this.txtTDN._TextChanged += new System.EventHandler(this.txtTDN__TextChanged);
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.White;
+            this.customButton1.BackgroundColor = System.Drawing.Color.White;
+            this.customButton1.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.customButton1.BorderRadius = 8;
+            this.customButton1.BorderSize = 1;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButton1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.customButton1.Location = new System.Drawing.Point(458, 260);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(150, 40);
+            this.customButton1.TabIndex = 19;
+            this.customButton1.TabStop = false;
+            this.customButton1.Text = "Đóng";
+            this.customButton1.TextColor = System.Drawing.Color.DeepSkyBlue;
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangNhap.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btnDangNhap.BorderColor = System.Drawing.Color.White;
+            this.btnDangNhap.BorderRadius = 8;
+            this.btnDangNhap.BorderSize = 1;
+            this.btnDangNhap.FlatAppearance.BorderSize = 0;
+            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
+            this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangNhap.Location = new System.Drawing.Point(298, 260);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(150, 40);
+            this.btnDangNhap.TabIndex = 16;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.TextColor = System.Drawing.Color.White;
+            this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // frmLogin
             // 

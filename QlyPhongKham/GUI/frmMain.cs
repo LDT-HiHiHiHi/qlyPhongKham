@@ -54,7 +54,6 @@ namespace GUI
             BUS.BUS_QLTK bus_qltk = new BUS.BUS_QLTK();
 
             var lstND = bus_qltk.lstNhomNguoiDung(frmLogin.USERNAME);
-
             foreach (var item in lstND)
             {
                 var dsQuyen = bus_qltk.lstManHinh(item.IdGr); // lấy các màn hình chức năng đã được phân quyền
@@ -119,6 +118,14 @@ namespace GUI
         public void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTaiKhoan frm = new frmTaiKhoan();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
+
+        private void quảnLýBệnhNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQLBN frm = new frmQLBN();
             frm.MdiParent = this;
 
             frm.Show();

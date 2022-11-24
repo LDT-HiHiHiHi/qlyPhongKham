@@ -48,9 +48,12 @@ namespace GUI
             };
             if(bus_tk.themTaiKhoan(tk))
             {
-                Program.AlertMessage("Tạo mới thành công !", MessageBoxIcon.Information);
-                this.Close();
-                return;
+                if(bus_tk.themQuyenChoND(id))
+                {
+                    Program.AlertMessage("Tạo mới thành công !", MessageBoxIcon.Information);
+                    this.Close();
+                    return;
+                }    
             }
             Program.AlertMessage("Đã xảy ra lỗi !", MessageBoxIcon.Error);
         }

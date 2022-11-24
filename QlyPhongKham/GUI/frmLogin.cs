@@ -31,16 +31,22 @@ namespace GUI
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             ////Kiểm tra rỗng
-            if (string.IsNullOrEmpty(txtTDN.Texts.Trim()))
+            if (string.IsNullOrEmpty(txtTDN.Texts))
             {
+                errorProvider1.SetError(txtTDN, "Vui lòng nhập tên đăng nhâp");
                 txtTDN.Focus();
+                errorProvider2.Clear();
                 return;
             }
-            if (string.IsNullOrEmpty(txtMK.Texts.Trim()))
+            errorProvider1.Clear();
+
+            if (string.IsNullOrEmpty(txtMK.Texts))
             {
+                errorProvider2.SetError(txtMK, "Vui lòng nhập mật khẩu");
                 txtMK.Focus();
                 return;
             }
+            errorProvider2.Clear();
 
             //Kiểm tra đăng nhập
             string tennd = txtTDN.Texts;
@@ -96,27 +102,20 @@ namespace GUI
             }
         }
 
-        private void txtTDN_Leave(object sender, EventArgs e)
+        private void txtTDN__TextChanged(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtTDN.Texts))
+            if (!string.IsNullOrEmpty(txtTDN.Texts))
             {
-                errorProvider1.SetError(txtTDN, "Vui lòng nhập tên đăng nhâp");
-                txtTDN.Focus();
-                return;
+                errorProvider1.Clear();
             }
-            errorProvider1.Clear();
         }
 
-        private void txtMK_Leave(object sender, EventArgs e)
+        private void txtMK__TextChanged(object sender, EventArgs e)
         {
-
-            if (string.IsNullOrEmpty(txtMK.Texts))
+            if (!string.IsNullOrEmpty(txtMK.Texts))
             {
-                errorProvider2.SetError(txtMK, "Vui lòng nhập mật khẩu");
-                txtMK.Focus();
-                return;
+                errorProvider2.Clear();
             }
-            errorProvider2.Clear();
         }
     }
 }

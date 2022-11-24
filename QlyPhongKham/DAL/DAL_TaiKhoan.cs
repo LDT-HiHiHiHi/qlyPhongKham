@@ -57,5 +57,34 @@ namespace DAL
         {
             return db.TAIKHOANs.Where(t => t.USERNAME.Contains(pUser)).ToList();
         }
+
+        public string getIDTK(string pUser)
+        {
+            return db.TAIKHOANs.Where(t => t.USERNAME.Equals(pUser)).Select(a => a.ID).FirstOrDefault();
+        }
+
+        public int checkGroupUser(string pID)
+        {
+            return db.NHOMNGUOIDUNGs.Where(t => t.ID_TK.Equals(pID)).Count();
+        }
+        public bool themQuyenChoND(string pID)
+        {
+            try
+            {
+                int idgr = db.QUYENs.Where(t => t.TENQUYEN.Equals("USER")).Select(p=>p.MAQUYEN).FirstOrDefault();
+                NHOMNGUOIDUNG nnd = new NHOMNGUOIDUNG
+                {
+                    ID_Q = idgr,
+                    ID_TK = pID
+                };
+                db.NHOMNGUOIDUNGs.InsertOnSubmit(nnd);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

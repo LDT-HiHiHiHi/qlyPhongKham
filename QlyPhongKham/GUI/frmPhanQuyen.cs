@@ -81,6 +81,5 @@ namespace GUI
                 MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
-
     }
 }
