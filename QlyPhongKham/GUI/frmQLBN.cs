@@ -14,11 +14,13 @@ namespace GUI
     public partial class frmQLBN : Form
     {
         BUS_QLBN bus_qlbn = new BUS_QLBN();
+        BUS_KhamBenh bus_kb = new BUS_KhamBenh();
         public static bool flag = false;
         public static string ID;
         public frmQLBN()
         {
             InitializeComponent();
+            menu.PrimaryColor = Color.FromArgb(30 ,144 ,255);
             txtTimKiem.Focus();
         }
 
@@ -80,6 +82,46 @@ namespace GUI
         private void txtTimKiem_Click(object sender, EventArgs e)
         {
             this.KeyPreview = true;
+        }
+
+        private void txtTimKiem_Leave(object sender, EventArgs e)
+        {
+            this.KeyPreview = false;
+        }
+
+        private void btnKham_Click(object sender, EventArgs e)
+        {
+            string maphong = cboPhong.SelectedValue();
+            string mabs = bus_kb.getMaBacSi(maphong);
+            string mabn = dgvListBN.CurrentRow.Cells["MABN"].Value.ToString();
+            if (string.IsNullOrEmpty(mabs))
+            {
+                Program.AlertMessage("Phòng chưa có bác sĩ", MessageBoxIcon.Information);
+                return;
+            }
+            string mals = "LS" + Program.phatSinhMaTuDong();
+            if(bus_kb.checkBenhNhanKham(mabn) > 0)
+            {
+                Program.AlertMessage("Bệnh nhân đã khám", MessageBoxIcon.Information);
+                return;
+            }
+            int stt = bus_kb.STT(mabs) + 1;
+            LS_KHAMBENH lskb = new LS_KHAMBENH
+            {
+                MALS = mals,
+                MABN = mabn,
+                MABS = mabs,
+                NGKHAM = DateTime.Today,
+                TRIEUCHUNG = "Chưa có",
+                STT = stt
+                
+            };
+            if (bus_kb.themDangKiKham(lskb))
+            {
+                Program.AlertMessage("Thêm thành công", MessageBoxIcon.Information);
+                return;
+            }
+            Program.AlertMessage("Đã xảy ra lỗi", MessageBoxIcon.Error);
         }
     }
 }

@@ -37,7 +37,6 @@ namespace GUI
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -45,8 +44,9 @@ namespace GUI
             this.txtDienThoai = new GUI.textBoxCustom();
             this.txtTenBN = new GUI.textBoxCustom();
             this.txtDiaChi = new GUI.textBoxCustom();
-            this.rdbNam = new customRadio.VBRadioButton();
-            this.rdbNu = new customRadio.VBRadioButton();
+            this.txtNgaySinh = new GUI.RJDatePicker();
+            this.rdbNam = new CustomControls.RJControls.RJRadioButton();
+            this.rdbNu = new CustomControls.RJControls.RJRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -66,64 +66,52 @@ namespace GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(65, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 22);
+            this.label1.Size = new System.Drawing.Size(132, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên bệnh nhân";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(65, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 22);
+            this.label2.Size = new System.Drawing.Size(92, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ngày sinh";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(65, 270);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 22);
+            this.label3.Size = new System.Drawing.Size(85, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Giới tính";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(65, 323);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 22);
+            this.label4.Size = new System.Drawing.Size(68, 23);
             this.label4.TabIndex = 2;
             this.label4.Text = "Địa chỉ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(65, 379);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 22);
+            this.label5.Size = new System.Drawing.Size(118, 23);
             this.label5.TabIndex = 2;
             this.label5.Text = "Số diện thoại";
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.txtNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtNgaySinh.Location = new System.Drawing.Point(240, 213);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(250, 30);
-            this.txtNgaySinh.TabIndex = 18;
-            this.txtNgaySinh.Value = new System.DateTime(2022, 11, 25, 14, 6, 3, 0);
             // 
             // errorProvider1
             // 
@@ -162,7 +150,7 @@ namespace GUI
             // 
             // txtDienThoai
             // 
-            this.txtDienThoai.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtDienThoai.BorderColor = System.Drawing.Color.Blue;
             this.txtDienThoai.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtDienThoai.BorderRadius = 0;
             this.txtDienThoai.BorderSize = 1;
@@ -184,7 +172,7 @@ namespace GUI
             // 
             // txtTenBN
             // 
-            this.txtTenBN.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTenBN.BorderColor = System.Drawing.Color.Blue;
             this.txtTenBN.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtTenBN.BorderRadius = 0;
             this.txtTenBN.BorderSize = 1;
@@ -206,7 +194,7 @@ namespace GUI
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtDiaChi.BorderColor = System.Drawing.Color.Blue;
             this.txtDiaChi.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtDiaChi.BorderRadius = 0;
             this.txtDiaChi.BorderSize = 1;
@@ -226,34 +214,51 @@ namespace GUI
             this.txtDiaChi.UnderlinedStyle = true;
             this.txtDiaChi._TextChanged += new System.EventHandler(this.txtDiaChi__TextChanged);
             // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtNgaySinh.BorderSize = 1;
+            this.txtNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.txtNgaySinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtNgaySinh.Location = new System.Drawing.Point(231, 208);
+            this.txtNgaySinh.MinimumSize = new System.Drawing.Size(4, 35);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(259, 35);
+            this.txtNgaySinh.SkinColor = System.Drawing.Color.White;
+            this.txtNgaySinh.TabIndex = 22;
+            this.txtNgaySinh.TextColor = System.Drawing.Color.Black;
+            // 
             // rdbNam
             // 
-            this.rdbNam.CheckedColor = System.Drawing.Color.Blue;
-            this.rdbNam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbNam.Location = new System.Drawing.Point(240, 264);
+            this.rdbNam.AutoSize = true;
+            this.rdbNam.CheckedColor = System.Drawing.Color.DodgerBlue;
+            this.rdbNam.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNam.Location = new System.Drawing.Point(231, 272);
             this.rdbNam.MinimumSize = new System.Drawing.Size(0, 21);
             this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(67, 35);
-            this.rdbNam.TabIndex = 21;
+            this.rdbNam.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbNam.Size = new System.Drawing.Size(76, 25);
+            this.rdbNam.TabIndex = 23;
             this.rdbNam.TabStop = true;
             this.rdbNam.Text = "Nam";
-            this.rdbNam.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdbNam.UnCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.rdbNam.UseVisualStyleBackColor = true;
             // 
             // rdbNu
             // 
+            this.rdbNu.AutoSize = true;
             this.rdbNu.CheckedColor = System.Drawing.Color.HotPink;
-            this.rdbNu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdbNu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbNu.Location = new System.Drawing.Point(385, 265);
+            this.rdbNu.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNu.Location = new System.Drawing.Point(370, 272);
             this.rdbNu.MinimumSize = new System.Drawing.Size(0, 21);
             this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(56, 35);
-            this.rdbNu.TabIndex = 21;
+            this.rdbNu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rdbNu.Size = new System.Drawing.Size(64, 25);
+            this.rdbNu.TabIndex = 23;
             this.rdbNu.TabStop = true;
             this.rdbNu.Text = "Nữ";
-            this.rdbNu.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rdbNu.UnCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.rdbNu.UseVisualStyleBackColor = true;
             // 
             // frmThemBenhNhan
@@ -264,8 +269,8 @@ namespace GUI
             this.ClientSize = new System.Drawing.Size(557, 520);
             this.Controls.Add(this.rdbNu);
             this.Controls.Add(this.rdbNam);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtNgaySinh);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtDienThoai);
             this.Controls.Add(this.txtTenBN);
             this.Controls.Add(this.txtDiaChi);
@@ -302,12 +307,12 @@ namespace GUI
         private textBoxCustom txtDiaChi;
         private textBoxCustom txtTenBN;
         private textBoxCustom txtDienThoai;
-        private System.Windows.Forms.DateTimePicker txtNgaySinh;
         private CustomButton btnLuu;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
-        private customRadio.VBRadioButton rdbNu;
-        private customRadio.VBRadioButton rdbNam;
+        private RJDatePicker txtNgaySinh;
+        private CustomControls.RJControls.RJRadioButton rdbNu;
+        private CustomControls.RJControls.RJRadioButton rdbNam;
     }
 }

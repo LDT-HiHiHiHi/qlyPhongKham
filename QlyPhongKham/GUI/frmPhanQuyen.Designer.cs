@@ -257,10 +257,10 @@
             // 
             this.ckAll.AutoSize = true;
             this.ckAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ckAll.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckAll.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckAll.Location = new System.Drawing.Point(3, 3);
             this.ckAll.Name = "ckAll";
-            this.ckAll.Size = new System.Drawing.Size(307, 23);
+            this.ckAll.Size = new System.Drawing.Size(307, 27);
             this.ckAll.TabIndex = 12;
             this.ckAll.Text = "Chọn tất cả";
             this.ckAll.UseVisualStyleBackColor = true;
@@ -280,7 +280,7 @@
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.Image = global::GUI.Properties.Resources.diskette__4_;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(467, 32);
+            this.btnLuu.Location = new System.Drawing.Point(467, 36);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Padding = new System.Windows.Forms.Padding(3, 3, 0, 3);

@@ -63,6 +63,9 @@ namespace DTO
     partial void InsertBENHNHAN(BENHNHAN instance);
     partial void UpdateBENHNHAN(BENHNHAN instance);
     partial void DeleteBENHNHAN(BENHNHAN instance);
+    partial void InsertLS_KHAMBENH(LS_KHAMBENH instance);
+    partial void UpdateLS_KHAMBENH(LS_KHAMBENH instance);
+    partial void DeleteLS_KHAMBENH(LS_KHAMBENH instance);
     #endregion
 		
 		public qlyPhongKhamDataContext(string connection) : 
@@ -70,12 +73,11 @@ namespace DTO
 		{
 			OnCreated();
 		}
-		public qlyPhongKhamDataContext() : 
+		public qlyPhongKhamDataContext() :
 				base(global::DTO.Properties.Settings.Default.QL_PHONGKHAMConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
-
 		public qlyPhongKhamDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
@@ -179,6 +181,14 @@ namespace DTO
 			get
 			{
 				return this.GetTable<BENHNHAN>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LS_KHAMBENH> LS_KHAMBENHs
+		{
+			get
+			{
+				return this.GetTable<LS_KHAMBENH>();
 			}
 		}
 		
@@ -1035,6 +1045,8 @@ namespace DTO
 		
 		private System.Nullable<double> _TONGTIENTT;
 		
+		private EntityRef<LS_KHAMBENH> _LS_KHAMBENH;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1049,6 +1061,7 @@ namespace DTO
 		
 		public TOATHUOC()
 		{
+			this._LS_KHAMBENH = default(EntityRef<LS_KHAMBENH>);
 			OnCreated();
 		}
 		
@@ -1083,6 +1096,10 @@ namespace DTO
 			{
 				if ((this._MALS != value))
 				{
+					if (this._LS_KHAMBENH.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnMALSChanging(value);
 					this.SendPropertyChanging();
 					this._MALS = value;
@@ -1108,6 +1125,40 @@ namespace DTO
 					this._TONGTIENTT = value;
 					this.SendPropertyChanged("TONGTIENTT");
 					this.OnTONGTIENTTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LS_KHAMBENH_TOATHUOC", Storage="_LS_KHAMBENH", ThisKey="MALS", OtherKey="MALS", IsForeignKey=true)]
+		public LS_KHAMBENH LS_KHAMBENH
+		{
+			get
+			{
+				return this._LS_KHAMBENH.Entity;
+			}
+			set
+			{
+				LS_KHAMBENH previousValue = this._LS_KHAMBENH.Entity;
+				if (((previousValue != value) 
+							|| (this._LS_KHAMBENH.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LS_KHAMBENH.Entity = null;
+						previousValue.TOATHUOCs.Remove(this);
+					}
+					this._LS_KHAMBENH.Entity = value;
+					if ((value != null))
+					{
+						value.TOATHUOCs.Add(this);
+						this._MALS = value.MALS;
+					}
+					else
+					{
+						this._MALS = default(string);
+					}
+					this.SendPropertyChanged("LS_KHAMBENH");
 				}
 			}
 		}
@@ -1666,6 +1717,8 @@ namespace DTO
 		
 		private string _MAPHONG;
 		
+		private EntitySet<LS_KHAMBENH> _LS_KHAMBENHs;
+		
 		private EntityRef<TAIKHOAN> _TAIKHOAN;
 		
 		private EntityRef<PHONG> _PHONG;
@@ -1686,6 +1739,7 @@ namespace DTO
 		
 		public BACSI()
 		{
+			this._LS_KHAMBENHs = new EntitySet<LS_KHAMBENH>(new Action<LS_KHAMBENH>(this.attach_LS_KHAMBENHs), new Action<LS_KHAMBENH>(this.detach_LS_KHAMBENHs));
 			this._TAIKHOAN = default(EntityRef<TAIKHOAN>);
 			this._PHONG = default(EntityRef<PHONG>);
 			OnCreated();
@@ -1779,6 +1833,19 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BACSI_LS_KHAMBENH", Storage="_LS_KHAMBENHs", ThisKey="MABS", OtherKey="MABS")]
+		public EntitySet<LS_KHAMBENH> LS_KHAMBENHs
+		{
+			get
+			{
+				return this._LS_KHAMBENHs;
+			}
+			set
+			{
+				this._LS_KHAMBENHs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_BACSI", Storage="_TAIKHOAN", ThisKey="IDTK", OtherKey="ID", IsForeignKey=true)]
 		public TAIKHOAN TAIKHOAN
 		{
@@ -1866,6 +1933,18 @@ namespace DTO
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_LS_KHAMBENHs(LS_KHAMBENH entity)
+		{
+			this.SendPropertyChanging();
+			entity.BACSI = this;
+		}
+		
+		private void detach_LS_KHAMBENHs(LS_KHAMBENH entity)
+		{
+			this.SendPropertyChanging();
+			entity.BACSI = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BENHNHAN")]
@@ -1885,6 +1964,8 @@ namespace DTO
 		private string _DIACHI;
 		
 		private string _SDT;
+		
+		private EntitySet<LS_KHAMBENH> _LS_KHAMBENHs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1906,6 +1987,7 @@ namespace DTO
 		
 		public BENHNHAN()
 		{
+			this._LS_KHAMBENHs = new EntitySet<LS_KHAMBENH>(new Action<LS_KHAMBENH>(this.attach_LS_KHAMBENHs), new Action<LS_KHAMBENH>(this.detach_LS_KHAMBENHs));
 			OnCreated();
 		}
 		
@@ -2029,6 +2111,19 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BENHNHAN_LS_KHAMBENH", Storage="_LS_KHAMBENHs", ThisKey="MABN", OtherKey="MABN")]
+		public EntitySet<LS_KHAMBENH> LS_KHAMBENHs
+		{
+			get
+			{
+				return this._LS_KHAMBENHs;
+			}
+			set
+			{
+				this._LS_KHAMBENHs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2047,6 +2142,310 @@ namespace DTO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_LS_KHAMBENHs(LS_KHAMBENH entity)
+		{
+			this.SendPropertyChanging();
+			entity.BENHNHAN = this;
+		}
+		
+		private void detach_LS_KHAMBENHs(LS_KHAMBENH entity)
+		{
+			this.SendPropertyChanging();
+			entity.BENHNHAN = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LS_KHAMBENH")]
+	public partial class LS_KHAMBENH : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MALS;
+		
+		private string _MABN;
+		
+		private string _MABS;
+		
+		private System.Nullable<System.DateTime> _NGKHAM;
+		
+		private System.Nullable<int> _STT;
+		
+		private string _TRIEUCHUNG;
+		
+		private EntitySet<TOATHUOC> _TOATHUOCs;
+		
+		private EntityRef<BENHNHAN> _BENHNHAN;
+		
+		private EntityRef<BACSI> _BACSI;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMALSChanging(string value);
+    partial void OnMALSChanged();
+    partial void OnMABNChanging(string value);
+    partial void OnMABNChanged();
+    partial void OnMABSChanging(string value);
+    partial void OnMABSChanged();
+    partial void OnNGKHAMChanging(System.Nullable<System.DateTime> value);
+    partial void OnNGKHAMChanged();
+    partial void OnSTTChanging(System.Nullable<int> value);
+    partial void OnSTTChanged();
+    partial void OnTRIEUCHUNGChanging(string value);
+    partial void OnTRIEUCHUNGChanged();
+    #endregion
+		
+		public LS_KHAMBENH()
+		{
+			this._TOATHUOCs = new EntitySet<TOATHUOC>(new Action<TOATHUOC>(this.attach_TOATHUOCs), new Action<TOATHUOC>(this.detach_TOATHUOCs));
+			this._BENHNHAN = default(EntityRef<BENHNHAN>);
+			this._BACSI = default(EntityRef<BACSI>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALS", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MALS
+		{
+			get
+			{
+				return this._MALS;
+			}
+			set
+			{
+				if ((this._MALS != value))
+				{
+					this.OnMALSChanging(value);
+					this.SendPropertyChanging();
+					this._MALS = value;
+					this.SendPropertyChanged("MALS");
+					this.OnMALSChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MABN", DbType="VarChar(20)")]
+		public string MABN
+		{
+			get
+			{
+				return this._MABN;
+			}
+			set
+			{
+				if ((this._MABN != value))
+				{
+					if (this._BENHNHAN.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMABNChanging(value);
+					this.SendPropertyChanging();
+					this._MABN = value;
+					this.SendPropertyChanged("MABN");
+					this.OnMABNChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MABS", DbType="VarChar(10)")]
+		public string MABS
+		{
+			get
+			{
+				return this._MABS;
+			}
+			set
+			{
+				if ((this._MABS != value))
+				{
+					if (this._BACSI.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMABSChanging(value);
+					this.SendPropertyChanging();
+					this._MABS = value;
+					this.SendPropertyChanged("MABS");
+					this.OnMABSChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGKHAM", DbType="Date")]
+		public System.Nullable<System.DateTime> NGKHAM
+		{
+			get
+			{
+				return this._NGKHAM;
+			}
+			set
+			{
+				if ((this._NGKHAM != value))
+				{
+					this.OnNGKHAMChanging(value);
+					this.SendPropertyChanging();
+					this._NGKHAM = value;
+					this.SendPropertyChanged("NGKHAM");
+					this.OnNGKHAMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STT", DbType="Int")]
+		public System.Nullable<int> STT
+		{
+			get
+			{
+				return this._STT;
+			}
+			set
+			{
+				if ((this._STT != value))
+				{
+					this.OnSTTChanging(value);
+					this.SendPropertyChanging();
+					this._STT = value;
+					this.SendPropertyChanged("STT");
+					this.OnSTTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TRIEUCHUNG", DbType="NVarChar(50)")]
+		public string TRIEUCHUNG
+		{
+			get
+			{
+				return this._TRIEUCHUNG;
+			}
+			set
+			{
+				if ((this._TRIEUCHUNG != value))
+				{
+					this.OnTRIEUCHUNGChanging(value);
+					this.SendPropertyChanging();
+					this._TRIEUCHUNG = value;
+					this.SendPropertyChanged("TRIEUCHUNG");
+					this.OnTRIEUCHUNGChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LS_KHAMBENH_TOATHUOC", Storage="_TOATHUOCs", ThisKey="MALS", OtherKey="MALS")]
+		public EntitySet<TOATHUOC> TOATHUOCs
+		{
+			get
+			{
+				return this._TOATHUOCs;
+			}
+			set
+			{
+				this._TOATHUOCs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BENHNHAN_LS_KHAMBENH", Storage="_BENHNHAN", ThisKey="MABN", OtherKey="MABN", IsForeignKey=true)]
+		public BENHNHAN BENHNHAN
+		{
+			get
+			{
+				return this._BENHNHAN.Entity;
+			}
+			set
+			{
+				BENHNHAN previousValue = this._BENHNHAN.Entity;
+				if (((previousValue != value) 
+							|| (this._BENHNHAN.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BENHNHAN.Entity = null;
+						previousValue.LS_KHAMBENHs.Remove(this);
+					}
+					this._BENHNHAN.Entity = value;
+					if ((value != null))
+					{
+						value.LS_KHAMBENHs.Add(this);
+						this._MABN = value.MABN;
+					}
+					else
+					{
+						this._MABN = default(string);
+					}
+					this.SendPropertyChanged("BENHNHAN");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BACSI_LS_KHAMBENH", Storage="_BACSI", ThisKey="MABS", OtherKey="MABS", IsForeignKey=true)]
+		public BACSI BACSI
+		{
+			get
+			{
+				return this._BACSI.Entity;
+			}
+			set
+			{
+				BACSI previousValue = this._BACSI.Entity;
+				if (((previousValue != value) 
+							|| (this._BACSI.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BACSI.Entity = null;
+						previousValue.LS_KHAMBENHs.Remove(this);
+					}
+					this._BACSI.Entity = value;
+					if ((value != null))
+					{
+						value.LS_KHAMBENHs.Add(this);
+						this._MABS = value.MABS;
+					}
+					else
+					{
+						this._MABS = default(string);
+					}
+					this.SendPropertyChanged("BACSI");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TOATHUOCs(TOATHUOC entity)
+		{
+			this.SendPropertyChanging();
+			entity.LS_KHAMBENH = this;
+		}
+		
+		private void detach_TOATHUOCs(TOATHUOC entity)
+		{
+			this.SendPropertyChanging();
+			entity.LS_KHAMBENH = null;
 		}
 	}
 	

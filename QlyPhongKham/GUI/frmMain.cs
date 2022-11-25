@@ -130,5 +130,13 @@ namespace GUI
 
             frm.Show();
         }
+
+        private void khámBệnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKhamBenh frm = new frmKhamBenh();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
     }
 }
