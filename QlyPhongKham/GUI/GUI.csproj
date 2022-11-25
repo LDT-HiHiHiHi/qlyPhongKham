@@ -126,6 +126,12 @@
     <Compile Include="frmTaiKhoan.Designer.cs">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemBenhNhan.Designer.cs">
+      <DependentUpon>frmThemBenhNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </Compile>
     <Compile Include="textBoxCustom.Designer.cs">
       <DependentUpon>textBoxCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VBRadioButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="frmConfig.resx">
       <DependentUpon>frmConfig.cs</DependentUpon>
@@ -177,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemBenhNhan.resx">
+      <DependentUpon>frmThemBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemTaiKhoan.resx">
       <DependentUpon>frmThemTaiKhoan.cs</DependentUpon>
@@ -389,6 +401,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

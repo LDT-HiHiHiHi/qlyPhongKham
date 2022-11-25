@@ -43,6 +43,7 @@
     <Compile Include="BUS_Login.cs" />
     <Compile Include="BUS_ManHinh.cs" />
     <Compile Include="BUS_PhanQuyen.cs" />
+    <Compile Include="BUS_QLBN.cs" />
     <Compile Include="BUS_QLNND.cs" />
     <Compile Include="BUS_QLTK.cs" />
     <Compile Include="BUS_TaiKhoan.cs" />

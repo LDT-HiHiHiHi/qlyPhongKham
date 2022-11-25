@@ -6,6 +6,7 @@
       <Column Name="PW" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="TAIKHOAN_NHOMNGUOIDUNG" Member="NHOMNGUOIDUNGs" ThisKey="ID" OtherKey="ID_TK" Type="NHOMNGUOIDUNG" />
       <Association Name="TAIKHOAN_THONGTINTAIKHOAN" Member="THONGTINTAIKHOANs" ThisKey="ID" OtherKey="ID_TAIKHOAN" Type="THONGTINTAIKHOAN" />
+      <Association Name="TAIKHOAN_BACSI" Member="BACSIs" ThisKey="ID" OtherKey="IDTK" Type="BACSI" />
     </Type>
   </Table>
   <Table Name="dbo.QL_PHANQUYEN" Member="QL_PHANQUYENs">
@@ -67,6 +68,33 @@
       <Column Name="DCHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ID_TAIKHOAN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Association Name="TAIKHOAN_THONGTINTAIKHOAN" Member="TAIKHOAN" ThisKey="ID_TAIKHOAN" OtherKey="ID" Type="TAIKHOAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHONG" Member="PHONGs">
+    <Type Name="PHONG">
+      <Column Name="MAPHONG" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENPHONG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="PHONG_BACSI" Member="BACSIs" ThisKey="MAPHONG" OtherKey="MAPHONG" Type="BACSI" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BACSI" Member="BACSIs">
+    <Type Name="BACSI">
+      <Column Name="MABS" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDTK" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MACN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MAPHONG" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="TAIKHOAN_BACSI" Member="TAIKHOAN" ThisKey="IDTK" OtherKey="ID" Type="TAIKHOAN" IsForeignKey="true" />
+      <Association Name="PHONG_BACSI" Member="PHONG" ThisKey="MAPHONG" OtherKey="MAPHONG" Type="PHONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BENHNHAN" Member="BENHNHANs">
+    <Type Name="BENHNHAN">
+      <Column Name="MABN" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENBN" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GTINH" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.fn_PhanQuyen" Method="fn_PhanQuyen" IsComposable="true">
