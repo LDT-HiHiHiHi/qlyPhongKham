@@ -30,10 +30,10 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +57,11 @@ namespace GUI
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.cboPhong = new CustomControls.RJControls.RJComboBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbSoLuong = new System.Windows.Forms.Label();
+            this.btnDoiPhong = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBN)).BeginInit();
@@ -64,6 +69,7 @@ namespace GUI
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -178,14 +184,14 @@ namespace GUI
             this.dgvListBN.AllowUserToDeleteRows = false;
             this.dgvListBN.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dgvListBN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListBN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListBN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListBN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListBN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MABN,
@@ -195,27 +201,27 @@ namespace GUI
             this.SDT,
             this.DIACHI});
             this.dgvListBN.ContextMenuStrip = this.menu;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListBN.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListBN.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvListBN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListBN.Location = new System.Drawing.Point(5, 139);
             this.dgvListBN.Margin = new System.Windows.Forms.Padding(5, 15, 5, 3);
             this.dgvListBN.Name = "dgvListBN";
             this.dgvListBN.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListBN.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListBN.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvListBN.RowHeadersVisible = false;
             this.dgvListBN.RowHeadersWidth = 51;
             this.dgvListBN.RowTemplate.Height = 24;
@@ -247,8 +253,8 @@ namespace GUI
             // 
             this.NGAYSINH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.NGAYSINH.DataPropertyName = "NGAYSINH";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.NGAYSINH.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
+            this.NGAYSINH.DefaultCellStyle = dataGridViewCellStyle6;
             this.NGAYSINH.HeaderText = "Ngày sinh";
             this.NGAYSINH.MinimumWidth = 6;
             this.NGAYSINH.Name = "NGAYSINH";
@@ -290,12 +296,13 @@ namespace GUI
             this.menu.IsMainMenu = false;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnKham,
-            this.btnSua});
+            this.btnSua,
+            this.btnDoiPhong});
             this.menu.MenuItemHeight = 25;
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(242, 64);
+            this.menu.Size = new System.Drawing.Size(242, 94);
             // 
             // btnKham
             // 
@@ -323,6 +330,7 @@ namespace GUI
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.43478F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 574);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -346,7 +354,7 @@ namespace GUI
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(333, 44);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(333, 47);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // btnThem
@@ -363,7 +371,7 @@ namespace GUI
             this.btnThem.Image = global::GUI.Properties.Resources.plus;
             this.btnThem.Location = new System.Drawing.Point(123, 3);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(40, 40);
+            this.btnThem.Size = new System.Drawing.Size(40, 41);
             this.btnThem.TabIndex = 1;
             this.btnThem.TextColor = System.Drawing.Color.White;
             this.btnThem.UseVisualStyleBackColor = false;
@@ -375,7 +383,7 @@ namespace GUI
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(169, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 46);
+            this.label3.Size = new System.Drawing.Size(161, 47);
             this.label3.TabIndex = 2;
             this.label3.Text = "Thêm bệnh nhân";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -388,7 +396,7 @@ namespace GUI
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.cboPhong, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(427, 53);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(427, 56);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -427,6 +435,64 @@ namespace GUI
             this.cboPhong.Size = new System.Drawing.Size(339, 34);
             this.cboPhong.TabIndex = 1;
             this.cboPhong.Texts = "";
+            this.cboPhong.OnSelectedIndexChanged += new System.EventHandler(this.cboPhong_OnSelectedIndexChanged);
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.1499F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.8501F));
+            this.tableLayoutPanel6.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lbSoLuong, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(427, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(507, 47);
+            this.tableLayoutPanel6.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Navy;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 47);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Số lượng :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbSoLuong
+            // 
+            this.lbSoLuong.AutoSize = true;
+            this.lbSoLuong.BackColor = System.Drawing.Color.Navy;
+            this.lbSoLuong.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbSoLuong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuong.ForeColor = System.Drawing.Color.White;
+            this.lbSoLuong.Location = new System.Drawing.Point(169, 7);
+            this.lbSoLuong.Margin = new System.Windows.Forms.Padding(7);
+            this.lbSoLuong.Name = "lbSoLuong";
+            this.lbSoLuong.Padding = new System.Windows.Forms.Padding(3);
+            this.lbSoLuong.Size = new System.Drawing.Size(30, 33);
+            this.lbSoLuong.TabIndex = 1;
+            this.lbSoLuong.Text = "0";
+            this.lbSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnDoiPhong
+            // 
+            this.btnDoiPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnDoiPhong.Name = "btnDoiPhong";
+            this.btnDoiPhong.Size = new System.Drawing.Size(241, 30);
+            this.btnDoiPhong.Text = "Đổi phòng";
+            this.btnDoiPhong.Click += new System.EventHandler(this.đổiPhòngToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
             // 
             // frmQLBN
             // 
@@ -446,6 +512,8 @@ namespace GUI
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,5 +544,10 @@ namespace GUI
         private CustomControls.RJControls.RJDropdownMenu menu;
         private System.Windows.Forms.ToolStripMenuItem btnKham;
         private System.Windows.Forms.ToolStripMenuItem btnSua;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbSoLuong;
+        private System.Windows.Forms.ToolStripMenuItem btnDoiPhong;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

@@ -57,5 +57,13 @@ namespace BUS
             });
             return dt;
         }
+        public bool suaPhong(LS_KHAMBENH ls)
+        {
+            return dal_qlbn.suaPhong(ls);
+        }
+        public string getMaBSCu(string mabn)
+        {
+            return dal_qlbn.getMaBS(mabn);
+        }
     }
 }

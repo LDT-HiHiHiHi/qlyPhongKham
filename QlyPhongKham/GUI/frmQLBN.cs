@@ -26,12 +26,13 @@ namespace GUI
 
         private void frmQLBN_Load(object sender, EventArgs e)
         {
-            btnKham.Enabled = btnSua.Enabled = false;
+            btnKham.Enabled = btnSua.Enabled= btnDoiPhong.Enabled = false;
             cboPhong.DataSource = bus_qlbn.getListPhong();
             cboPhong.DisplayMember = "TENPHONG";
             cboPhong.ValueMember = "MAPHONG";
             dgvListBN.DataSource = bus_qlbn.getListBenhNhan();
             this.KeyDown += FrmQLBN_KeyDown;
+            cboPhong_OnSelectedIndexChanged(sender, e);
         }
 
         private void FrmQLBN_KeyDown(object sender, KeyEventArgs e)
@@ -51,7 +52,7 @@ namespace GUI
         private void dgvListBN_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             ID = dgvListBN.CurrentRow.Cells["MABN"].Value.ToString();
-            btnKham.Enabled = btnSua.Enabled = true;
+            btnKham.Enabled = btnSua.Enabled = btnDoiPhong.Enabled = true;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -118,7 +119,61 @@ namespace GUI
             };
             if (bus_kb.themDangKiKham(lskb))
             {
+                cboPhong_OnSelectedIndexChanged(sender, e);
                 Program.AlertMessage("Thêm thành công", MessageBoxIcon.Information);
+                return;
+            }
+            Program.AlertMessage("Đã xảy ra lỗi", MessageBoxIcon.Error);
+        }
+
+        private void cboPhong_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maphong = cboPhong.SelectedValue();
+            string mabs = bus_kb.getMaBacSi(maphong);
+            int stt = bus_kb.STT(mabs);
+            lbSoLuong.Text = stt.ToString();
+        }
+
+        private void đổiPhòngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string mabn = dgvListBN.CurrentRow.Cells["MABN"].Value.ToString();
+            string mabsCu = bus_qlbn.getMaBSCu(mabn);
+
+            string maphong = cboPhong.SelectedValue();
+            string mabs = bus_kb.getMaBacSi(maphong);
+            if (string.IsNullOrEmpty(mabs))
+            {
+                Program.AlertMessage("Phòng chưa có bác sĩ", MessageBoxIcon.Information);
+                return;
+            }
+            if (mabs.Equals(mabsCu))
+            {
+                return;
+            }
+            int stt;
+            if (bus_kb.STT(mabs) == 0)
+            {
+                stt = 1;
+            }
+            else
+            {
+                stt = bus_kb.addSTT(mabs) + 1;
+            }
+            if (bus_kb.checkBenhNhanKham(mabn) == 0)
+            {
+                Program.AlertMessage("Bệnh nhân chưa khám", MessageBoxIcon.Information);
+                return;
+            }
+            LS_KHAMBENH ls = new LS_KHAMBENH
+            {
+                MABN = mabn,
+                STT = stt,
+                MABS = mabs
+            };
+            if(bus_qlbn.suaPhong(ls))
+            {
+                cboPhong_OnSelectedIndexChanged(sender, e);
+                Program.AlertMessage("Sửa phòng thành công", MessageBoxIcon.Information);
                 return;
             }
             Program.AlertMessage("Đã xảy ra lỗi", MessageBoxIcon.Error);

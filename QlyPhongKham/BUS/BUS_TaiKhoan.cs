@@ -52,5 +52,9 @@ namespace BUS
         {
             return dal_tk.themQuyenChoND(pID);
         }
+        public string getIDTK(string pUser)
+        {
+            return dal_tk.getIDTK(pUser);
+        }
     }
 }
