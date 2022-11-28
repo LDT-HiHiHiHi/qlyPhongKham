@@ -33,6 +33,7 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhamBenh));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvBenhNhan = new System.Windows.Forms.DataGridView();
@@ -43,19 +44,20 @@ namespace GUI
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbTenBn = new GUI.textBoxCustom();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lbTenBn = new GUI.textBoxCustom();
             this.cboDichVu = new CustomControls.RJControls.RJComboBox();
             this.btnThem = new GUI.CustomButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtMoTa = new GUI.textBoxCustom();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnKeToa = new GUI.CustomButton();
+            this.btnLuu = new GUI.CustomButton();
             this.btnToaThuoc = new GUI.CustomButton();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtChanDoan = new GUI.textBoxCustom();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCTDV = new System.Windows.Forms.DataGridView();
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +65,7 @@ namespace GUI
             this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -71,6 +73,7 @@ namespace GUI
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).BeginInit();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -247,29 +250,6 @@ namespace GUI
             this.label2.Text = "Tên bệnh nhân :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbTenBn
-            // 
-            this.lbTenBn.BackColor = System.Drawing.Color.White;
-            this.lbTenBn.BorderColor = System.Drawing.Color.White;
-            this.lbTenBn.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.lbTenBn.BorderRadius = 0;
-            this.lbTenBn.BorderSize = 1;
-            this.lbTenBn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbTenBn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenBn.Location = new System.Drawing.Point(482, 4);
-            this.lbTenBn.Margin = new System.Windows.Forms.Padding(4);
-            this.lbTenBn.Multiline = false;
-            this.lbTenBn.Name = "lbTenBn";
-            this.lbTenBn.Padding = new System.Windows.Forms.Padding(7);
-            this.lbTenBn.PasswordChar = false;
-            this.lbTenBn.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.lbTenBn.PlaceholderText = "";
-            this.lbTenBn.Size = new System.Drawing.Size(380, 38);
-            this.lbTenBn.TabIndex = 1;
-            this.lbTenBn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lbTenBn.Texts = "Lê Văn A";
-            this.lbTenBn.UnderlinedStyle = true;
-            // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -295,6 +275,84 @@ namespace GUI
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.Size = new System.Drawing.Size(666, 45);
             this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(472, 50);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Mô tả thực hiên dịch vụ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.Controls.Add(this.btnLuu, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnToaThuoc, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(481, 200);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(666, 60);
+            this.tableLayoutPanel5.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(3, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(472, 50);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Chẩn đoán";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // groupBox1
+            // 
+            this.tableLayoutPanel2.SetColumnSpan(this.groupBox1, 2);
+            this.groupBox1.Controls.Add(this.dgvCTDV);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1150, 583);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dịch vụ";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // lbTenBn
+            // 
+            this.lbTenBn.BackColor = System.Drawing.Color.White;
+            this.lbTenBn.BorderColor = System.Drawing.Color.White;
+            this.lbTenBn.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.lbTenBn.BorderRadius = 0;
+            this.lbTenBn.BorderSize = 1;
+            this.lbTenBn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTenBn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenBn.Location = new System.Drawing.Point(482, 4);
+            this.lbTenBn.Margin = new System.Windows.Forms.Padding(4);
+            this.lbTenBn.Multiline = false;
+            this.lbTenBn.Name = "lbTenBn";
+            this.lbTenBn.Padding = new System.Windows.Forms.Padding(7);
+            this.lbTenBn.PasswordChar = false;
+            this.lbTenBn.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.lbTenBn.PlaceholderText = "";
+            this.lbTenBn.Size = new System.Drawing.Size(380, 38);
+            this.lbTenBn.TabIndex = 1;
+            this.lbTenBn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.lbTenBn.Texts = "Lê Văn A";
+            this.lbTenBn.UnderlinedStyle = true;
             // 
             // cboDichVu
             // 
@@ -345,17 +403,6 @@ namespace GUI
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(472, 50);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Mô tả thực hiên dịch vụ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // txtMoTa
             // 
             this.txtMoTa.BackColor = System.Drawing.Color.White;
@@ -379,40 +426,26 @@ namespace GUI
             this.txtMoTa.Texts = "";
             this.txtMoTa.UnderlinedStyle = true;
             // 
-            // tableLayoutPanel5
+            // btnLuu
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.Controls.Add(this.btnKeToa, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnToaThuoc, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(481, 200);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(666, 60);
-            this.tableLayoutPanel5.TabIndex = 8;
-            // 
-            // btnKeToa
-            // 
-            this.btnKeToa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnKeToa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnKeToa.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnKeToa.BorderRadius = 8;
-            this.btnKeToa.BorderSize = 0;
-            this.btnKeToa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnKeToa.FlatAppearance.BorderSize = 0;
-            this.btnKeToa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKeToa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKeToa.ForeColor = System.Drawing.Color.White;
-            this.btnKeToa.Location = new System.Drawing.Point(513, 3);
-            this.btnKeToa.Name = "btnKeToa";
-            this.btnKeToa.Size = new System.Drawing.Size(150, 54);
-            this.btnKeToa.TabIndex = 0;
-            this.btnKeToa.Text = "Lưu";
-            this.btnKeToa.TextColor = System.Drawing.Color.White;
-            this.btnKeToa.UseVisualStyleBackColor = false;
+            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLuu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLuu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLuu.BorderRadius = 8;
+            this.btnLuu.BorderSize = 0;
+            this.btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(513, 3);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(150, 54);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextColor = System.Drawing.Color.White;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnToaThuoc
             // 
@@ -433,17 +466,7 @@ namespace GUI
             this.btnToaThuoc.Text = "Kê toa";
             this.btnToaThuoc.TextColor = System.Drawing.Color.White;
             this.btnToaThuoc.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(3, 147);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(472, 50);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Chẩn đoán";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnToaThuoc.Click += new System.EventHandler(this.btnToaThuoc_Click);
             // 
             // txtChanDoan
             // 
@@ -467,19 +490,7 @@ namespace GUI
             this.txtChanDoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtChanDoan.Texts = "";
             this.txtChanDoan.UnderlinedStyle = true;
-            // 
-            // groupBox1
-            // 
-            this.tableLayoutPanel2.SetColumnSpan(this.groupBox1, 2);
-            this.groupBox1.Controls.Add(this.dgvCTDV);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1150, 583);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dịch vụ";
+            this.txtChanDoan._TextChanged += new System.EventHandler(this.txtChanDoan__TextChanged);
             // 
             // dgvCTDV
             // 
@@ -493,7 +504,7 @@ namespace GUI
             this.MACD,
             this.MOTA,
             this.KETQUA,
-            this.Column1});
+            this.DONGIA});
             this.dgvCTDV.ContextMenuStrip = this.menu;
             this.dgvCTDV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCTDV.Location = new System.Drawing.Point(3, 30);
@@ -565,15 +576,15 @@ namespace GUI
             this.KETQUA.Name = "KETQUA";
             this.KETQUA.ReadOnly = true;
             // 
-            // Column1
+            // DONGIA
             // 
-            this.Column1.DataPropertyName = "DONGIA";
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            this.Column1.Width = 125;
+            this.DONGIA.DataPropertyName = "DONGIA";
+            this.DONGIA.HeaderText = "Column1";
+            this.DONGIA.MinimumWidth = 6;
+            this.DONGIA.Name = "DONGIA";
+            this.DONGIA.ReadOnly = true;
+            this.DONGIA.Visible = false;
+            this.DONGIA.Width = 125;
             // 
             // frmKhamBenh
             // 
@@ -593,6 +604,7 @@ namespace GUI
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).EndInit();
             this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -615,7 +627,7 @@ namespace GUI
         private System.Windows.Forms.Label label4;
         private textBoxCustom txtMoTa;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private CustomButton btnKeToa;
+        private CustomButton btnLuu;
         private CustomButton btnToaThuoc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCTDV;
@@ -627,10 +639,11 @@ namespace GUI
         private textBoxCustom txtChanDoan;
         private CustomControls.RJControls.RJDropdownMenu menu;
         private System.Windows.Forms.ToolStripMenuItem btnXoa;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MACD;
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn KETQUA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA;
     }
 }

@@ -13,6 +13,8 @@ namespace GUI
 {
     public partial class frmKhamBenh : Form
     {
+        public static string MALS;
+        public static string tenBN;
         BUS_KhamBenh bus_kb = new BUS_KhamBenh();
         BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
         public frmKhamBenh()
@@ -23,21 +25,29 @@ namespace GUI
 
         private void frmKhamBenh_Load(object sender, EventArgs e)
         {
-            btnThem.Enabled = btnXoa.Enabled = false;
+            btnThem.Enabled = btnXoa.Enabled = btnToaThuoc.Enabled = btnLuu.Enabled = false;
             string idtk = bus_tk.getIDTK(frmLogin.USERNAME);
             dgvBenhNhan.DataSource = bus_kb.getDanhSachBN(idtk);
             cboDichVu.DataSource = bus_kb.getListDV();
             cboDichVu.DisplayMember = "TENDV";
             cboDichVu.ValueMember = "MADV";
-            
         }
 
         private void dgvBenhNhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnThem.Enabled = true;
+            btnThem.Enabled = btnToaThuoc.Enabled = true;
             string ten = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
             string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             lbTenBn.Texts = ten;
+            string chandoan = bus_kb.getChanDoan(mals);
+            if(chandoan.Equals("Chưa có"))
+            {
+                txtChanDoan.Texts = string.Empty;
+            } 
+            else
+            {
+                txtChanDoan.Texts = chandoan;
+            }
             if(bus_kb.checkPhieuTonTai(mals) > 0)
             {
                 dgvCTDV.DataSource = bus_kb.getListCT(bus_kb.getMaCD(mals));
@@ -49,7 +59,16 @@ namespace GUI
                 dt.Columns.Add(new DataColumn("TENDV", typeof(string)));
                 dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                 dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
+                dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
                 dgvCTDV.DataSource = dt;
+            }
+            if(bus_kb.getTrangThaiBN(mals) == true)
+            {
+                btnThem.Enabled = btnLuu.Enabled = false;
+            }
+            else
+            {
+                btnThem.Enabled = btnLuu.Enabled = true;
             }
         }
 
@@ -92,6 +111,7 @@ namespace GUI
                             dt.Columns.Add(new DataColumn("TENDV", typeof(string)));
                             dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                             dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
+                            dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
                             dgvCTDV.DataSource = dt;
                         }
                         return;
@@ -118,6 +138,7 @@ namespace GUI
                         dt.Columns.Add(new DataColumn("TENDV", typeof(string)));
                         dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                         dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
+                        dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
                         dgvCTDV.DataSource = dt;
                     }
                     return;
@@ -149,7 +170,15 @@ namespace GUI
 
         private void dgvCTDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnXoa.Enabled = true;
+            string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
+            if (bus_kb.getTrangThaiBN(mals) == true)
+            {
+                btnXoa.Enabled = false;
+            }
+            else
+            {
+                btnXoa.Enabled = true;
+            }    
             cboDichVu.Texts = dgvCTDV.CurrentRow.Cells["TENDV"].Value.ToString();
             string mota =  dgvCTDV.CurrentRow.Cells["MOTA"].Value.ToString();
             if(mota.Equals("Chưa có"))
@@ -175,6 +204,7 @@ namespace GUI
                 }    
                 Program.AlertMessage("Xóa thành công", MessageBoxIcon.Information);
                 btnXoa.Enabled = false;
+                txtMoTa.Texts = string.Empty;
                 if (bus_kb.checkPhieuTonTai(mals) > 0)
                 {
                     dgvCTDV.DataSource = bus_kb.getListCT(bus_kb.getMaCD(mals));
@@ -186,6 +216,7 @@ namespace GUI
                     dt.Columns.Add(new DataColumn("TENDV", typeof(string)));
                     dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                     dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
+                    dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
                     dgvCTDV.DataSource = dt;
                 }
                 return;
@@ -197,6 +228,59 @@ namespace GUI
         {
             btnXoa.Enabled = false;
             txtMoTa.Texts = string.Empty;
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
+            string chandoan = txtChanDoan.Texts;
+            string ten = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
+            if (string.IsNullOrEmpty(chandoan))
+            {
+                errorProvider1.SetError(txtChanDoan, "Vui lòng nhập chẩn đoán");
+                txtChanDoan.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+            DialogResult r;
+            r = MessageBox.Show("Bạn có chắc chắn muốn lưu ? ", "Thông báo",
+
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1);
+
+            if (r == DialogResult.Yes)
+            {
+                if (bus_kb.hoanThanhLichSu(mals, chandoan))
+                {
+                    Program.AlertMessage("Hoàn thành khám bệnh cho bệnh nhân " + ten, MessageBoxIcon.Information);
+                    txtChanDoan.Texts = string.Empty;
+                    if (bus_kb.getTrangThaiBN(mals) == true)
+                    {
+                        btnThem.Enabled = btnLuu.Enabled = false;
+                    }
+                    else
+                    {
+                        btnThem.Enabled = btnLuu.Enabled = true;
+                    }
+                    return;
+                }
+                Program.AlertMessage("Đã xảy ra lỗi" + ten, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtChanDoan__TextChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txtChanDoan.Texts))
+            {
+                errorProvider1.Clear();
+            }    
+        }
+
+        private void btnToaThuoc_Click(object sender, EventArgs e)
+        {
+            tenBN = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
+            MALS = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
+            new frmKetoa().ShowDialog();
         }
     }
 }

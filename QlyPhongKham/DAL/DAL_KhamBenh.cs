@@ -29,7 +29,7 @@ namespace DAL
 
         public int checkBenhNhanKham(string pMaBN)
         {
-            return qlpk.LS_KHAMBENHs.Where(t => t.MABN.Equals(pMaBN) && t.NGKHAM.Equals(DateTime.Today)).Count();
+            return qlpk.LS_KHAMBENHs.Where(t => t.MABN.Equals(pMaBN) && t.NGKHAM.Equals(DateTime.Today) && t.TRANGTHAI == false).Count();
         }
         public int STT(string pMaBS)
         {
@@ -64,7 +64,8 @@ namespace DAL
                 {
                     MACD = macd,
                     TONGTIENDV = 0,
-                    MALS = mals
+                    MALS = mals,
+                    TRANGTHAI = false
                 };
 
                 qlpk.PHIEUCHIDINHs.InsertOnSubmit(pcd);
@@ -197,6 +198,42 @@ namespace DAL
             {
                 return false;
             }
+        }
+        public bool? getTrangThaiBN(string mals)
+        {
+            return qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).Select(a => a.TRANGTHAI).FirstOrDefault();
+        }
+
+        public bool hoanThanhLichSu(string mals, string chandoan)
+        {
+            try
+            {
+                LS_KHAMBENH ls = qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).FirstOrDefault();
+                ls.TRANGTHAI = true;
+                ls.CHANDOAN = chandoan;
+                qlpk.SubmitChanges();
+
+                string macd = qlpk.PHIEUCHIDINHs.Where(a => a.MALS.Equals(mals)).Select(b => b.MACD).FirstOrDefault();
+                if(macd != null)
+                {
+                    if(qlpk.CHITIETCDs.Where(c=>c.MACD.Equals(macd)).Count() == 0)
+                    {
+                        PHIEUCHIDINH cd = qlpk.PHIEUCHIDINHs.Where(a => a.MALS.Equals(mals)).FirstOrDefault();
+                        qlpk.PHIEUCHIDINHs.DeleteOnSubmit(cd);
+                        qlpk.SubmitChanges();
+                    }    
+                }    
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public string getChanDoan(string mals)
+        {
+            return qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).Select(a => a.CHANDOAN).FirstOrDefault();
         }
     }
 }

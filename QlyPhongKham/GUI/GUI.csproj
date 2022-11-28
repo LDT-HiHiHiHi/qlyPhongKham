@@ -84,6 +84,12 @@
     <Compile Include="frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKetoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKetoa.Designer.cs">
+      <DependentUpon>frmKetoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKhamBenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKetoa.resx">
+      <DependentUpon>frmKetoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhamBenh.resx">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
@@ -439,6 +448,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changing-room.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

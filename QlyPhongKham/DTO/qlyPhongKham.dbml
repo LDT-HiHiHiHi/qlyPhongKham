@@ -42,23 +42,6 @@
       <Association Name="MANHINH_QL_PHANQUYEN" Member="QL_PHANQUYENs" ThisKey="ID" OtherKey="ID_MH" Type="QL_PHANQUYEN" />
     </Type>
   </Table>
-  <Table Name="dbo.TOATHUOC" Member="TOATHUOCs">
-    <Type Name="TOATHUOC">
-      <Column Name="MATT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MALS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="TONGTIENTT" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="LS_KHAMBENH_TOATHUOC" Member="LS_KHAMBENH" ThisKey="MALS" OtherKey="MALS" Type="LS_KHAMBENH" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DMTHUOC" Member="DMTHUOCs">
-    <Type Name="DMTHUOC">
-      <Column Name="MAT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENTHUOC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="HSD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DONVITINH" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.THONGTINTAIKHOAN" Member="THONGTINTAIKHOANs">
     <Type Name="THONGTINTAIKHOAN">
       <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -100,20 +83,6 @@
       <Association Name="BENHNHAN_LS_KHAMBENH" Member="LS_KHAMBENHs" ThisKey="MABN" OtherKey="MABN" Type="LS_KHAMBENH" />
     </Type>
   </Table>
-  <Table Name="dbo.LS_KHAMBENH" Member="LS_KHAMBENHs">
-    <Type Name="LS_KHAMBENH">
-      <Column Name="MALS" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MABN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="MABS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="NGKHAM" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="STT" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TRIEUCHUNG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="LS_KHAMBENH_TOATHUOC" Member="TOATHUOCs" ThisKey="MALS" OtherKey="MALS" Type="TOATHUOC" />
-      <Association Name="LS_KHAMBENH_PHIEUCHIDINH" Member="PHIEUCHIDINHs" ThisKey="MALS" OtherKey="MALS" Type="PHIEUCHIDINH" />
-      <Association Name="BENHNHAN_LS_KHAMBENH" Member="BENHNHAN" ThisKey="MABN" OtherKey="MABN" Type="BENHNHAN" IsForeignKey="true" />
-      <Association Name="BACSI_LS_KHAMBENH" Member="BACSI" ThisKey="MABS" OtherKey="MABS" Type="BACSI" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.DONGIA_DICHVU" Member="DONGIA_DICHVUs">
     <Type Name="DONGIA_DICHVU">
       <Column Name="MADV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -130,15 +99,6 @@
       <Association Name="DICHVU_CHITIETCD" Member="CHITIETCDs" ThisKey="MADV" OtherKey="MADV" Type="CHITIETCD" />
     </Type>
   </Table>
-  <Table Name="dbo.PHIEUCHIDINH" Member="PHIEUCHIDINHs">
-    <Type Name="PHIEUCHIDINH">
-      <Column Name="MACD" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MALS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="TONGTIENDV" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="PHIEUCHIDINH_CHITIETCD" Member="CHITIETCDs" ThisKey="MACD" OtherKey="MACD" Type="CHITIETCD" />
-      <Association Name="LS_KHAMBENH_PHIEUCHIDINH" Member="LS_KHAMBENH" ThisKey="MALS" OtherKey="MALS" Type="LS_KHAMBENH" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.CHITIETCD" Member="CHITIETCDs">
     <Type Name="CHITIETCD">
       <Column Name="MACD" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -146,8 +106,74 @@
       <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="KETQUA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="HINHANH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Association Name="PHIEUCHIDINH_CHITIETCD" Member="PHIEUCHIDINH" ThisKey="MACD" OtherKey="MACD" Type="PHIEUCHIDINH" IsForeignKey="true" />
       <Association Name="DICHVU_CHITIETCD" Member="DICHVU" ThisKey="MADV" OtherKey="MADV" Type="DICHVU" IsForeignKey="true" />
+      <Association Name="PHIEUCHIDINH_CHITIETCD" Member="PHIEUCHIDINH" ThisKey="MACD" OtherKey="MACD" Type="PHIEUCHIDINH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LS_KHAMBENH" Member="LS_KHAMBENHs">
+    <Type Name="LS_KHAMBENH">
+      <Column Name="MALS" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MABN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MABS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NGKHAM" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CHANDOAN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TRANGTHAI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="LS_KHAMBENH_TOATHUOC" Member="TOATHUOCs" ThisKey="MALS" OtherKey="MALS" Type="TOATHUOC" />
+      <Association Name="LS_KHAMBENH_PHIEUCHIDINH" Member="PHIEUCHIDINHs" ThisKey="MALS" OtherKey="MALS" Type="PHIEUCHIDINH" />
+      <Association Name="BENHNHAN_LS_KHAMBENH" Member="BENHNHAN" ThisKey="MABN" OtherKey="MABN" Type="BENHNHAN" IsForeignKey="true" />
+      <Association Name="BACSI_LS_KHAMBENH" Member="BACSI" ThisKey="MABS" OtherKey="MABS" Type="BACSI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TOATHUOC" Member="TOATHUOCs">
+    <Type Name="TOATHUOC">
+      <Column Name="MATT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TRANGTHAI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TONGTIENTT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="TOATHUOC_CT_TOATHUOC" Member="CT_TOATHUOCs" ThisKey="MATT" OtherKey="MATT" Type="CT_TOATHUOC" />
+      <Association Name="LS_KHAMBENH_TOATHUOC" Member="LS_KHAMBENH" ThisKey="MALS" OtherKey="MALS" Type="LS_KHAMBENH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_TOATHUOC" Member="CT_TOATHUOCs">
+    <Type Name="CT_TOATHUOC">
+      <Column Name="MATT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SOBUOI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOLUONGUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TONGSOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="TOATHUOC_CT_TOATHUOC" Member="TOATHUOC" ThisKey="MATT" OtherKey="MATT" Type="TOATHUOC" IsForeignKey="true" />
+      <Association Name="DMTHUOC_CT_TOATHUOC" Member="DMTHUOC" ThisKey="MAT" OtherKey="MAT" Type="DMTHUOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DONGIA_THUOC" Member="DONGIA_THUOCs">
+    <Type Name="DONGIA_THUOC">
+      <Column Name="MAT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NGCAPNHAT" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="DMTHUOC_DONGIA_THUOC" Member="DMTHUOC" ThisKey="MAT" OtherKey="MAT" Type="DMTHUOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHIEUCHIDINH" Member="PHIEUCHIDINHs">
+    <Type Name="PHIEUCHIDINH">
+      <Column Name="MACD" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TRANGTHAI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TONGTIENDV" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="PHIEUCHIDINH_CHITIETCD" Member="CHITIETCDs" ThisKey="MACD" OtherKey="MACD" Type="CHITIETCD" />
+      <Association Name="LS_KHAMBENH_PHIEUCHIDINH" Member="LS_KHAMBENH" ThisKey="MALS" OtherKey="MALS" Type="LS_KHAMBENH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DMTHUOC" Member="DMTHUOCs">
+    <Type Name="DMTHUOC">
+      <Column Name="MAT" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENTHUOC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HSD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DONVITINH" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="DMTHUOC_CT_TOATHUOC" Member="CT_TOATHUOCs" ThisKey="MAT" OtherKey="MAT" Type="CT_TOATHUOC" />
+      <Association Name="DMTHUOC_DONGIA_THUOC" Member="DONGIA_THUOCs" ThisKey="MAT" OtherKey="MAT" Type="DONGIA_THUOC" />
     </Type>
   </Table>
   <Function Name="dbo.fn_PhanQuyen" Method="fn_PhanQuyen" IsComposable="true">

@@ -57,6 +57,8 @@
     </Compile>
     <Compile Include="SaveConfig.cs" />
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="THUOC.cs" />
+    <Compile Include="ToaThuoc.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

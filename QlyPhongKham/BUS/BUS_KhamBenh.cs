@@ -78,5 +78,17 @@ namespace BUS
         {
             return dal_kb.capNhatThanhTien(macd);
         }
+        public bool? getTrangThaiBN(string mals)
+        {
+            return dal_kb.getTrangThaiBN(mals);
+        }
+        public bool hoanThanhLichSu(string mals, string chandoan)
+        {
+            return dal_kb.hoanThanhLichSu(mals, chandoan);
+        }
+        public string getChanDoan(string mals)
+        {
+            return dal_kb.getChanDoan(mals);
+        }
     }
 }

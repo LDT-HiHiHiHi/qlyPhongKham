@@ -113,7 +113,8 @@ namespace GUI
                 MABN = mabn,
                 MABS = mabs,
                 NGKHAM = DateTime.Today,
-                TRIEUCHUNG = "Chưa có",
+                CHANDOAN = "Chưa có",
+                TRANGTHAI = false,
                 STT = stt
                 
             };

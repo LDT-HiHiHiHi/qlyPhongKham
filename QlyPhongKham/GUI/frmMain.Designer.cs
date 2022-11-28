@@ -35,7 +35,6 @@
             this.kêToaThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.khámBệnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemThôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.phânQuyềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +68,6 @@
             this.kêToaThuốcToolStripMenuItem,
             this.khámBệnhToolStripMenuItem,
             this.xemThôngTinCáNhânToolStripMenuItem,
-            this.toolStripSeparator1,
             this.phânQuyềnToolStripMenuItem,
             this.toolStripSeparator3,
             this.đăngXuấtToolStripMenuItem1});
@@ -110,11 +108,6 @@
             this.xemThôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.xemThôngTinCáNhânToolStripMenuItem.Tag = "M5";
             this.xemThôngTinCáNhânToolStripMenuItem.Text = "Xem thông tin cá nhân";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
             // 
             // phânQuyềnToolStripMenuItem
             // 
@@ -241,7 +234,6 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhómNgườiDùngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýMànHìnhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmNgườiDùngVàoNhómToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;

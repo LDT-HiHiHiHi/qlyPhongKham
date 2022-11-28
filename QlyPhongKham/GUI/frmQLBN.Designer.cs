@@ -50,6 +50,7 @@ namespace GUI
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
             this.btnKham = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSua = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDoiPhong = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnThem = new GUI.CustomButton();
@@ -60,7 +61,6 @@ namespace GUI
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
-            this.btnDoiPhong = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -322,6 +322,15 @@ namespace GUI
             this.btnSua.Text = "Sửa thông tin";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
+            // btnDoiPhong
+            // 
+            this.btnDoiPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnDoiPhong.Image = global::GUI.Properties.Resources.changing_room;
+            this.btnDoiPhong.Name = "btnDoiPhong";
+            this.btnDoiPhong.Size = new System.Drawing.Size(241, 30);
+            this.btnDoiPhong.Text = "Đổi phòng";
+            this.btnDoiPhong.Click += new System.EventHandler(this.đổiPhòngToolStripMenuItem_Click);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
@@ -480,14 +489,6 @@ namespace GUI
             this.lbSoLuong.TabIndex = 1;
             this.lbSoLuong.Text = "0";
             this.lbSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnDoiPhong
-            // 
-            this.btnDoiPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnDoiPhong.Name = "btnDoiPhong";
-            this.btnDoiPhong.Size = new System.Drawing.Size(241, 30);
-            this.btnDoiPhong.Text = "Đổi phòng";
-            this.btnDoiPhong.Click += new System.EventHandler(this.đổiPhòngToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
