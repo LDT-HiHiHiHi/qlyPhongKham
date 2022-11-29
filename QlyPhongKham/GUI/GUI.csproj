@@ -138,6 +138,12 @@
     <Compile Include="frmTaiKhoan.Designer.cs">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThanhToanDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhToanDV.Designer.cs">
+      <DependentUpon>frmThanhToanDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThemBenhNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaiKhoan.resx">
       <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhToanDV.resx">
+      <DependentUpon>frmThanhToanDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemBenhNhan.resx">
       <DependentUpon>frmThemBenhNhan.cs</DependentUpon>
@@ -451,6 +460,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\changing-room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

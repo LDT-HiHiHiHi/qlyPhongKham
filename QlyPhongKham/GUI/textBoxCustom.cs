@@ -384,5 +384,20 @@ namespace GUI
         {
             textBox1.SelectAll();
         }
+
+        public void Select(int start, int len)
+        {
+            textBox1.Select(start, len);
+        }
+
+        public int SelectionStart
+        {
+            get { return textBox1.SelectionStart; }
+        }
+
+        public int SelectionLength
+        {
+            get { return textBox1.SelectionLength; }
+        }
     }
 }

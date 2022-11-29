@@ -138,5 +138,13 @@ namespace GUI
 
             frm.Show();
         }
+
+        private void kêToaThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThanhToanDV frm = new frmThanhToanDV();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
     }
 }
