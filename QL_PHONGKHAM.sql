@@ -397,5 +397,5 @@ VALUES
 select * from DICHVU
 select * from DONGIA_DICHVU
 select * from DMTHUOC
-select * from DONGIA_THUOC
+select * from CHITIETCD
 

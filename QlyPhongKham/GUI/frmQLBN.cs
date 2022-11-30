@@ -120,6 +120,7 @@ namespace GUI
             };
             if (bus_kb.themDangKiKham(lskb))
             {
+                btnKham.Enabled = btnSua.Enabled = btnDoiPhong.Enabled = false;
                 cboPhong_OnSelectedIndexChanged(sender, e);
                 Program.AlertMessage("Thêm thành công", MessageBoxIcon.Information);
                 return;
@@ -173,6 +174,7 @@ namespace GUI
             };
             if(bus_qlbn.suaPhong(ls))
             {
+                btnKham.Enabled = btnSua.Enabled = btnDoiPhong.Enabled = false;
                 cboPhong_OnSelectedIndexChanged(sender, e);
                 Program.AlertMessage("Sửa phòng thành công", MessageBoxIcon.Information);
                 return;

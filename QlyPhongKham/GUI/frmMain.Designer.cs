@@ -85,6 +85,7 @@
             this.thựcHiệnDịchVụToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
             this.thựcHiệnDịchVụToolStripMenuItem.Tag = "M4";
             this.thựcHiệnDịchVụToolStripMenuItem.Text = "Thực hiện dịch vụ";
+            this.thựcHiệnDịchVụToolStripMenuItem.Click += new System.EventHandler(this.thựcHiệnDịchVụToolStripMenuItem_Click);
             // 
             // kêToaThuốcToolStripMenuItem
             // 

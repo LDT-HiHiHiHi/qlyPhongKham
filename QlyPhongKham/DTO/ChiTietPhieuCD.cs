@@ -11,7 +11,7 @@ namespace DTO
         public ChiTietPhieuCD()
         {
         }
-        string tendv, macd, ketqua,mota;
+        string tendv, macd, ketqua,mota,hinhanh;
         double? dongia;
 
         public string TENDV { get => tendv; set => tendv = value; }
@@ -19,5 +19,6 @@ namespace DTO
         public string KETQUA { get => ketqua; set => ketqua = value; }
         public string MOTA { get => mota; set => mota = value; }
         public double? DONGIA { get => dongia; set => dongia = value; }
+        public string HINHANH { get => hinhanh; set => hinhanh = value; }
     }
 }

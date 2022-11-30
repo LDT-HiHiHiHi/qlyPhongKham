@@ -443,6 +443,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap open_folder {
+            get {
+                object obj = ResourceManager.GetObject("open-folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap padlock {
             get {
                 object obj = ResourceManager.GetObject("padlock", resourceCulture);
@@ -456,6 +466,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap patient {
             get {
                 object obj = ResourceManager.GetObject("patient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap picture {
+            get {
+                object obj = ResourceManager.GetObject("picture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

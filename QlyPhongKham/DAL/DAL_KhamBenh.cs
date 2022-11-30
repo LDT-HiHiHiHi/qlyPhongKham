@@ -75,8 +75,8 @@ namespace DAL
                 {
                     MACD = macd,
                     MADV = madv,
-                    HINHANH = string.Empty,
-                    KETQUA = string.Empty,
+                    HINHANH = "Chưa có",
+                    KETQUA = "Chưa có",
                     MOTA = mota
                 };
 
@@ -97,7 +97,8 @@ namespace DAL
                 MACD = cd.MACD,
                 MOTA = cd.MOTA,
                 KETQUA = cd.KETQUA,
-                DONGIA = qlpk.DONGIA_DICHVUs.Where(b => b.MADV.Equals(dv.MADV)).Select(c => c.GIA).FirstOrDefault()
+                DONGIA = qlpk.DONGIA_DICHVUs.Where(b => b.MADV.Equals(dv.MADV)).Select(c => c.GIA).FirstOrDefault(),
+                HINHANH = cd.HINHANH
             }).ToList();
         }
 
@@ -154,8 +155,8 @@ namespace DAL
                     MACD = macd,
                     MADV = madv,
                     MOTA = mota,
-                    HINHANH = string.Empty,
-                    KETQUA = string.Empty
+                    HINHANH = "Chưa có",
+                    KETQUA = "Chưa có",
                 };
 
                 qlpk.CHITIETCDs.InsertOnSubmit(ct);

@@ -29,3 +29,5 @@ C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.CoreCo
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmKetoa.resources
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmThanhToanDV.resources
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmThucHienDichVu.resources
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.frmXemHinhAnh.resources

@@ -146,5 +146,13 @@ namespace GUI
 
             frm.Show();
         }
+
+        private void thựcHiệnDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThucHienDichVu frm = new frmThucHienDichVu();
+            frm.MdiParent = this;
+
+            frm.Show();
+        }
     }
 }
