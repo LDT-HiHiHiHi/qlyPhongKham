@@ -51,7 +51,7 @@ namespace GUI
             this.Controls.Add(this.hienThi);
             this.Name = "frmXemHinhAnh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmXemHinhAnh";
+            this.Text = "Xem ảnh";
             this.Load += new System.EventHandler(this.frmXemHinhAnh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hienThi)).EndInit();
             this.ResumeLayout(false);

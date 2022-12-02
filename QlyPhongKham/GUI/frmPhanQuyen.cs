@@ -11,7 +11,7 @@ using BUS;
 using DTO;
 namespace GUI
 {
-    public partial class frmPhanQuyen : Form
+    public partial class frmPhanQuyen : Form_Edit
     {
         BUS_QLNND bus_qlnnd = new BUS_QLNND();
         BUS_PhanQuyen bus_phanQuyen = new BUS_PhanQuyen();
@@ -79,6 +79,28 @@ namespace GUI
             catch (Exception)
             {
                 MessageBox.Show("Đã xảy ra lỗi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+        }
+
+        private void frmPhanQuyen_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
+        }
+
+        private void frmPhanQuyen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
             }
         }
     }

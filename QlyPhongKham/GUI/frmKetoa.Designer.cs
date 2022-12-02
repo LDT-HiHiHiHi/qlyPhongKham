@@ -578,7 +578,7 @@ namespace GUI
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmKetoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmKetoa";
+            this.Text = "Kê toa";
             this.Load += new System.EventHandler(this.frmKetoa_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

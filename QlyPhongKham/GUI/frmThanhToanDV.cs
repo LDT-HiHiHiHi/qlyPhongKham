@@ -11,7 +11,7 @@ using DTO;
 using BUS;
 namespace GUI
 {
-    public partial class frmThanhToanDV : Form
+    public partial class frmThanhToanDV : Form_Edit
     {
         BUS_ThanhToanDV bus_dv = new BUS_ThanhToanDV();
         BUS_KhamBenh bus_kb = new BUS_KhamBenh();
@@ -213,6 +213,28 @@ namespace GUI
         private void txtTimKiem_Click(object sender, EventArgs e)
         {
             this.KeyPreview = true;
+        }
+
+        private void frmThanhToanDV_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
+        }
+
+        private void frmThanhToanDV_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
+            }
         }
     }
 }

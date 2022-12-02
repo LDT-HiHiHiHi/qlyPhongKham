@@ -262,10 +262,11 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(682, 653);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmManHinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Màn hình";
+            this.Activated += new System.EventHandler(this.frmManHinh_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmManHinh_FormClosing);
             this.Load += new System.EventHandler(this.frmManHinh_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

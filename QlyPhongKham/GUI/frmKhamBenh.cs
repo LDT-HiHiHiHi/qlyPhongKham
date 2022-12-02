@@ -11,7 +11,7 @@ using DTO;
 using BUS;
 namespace GUI
 {
-    public partial class frmKhamBenh : Form
+    public partial class frmKhamBenh : Form_Edit
     {
         public static string MALS;
         public static string tenBN;
@@ -60,6 +60,7 @@ namespace GUI
                 dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                 dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
                 dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
+                dt.Columns.Add(new DataColumn("HINHANH", typeof(string)));
                 dgvCTDV.DataSource = dt;
             }
             if(bus_kb.getTrangThaiBN(mals) == true)
@@ -112,6 +113,7 @@ namespace GUI
                             dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                             dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
                             dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
+                            dt.Columns.Add(new DataColumn("HINHANH", typeof(string)));
                             dgvCTDV.DataSource = dt;
                         }
                         return;
@@ -139,6 +141,7 @@ namespace GUI
                         dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                         dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
                         dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
+                        dt.Columns.Add(new DataColumn("HINHANH", typeof(string)));
                         dgvCTDV.DataSource = dt;
                     }
                     return;
@@ -217,6 +220,7 @@ namespace GUI
                     dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
                     dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
                     dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
+                    dt.Columns.Add(new DataColumn("HINHANH", typeof(string)));
                     dgvCTDV.DataSource = dt;
                 }
                 return;
@@ -281,6 +285,28 @@ namespace GUI
             tenBN = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
             MALS = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             new frmKetoa().ShowDialog();
+        }
+
+        private void frmKhamBenh_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
+        }
+
+        private void frmKhamBenh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
+            }
         }
     }
 }

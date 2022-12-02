@@ -11,9 +11,10 @@ using BUS;
 using DTO;
 namespace GUI
 {
-    public partial class frmNhomNguoiDung : Form
+    public partial class frmNhomNguoiDung : Form_Edit
     {
         BUS_QLNND bus_qlnnd = new BUS_QLNND();
+        
         public frmNhomNguoiDung()
         {
             InitializeComponent();
@@ -106,6 +107,28 @@ namespace GUI
         private void drvThongTinNhom_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnSua.Enabled = btnXoa.Enabled = true;
+        }
+
+        private void frmNhomNguoiDung_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
+            }
+        }
+
+        private void frmNhomNguoiDung_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
         }
     }
 }

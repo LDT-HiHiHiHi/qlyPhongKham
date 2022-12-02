@@ -11,7 +11,7 @@ using BUS;
 using DTO;
 namespace GUI
 {
-    public partial class frmManHinh : Form
+    public partial class frmManHinh : Form_Edit
     {
         BUS_ManHinh bus_mh = new BUS_ManHinh();
         public frmManHinh()
@@ -81,6 +81,29 @@ namespace GUI
             xóaToolStripMenuItem.Enabled = true;
             txtIDMH.Texts = dgvManHinh.CurrentRow.Cells["IDMH"].Value.ToString();
             txtTenMH.Texts = dgvManHinh.CurrentRow.Cells["TENMH"].Value.ToString();
+        }
+
+        private void frmManHinh_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
+        }
+
+        private void frmManHinh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
+            }
         }
     }
 }

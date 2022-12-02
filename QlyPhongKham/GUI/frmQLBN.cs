@@ -11,7 +11,7 @@ using DTO;
 using BUS;
 namespace GUI
 {
-    public partial class frmQLBN : Form
+    public partial class frmQLBN : Form_Edit
     {
         BUS_QLBN bus_qlbn = new BUS_QLBN();
         BUS_KhamBenh bus_kb = new BUS_KhamBenh();
@@ -22,6 +22,8 @@ namespace GUI
             InitializeComponent();
             menu.PrimaryColor = Color.FromArgb(30 ,144 ,255);
             txtTimKiem.Focus();
+            dgvListBN.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvListBN.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
         }
 
         private void frmQLBN_Load(object sender, EventArgs e)
@@ -180,6 +182,29 @@ namespace GUI
                 return;
             }
             Program.AlertMessage("Đã xảy ra lỗi", MessageBoxIcon.Error);
+        }
+
+        private void frmQLBN_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
+        }
+
+        private void frmQLBN_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ using System.IO;
 
 namespace GUI
 {
-    public partial class frmThucHienDichVu : Form
+    public partial class frmThucHienDichVu : Form_Edit
     {
         BUS_ThucHienDV bus_dv = new BUS_ThucHienDV();
         BUS_KhamBenh bus_kb = new BUS_KhamBenh();
@@ -167,6 +167,28 @@ namespace GUI
         private void txtTimKiem_Leave(object sender, EventArgs e)
         {
             this.KeyPreview = false;
+        }
+
+        private void frmThucHienDichVu_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
+        }
+
+        private void frmThucHienDichVu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
+            }
         }
     }
 }

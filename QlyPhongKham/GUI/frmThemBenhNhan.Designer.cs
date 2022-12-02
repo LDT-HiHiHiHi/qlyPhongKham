@@ -169,6 +169,7 @@ namespace GUI
             this.txtDienThoai.Texts = "";
             this.txtDienThoai.UnderlinedStyle = true;
             this.txtDienThoai._TextChanged += new System.EventHandler(this.txtDienThoai__TextChanged);
+            this.txtDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienThoai_KeyPress);
             // 
             // txtTenBN
             // 
@@ -285,7 +286,7 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(575, 567);
             this.Name = "frmThemBenhNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThemBenhNhan";
+            this.Text = "Thêm bệnh nhân";
             this.Load += new System.EventHandler(this.frmThemBenhNhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

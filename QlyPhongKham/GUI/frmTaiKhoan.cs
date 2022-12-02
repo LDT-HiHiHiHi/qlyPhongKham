@@ -12,9 +12,11 @@ using BUS;
 using DTO;
 namespace GUI
 {
-    public partial class frmTaiKhoan : Form
+    public partial class frmTaiKhoan : Form_Edit
     {
+
         BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
+        
         public frmTaiKhoan()
         {
             InitializeComponent();
@@ -97,6 +99,28 @@ namespace GUI
                 return;
             }
             dgvTaiKhoan.DataSource = bus_tk.timKiemTaiKhoan(user);
+        }
+
+        private void frmTaiKhoan_Activated(object sender, EventArgs e)
+        {
+            //Activate the corresponding Tabpage
+            tabCtrl.SelectedTab = tabPag;
+
+            if (!tabCtrl.Visible)
+            {
+                tabCtrl.Visible = true;
+            }
+        }
+
+        private void frmTaiKhoan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy the corresponding Tabpage when closing MDI child form
+            this.tabPag.Dispose();
+            //If no Tabpage left
+            if (!tabCtrl.HasChildren)
+            {
+                tabCtrl.Visible = false;
+            }
         }
     }
 }

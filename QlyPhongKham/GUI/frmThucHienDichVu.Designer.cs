@@ -368,14 +368,14 @@ namespace GUI
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "rjDropdownMenu1";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(215, 62);
+            this.menu.Size = new System.Drawing.Size(203, 34);
             // 
             // btnXem
             // 
             this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btnXem.Image = global::GUI.Properties.Resources.picture;
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(214, 30);
+            this.btnXem.Size = new System.Drawing.Size(202, 30);
             this.btnXem.Text = "Xem hình ảnh";
             this.btnXem.Click += new System.EventHandler(this.xemHìnhẢnhToolStripMenuItem_Click);
             // 
@@ -527,7 +527,10 @@ namespace GUI
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmThucHienDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThanhToanDV";
+            this.Text = "Thực hiện dịch vụ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.frmThucHienDichVu_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmThucHienDichVu_FormClosing);
             this.Load += new System.EventHandler(this.frmThucHienDichVu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -58,15 +58,15 @@ namespace GUI
             this.txtChanDoan = new GUI.textBoxCustom();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCTDV = new System.Windows.Forms.DataGridView();
-            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HINHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -116,7 +116,7 @@ namespace GUI
             this.dgvBenhNhan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -130,19 +130,20 @@ namespace GUI
             this.TENBN});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBenhNhan.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBenhNhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBenhNhan.Location = new System.Drawing.Point(3, 63);
+            this.dgvBenhNhan.Location = new System.Drawing.Point(3, 97);
+            this.dgvBenhNhan.Margin = new System.Windows.Forms.Padding(3, 37, 3, 3);
             this.dgvBenhNhan.Name = "dgvBenhNhan";
             this.dgvBenhNhan.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -151,7 +152,7 @@ namespace GUI
             this.dgvBenhNhan.RowHeadersVisible = false;
             this.dgvBenhNhan.RowHeadersWidth = 51;
             this.dgvBenhNhan.RowTemplate.Height = 24;
-            this.dgvBenhNhan.Size = new System.Drawing.Size(314, 887);
+            this.dgvBenhNhan.Size = new System.Drawing.Size(314, 853);
             this.dgvBenhNhan.TabIndex = 1;
             this.dgvBenhNhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBenhNhan_CellClick);
             // 
@@ -163,7 +164,7 @@ namespace GUI
             this.STT.MinimumWidth = 6;
             this.STT.Name = "STT";
             this.STT.ReadOnly = true;
-            this.STT.Width = 65;
+            this.STT.Width = 74;
             // 
             // LSKB
             // 
@@ -514,32 +515,6 @@ namespace GUI
             this.dgvCTDV.TabIndex = 0;
             this.dgvCTDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDV_CellClick);
             // 
-            // menu
-            // 
-            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menu.IsMainMenu = false;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXoa});
-            this.menu.MenuItemHeight = 25;
-            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.menu.Name = "menu";
-            this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(184, 34);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(183, 30);
-            this.btnXoa.Text = "Xóa dịch vụ";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
-            // 
             // TENDV
             // 
             this.TENDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -598,6 +573,32 @@ namespace GUI
             this.DONGIA.Visible = false;
             this.DONGIA.Width = 125;
             // 
+            // menu
+            // 
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.IsMainMenu = false;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnXoa});
+            this.menu.MenuItemHeight = 25;
+            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu.Name = "menu";
+            this.menu.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu.Size = new System.Drawing.Size(184, 34);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(183, 30);
+            this.btnXoa.Text = "Xóa dịch vụ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
             // frmKhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -607,7 +608,10 @@ namespace GUI
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmKhamBenh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmKhamBenh";
+            this.Text = "Khám bệnh";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.frmKhamBenh_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmKhamBenh_FormClosing);
             this.Load += new System.EventHandler(this.frmKhamBenh_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).EndInit();
