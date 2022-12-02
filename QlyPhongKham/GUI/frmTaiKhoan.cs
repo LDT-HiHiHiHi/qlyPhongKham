@@ -28,6 +28,15 @@ namespace GUI
         {
             đặtLạiMậtKhẩuToolStripMenuItem.Enabled = false;
             dgvTaiKhoan.DataSource = bus_tk.getListTK();
+            this.KeyDown += FrmTaiKhoan_KeyDown;
+        }
+
+        private void FrmTaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnTimKiem_Click(sender, e);
+            }
         }
 
         private void thêmTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,6 +130,16 @@ namespace GUI
             {
                 tabCtrl.Visible = false;
             }
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+        }
+
+        private void txtTimKiem_Leave(object sender, EventArgs e)
+        {
+            this.KeyPreview = false;
         }
     }
 }

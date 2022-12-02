@@ -256,8 +256,6 @@ namespace GUI
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTimKiem.Texts = "";
             this.txtTimKiem.UnderlinedStyle = false;
-            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
-            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
             // groupBox1
             // 
@@ -408,7 +406,7 @@ namespace GUI
             this.btnLuu.BackColor = System.Drawing.Color.Navy;
             this.btnLuu.BackgroundColor = System.Drawing.Color.Navy;
             this.btnLuu.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLuu.BorderRadius = 0;
+            this.btnLuu.BorderRadius = 5;
             this.btnLuu.BorderSize = 0;
             this.btnLuu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLuu.FlatAppearance.BorderSize = 0;
@@ -439,7 +437,7 @@ namespace GUI
             // 
             this.txtKetQua.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtKetQua.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtKetQua.BorderRadius = 0;
+            this.txtKetQua.BorderRadius = 5;
             this.txtKetQua.BorderSize = 1;
             this.txtKetQua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtKetQua.Font = new System.Drawing.Font("Times New Roman", 13.8F);
@@ -473,7 +471,7 @@ namespace GUI
             // 
             this.txtHinhAnh.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtHinhAnh.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtHinhAnh.BorderRadius = 0;
+            this.txtHinhAnh.BorderRadius = 5;
             this.txtHinhAnh.BorderSize = 1;
             this.txtHinhAnh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtHinhAnh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -525,6 +523,7 @@ namespace GUI
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1482, 953);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.KeyPreview = true;
             this.Name = "frmThucHienDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thực hiện dịch vụ";

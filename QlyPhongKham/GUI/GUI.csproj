@@ -497,6 +497,33 @@
   <ItemGroup>
     <None Include="Resources\picture.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ledger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decentralized %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-password %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

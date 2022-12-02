@@ -74,6 +74,41 @@ namespace GUI
             {
                 btnTimKiem_Click(sender, e);
             }
+            if (e.KeyCode == Keys.F5)
+            {
+                if (checkBox.Checked)
+                {
+                    List<ThanhToanDV> list = bus_dv.getListCD();
+                    if (list != null)
+                    {
+                        dgvCD.DataSource = list;
+                    }
+                    else
+                    {
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add(new DataColumn("MACD", typeof(string)));
+                        dt.Columns.Add(new DataColumn("TENBN", typeof(string)));
+                        dt.Columns.Add(new DataColumn("DAY", typeof(DateTime)));
+                        dgvCD.DataSource = dt;
+                    }
+                }
+                else
+                {
+                    List<ThanhToanDV> list = bus_dv.getListCD_Today();
+                    if (list != null)
+                    {
+                        dgvCD.DataSource = list;
+                    }
+                    else
+                    {
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add(new DataColumn("MACD", typeof(string)));
+                        dt.Columns.Add(new DataColumn("TENBN", typeof(string)));
+                        dt.Columns.Add(new DataColumn("DAY", typeof(DateTime)));
+                        dgvCD.DataSource = dt;
+                    }
+                }
+            }
         }
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)

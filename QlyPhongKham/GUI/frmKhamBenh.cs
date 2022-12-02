@@ -31,6 +31,16 @@ namespace GUI
             cboDichVu.DataSource = bus_kb.getListDV();
             cboDichVu.DisplayMember = "TENDV";
             cboDichVu.ValueMember = "MADV";
+            this.KeyDown += FrmKhamBenh_KeyDown;
+        }
+
+        private void FrmKhamBenh_KeyDown(object sender, KeyEventArgs e)
+        {
+            string idtk = bus_tk.getIDTK(frmLogin.USERNAME);
+            if (e.KeyCode == Keys.F5)
+            {
+                dgvBenhNhan.DataSource = bus_kb.getDanhSachBN(idtk);
+            }    
         }
 
         private void dgvBenhNhan_CellClick(object sender, DataGridViewCellEventArgs e)

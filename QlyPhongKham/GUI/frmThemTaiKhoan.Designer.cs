@@ -31,7 +31,6 @@ namespace GUI
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemTaiKhoan));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,20 +40,11 @@ namespace GUI
             this.btnXacNhan = new GUI.CustomButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.add_user__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(189, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -88,7 +78,7 @@ namespace GUI
             // 
             // txtRPW
             // 
-            this.txtRPW.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtRPW.BorderColor = System.Drawing.Color.Navy;
             this.txtRPW.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtRPW.BorderRadius = 0;
             this.txtRPW.BorderSize = 1;
@@ -109,7 +99,7 @@ namespace GUI
             // 
             // txtPW
             // 
-            this.txtPW.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtPW.BorderColor = System.Drawing.Color.Navy;
             this.txtPW.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtPW.BorderRadius = 0;
             this.txtPW.BorderSize = 1;
@@ -131,7 +121,7 @@ namespace GUI
             // 
             // txtTenDN
             // 
-            this.txtTenDN.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtTenDN.BorderColor = System.Drawing.Color.Navy;
             this.txtTenDN.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtTenDN.BorderRadius = 0;
             this.txtTenDN.BorderSize = 1;
@@ -153,8 +143,8 @@ namespace GUI
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnXacNhan.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnXacNhan.BackColor = System.Drawing.Color.Navy;
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.Navy;
             this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnXacNhan.BorderRadius = 8;
             this.btnXacNhan.BorderSize = 0;
@@ -181,6 +171,16 @@ namespace GUI
             this.errorProvider2.ContainerControl = this;
             this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.user__4_;
+            this.pictureBox1.Location = new System.Drawing.Point(189, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmThemTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -201,9 +201,9 @@ namespace GUI
             this.Name = "frmThemTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThemTaiKhoan";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

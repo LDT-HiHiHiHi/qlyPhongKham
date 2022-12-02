@@ -48,7 +48,6 @@ namespace GUI
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cboDichVu = new CustomControls.RJControls.RJComboBox();
-            this.btnThem = new GUI.CustomButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMoTa = new GUI.textBoxCustom();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,8 +64,9 @@ namespace GUI
             this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnThem = new GUI.CustomButton();
+            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -100,7 +100,7 @@ namespace GUI
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1476, 60);
@@ -330,26 +330,6 @@ namespace GUI
             this.cboDichVu.Texts = "";
             this.cboDichVu.OnSelectedIndexChanged += new System.EventHandler(this.cboDichVu_OnSelectedIndexChanged);
             // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.BackgroundColor = System.Drawing.Color.White;
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 10;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = global::GUI.Properties.Resources.plus;
-            this.btnThem.Location = new System.Drawing.Point(459, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(41, 41);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -401,19 +381,19 @@ namespace GUI
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnLuu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLuu.BackColor = System.Drawing.Color.Navy;
+            this.btnLuu.BackgroundColor = System.Drawing.Color.Navy;
             this.btnLuu.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnLuu.BorderRadius = 8;
             this.btnLuu.BorderSize = 0;
             this.btnLuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLuu.FlatAppearance.BorderSize = 0;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(513, 3);
+            this.btnLuu.Location = new System.Drawing.Point(483, 3);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(150, 54);
+            this.btnLuu.Size = new System.Drawing.Size(180, 54);
             this.btnLuu.TabIndex = 0;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextColor = System.Drawing.Color.White;
@@ -430,11 +410,11 @@ namespace GUI
             this.btnToaThuoc.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnToaThuoc.FlatAppearance.BorderSize = 0;
             this.btnToaThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToaThuoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToaThuoc.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToaThuoc.ForeColor = System.Drawing.Color.White;
-            this.btnToaThuoc.Location = new System.Drawing.Point(357, 3);
+            this.btnToaThuoc.Location = new System.Drawing.Point(297, 3);
             this.btnToaThuoc.Name = "btnToaThuoc";
-            this.btnToaThuoc.Size = new System.Drawing.Size(150, 54);
+            this.btnToaThuoc.Size = new System.Drawing.Size(180, 54);
             this.btnToaThuoc.TabIndex = 1;
             this.btnToaThuoc.Text = "Kê toa";
             this.btnToaThuoc.TextColor = System.Drawing.Color.White;
@@ -585,6 +565,31 @@ namespace GUI
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
             this.menu.Size = new System.Drawing.Size(184, 34);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.BackgroundColor = System.Drawing.Color.White;
+            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.BorderSize = 0;
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus;
+            this.btnThem.Location = new System.Drawing.Point(459, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(41, 41);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
@@ -594,11 +599,6 @@ namespace GUI
             this.btnXoa.Text = "Xóa dịch vụ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
-            // 
             // frmKhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -606,6 +606,7 @@ namespace GUI
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1482, 953);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.KeyPreview = true;
             this.Name = "frmKhamBenh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khám bệnh";

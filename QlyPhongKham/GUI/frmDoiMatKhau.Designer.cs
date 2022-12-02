@@ -33,15 +33,15 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoiMatKhau));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnXacNhan = new GUI.CustomButton();
             this.txtPW = new GUI.textBoxCustom();
             this.txtRPW = new GUI.textBoxCustom();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -63,16 +63,6 @@ namespace GUI
             this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Mật khẩu mới";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.reset_password__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(206, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -96,8 +86,8 @@ namespace GUI
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.Gold;
-            this.btnXacNhan.BackgroundColor = System.Drawing.Color.Gold;
+            this.btnXacNhan.BackColor = System.Drawing.Color.Navy;
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.Navy;
             this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnXacNhan.BorderRadius = 8;
             this.btnXacNhan.BorderSize = 0;
@@ -116,7 +106,7 @@ namespace GUI
             // 
             // txtPW
             // 
-            this.txtPW.BorderColor = System.Drawing.Color.Gold;
+            this.txtPW.BorderColor = System.Drawing.Color.Navy;
             this.txtPW.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtPW.BorderRadius = 0;
             this.txtPW.BorderSize = 1;
@@ -138,7 +128,7 @@ namespace GUI
             // 
             // txtRPW
             // 
-            this.txtRPW.BorderColor = System.Drawing.Color.Gold;
+            this.txtRPW.BorderColor = System.Drawing.Color.Navy;
             this.txtRPW.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtRPW.BorderRadius = 0;
             this.txtRPW.BorderSize = 1;
@@ -162,6 +152,16 @@ namespace GUI
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.unlock;
+            this.pictureBox1.Location = new System.Drawing.Point(206, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -183,8 +183,8 @@ namespace GUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDoiMatKhau";
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -144,7 +144,7 @@
             // 
             this.customButton2.BackColor = System.Drawing.Color.White;
             this.customButton2.BackgroundColor = System.Drawing.Color.White;
-            this.customButton2.BorderColor = System.Drawing.Color.Gold;
+            this.customButton2.BorderColor = System.Drawing.Color.Navy;
             this.customButton2.BorderRadius = 8;
             this.customButton2.BorderSize = 1;
             this.customButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -153,20 +153,20 @@
             this.customButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton2.ForeColor = System.Drawing.Color.Gold;
+            this.customButton2.ForeColor = System.Drawing.Color.Navy;
             this.customButton2.Location = new System.Drawing.Point(264, 273);
             this.customButton2.Name = "customButton2";
             this.customButton2.Size = new System.Drawing.Size(110, 40);
             this.customButton2.TabIndex = 32;
             this.customButton2.Text = "Hủy";
-            this.customButton2.TextColor = System.Drawing.Color.Gold;
+            this.customButton2.TextColor = System.Drawing.Color.Navy;
             this.customButton2.UseVisualStyleBackColor = false;
             this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.Gold;
-            this.btnLuu.BackgroundColor = System.Drawing.Color.Gold;
+            this.btnLuu.BackColor = System.Drawing.Color.Navy;
+            this.btnLuu.BackgroundColor = System.Drawing.Color.Navy;
             this.btnLuu.BorderColor = System.Drawing.Color.Gold;
             this.btnLuu.BorderRadius = 8;
             this.btnLuu.BorderSize = 1;

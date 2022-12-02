@@ -101,6 +101,7 @@ namespace GUI
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1476, 50);
@@ -256,7 +257,7 @@ namespace GUI
             // 
             this.txtTimKiem.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTimKiem.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTimKiem.BorderRadius = 8;
+            this.txtTimKiem.BorderRadius = 5;
             this.txtTimKiem.BorderSize = 1;
             this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,8 +275,6 @@ namespace GUI
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTimKiem.Texts = "";
             this.txtTimKiem.UnderlinedStyle = false;
-            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
-            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
             // groupBox1
             // 
@@ -406,10 +405,10 @@ namespace GUI
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.Lime;
-            this.btnThanhToan.BackgroundColor = System.Drawing.Color.Lime;
+            this.btnThanhToan.BackColor = System.Drawing.Color.Navy;
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.Navy;
             this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThanhToan.BorderRadius = 0;
+            this.btnThanhToan.BorderRadius = 5;
             this.btnThanhToan.BorderSize = 0;
             this.btnThanhToan.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnThanhToan.FlatAppearance.BorderSize = 0;
@@ -427,10 +426,10 @@ namespace GUI
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(593, 155);
             this.label8.Margin = new System.Windows.Forms.Padding(5);
             this.label8.Name = "label8";
@@ -454,7 +453,7 @@ namespace GUI
             // 
             this.txtTienThua.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTienThua.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTienThua.BorderRadius = 0;
+            this.txtTienThua.BorderRadius = 5;
             this.txtTienThua.BorderSize = 1;
             this.txtTienThua.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTienThua.Font = new System.Drawing.Font("Times New Roman", 13.8F);
@@ -487,7 +486,7 @@ namespace GUI
             // 
             this.txtTienNhan.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTienNhan.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTienNhan.BorderRadius = 0;
+            this.txtTienNhan.BorderRadius = 5;
             this.txtTienNhan.BorderSize = 1;
             this.txtTienNhan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTienNhan.Font = new System.Drawing.Font("Times New Roman", 13.8F);
@@ -509,10 +508,10 @@ namespace GUI
             // 
             // lb
             // 
-            this.lb.BackColor = System.Drawing.Color.HotPink;
+            this.lb.BackColor = System.Drawing.Color.White;
             this.lb.Dock = System.Windows.Forms.DockStyle.Left;
             this.lb.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb.ForeColor = System.Drawing.Color.White;
+            this.lb.ForeColor = System.Drawing.Color.Black;
             this.lb.Location = new System.Drawing.Point(593, 105);
             this.lb.Margin = new System.Windows.Forms.Padding(5);
             this.lb.Name = "lb";
@@ -536,7 +535,7 @@ namespace GUI
             // 
             this.txtTongTien.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTongTien.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTongTien.BorderRadius = 0;
+            this.txtTongTien.BorderRadius = 5;
             this.txtTongTien.BorderSize = 1;
             this.txtTongTien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTongTien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -556,10 +555,10 @@ namespace GUI
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(593, 55);
             this.label4.Margin = new System.Windows.Forms.Padding(5);
             this.label4.Name = "label4";
@@ -592,6 +591,7 @@ namespace GUI
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1482, 953);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.KeyPreview = true;
             this.Name = "frmThanhToanDV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán dịch vụ";

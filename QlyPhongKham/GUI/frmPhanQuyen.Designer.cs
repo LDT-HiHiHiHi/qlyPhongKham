@@ -122,7 +122,7 @@
             this.MAQUYEN.Name = "MAQUYEN";
             this.MAQUYEN.ReadOnly = true;
             this.MAQUYEN.Visible = false;
-            this.MAQUYEN.Width = 125;
+            this.MAQUYEN.Width = 81;
             // 
             // Column5
             // 
@@ -215,7 +215,7 @@
             this.ID_PQ.MinimumWidth = 6;
             this.ID_PQ.Name = "ID_PQ";
             this.ID_PQ.Visible = false;
-            this.ID_PQ.Width = 125;
+            this.ID_PQ.Width = 32;
             // 
             // Column2
             // 
@@ -267,8 +267,8 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnLuu.BackgroundColor = System.Drawing.Color.MediumBlue;
+            this.btnLuu.BackColor = System.Drawing.Color.Navy;
+            this.btnLuu.BackgroundColor = System.Drawing.Color.Navy;
             this.btnLuu.BorderColor = System.Drawing.Color.White;
             this.btnLuu.BorderRadius = 5;
             this.btnLuu.BorderSize = 0;
@@ -277,13 +277,12 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Image = global::GUI.Properties.Resources.diskette__4_;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(467, 36);
+            this.btnLuu.Location = new System.Drawing.Point(437, 36);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Padding = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.btnLuu.Size = new System.Drawing.Size(150, 45);
+            this.btnLuu.Size = new System.Drawing.Size(180, 54);
             this.btnLuu.TabIndex = 13;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextColor = System.Drawing.Color.White;

@@ -38,7 +38,6 @@ namespace GUI
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTimKiem = new GUI.textBoxCustom();
-            this.btnTimKiem = new GUI.CustomButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListBN = new System.Windows.Forms.DataGridView();
             this.MABN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,12 +47,8 @@ namespace GUI
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIACHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnKham = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSua = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDoiPhong = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnThem = new GUI.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,6 +57,11 @@ namespace GUI
             this.label5 = new System.Windows.Forms.Label();
             this.lbSoLuong = new System.Windows.Forms.Label();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnTimKiem = new GUI.CustomButton();
+            this.btnKham = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSua = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDoiPhong = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnThem = new GUI.CustomButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBN)).BeginInit();
@@ -113,7 +113,7 @@ namespace GUI
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(419, 45);
@@ -146,31 +146,12 @@ namespace GUI
             this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
             this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.White;
-            this.btnTimKiem.BackgroundColor = System.Drawing.Color.White;
-            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiem.BorderRadius = 0;
-            this.btnTimKiem.BorderSize = 0;
-            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Image = global::GUI.Properties.Resources.search__1_;
-            this.btnTimKiem.Location = new System.Drawing.Point(853, 3);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(35, 39);
-            this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.TextColor = System.Drawing.Color.White;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1276, 73);
@@ -183,7 +164,7 @@ namespace GUI
             this.dgvListBN.AllowUserToAddRows = false;
             this.dgvListBN.AllowUserToDeleteRows = false;
             this.dgvListBN.BackgroundColor = System.Drawing.Color.FloralWhite;
-            this.dgvListBN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListBN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -238,7 +219,7 @@ namespace GUI
             this.MABN.Name = "MABN";
             this.MABN.ReadOnly = true;
             this.MABN.Visible = false;
-            this.MABN.Width = 125;
+            this.MABN.Width = 36;
             // 
             // TENBN
             // 
@@ -269,7 +250,7 @@ namespace GUI
             this.GTINH.MinimumWidth = 6;
             this.GTINH.Name = "GTINH";
             this.GTINH.ReadOnly = true;
-            this.GTINH.Width = 101;
+            this.GTINH.Width = 110;
             // 
             // SDT
             // 
@@ -279,7 +260,7 @@ namespace GUI
             this.SDT.MinimumWidth = 6;
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
-            this.SDT.Width = 131;
+            this.SDT.Width = 143;
             // 
             // DIACHI
             // 
@@ -303,33 +284,6 @@ namespace GUI
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
             this.menu.Size = new System.Drawing.Size(242, 94);
-            // 
-            // btnKham
-            // 
-            this.btnKham.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKham.Image = global::GUI.Properties.Resources.add;
-            this.btnKham.Name = "btnKham";
-            this.btnKham.Size = new System.Drawing.Size(241, 30);
-            this.btnKham.Text = "Đăng ký khám mới";
-            this.btnKham.Click += new System.EventHandler(this.btnKham_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Image = global::GUI.Properties.Resources.edit;
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(241, 30);
-            this.btnSua.Text = "Sửa thông tin";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnDoiPhong
-            // 
-            this.btnDoiPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnDoiPhong.Image = global::GUI.Properties.Resources.changing_room;
-            this.btnDoiPhong.Name = "btnDoiPhong";
-            this.btnDoiPhong.Size = new System.Drawing.Size(241, 30);
-            this.btnDoiPhong.Text = "Đổi phòng";
-            this.btnDoiPhong.Click += new System.EventHandler(this.đổiPhòngToolStripMenuItem_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -365,26 +319,6 @@ namespace GUI
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.Size = new System.Drawing.Size(333, 47);
             this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.BackgroundColor = System.Drawing.Color.White;
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 10;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = global::GUI.Properties.Resources.plus;
-            this.btnThem.Location = new System.Drawing.Point(123, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(40, 41);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label3
             // 
@@ -477,10 +411,10 @@ namespace GUI
             // lbSoLuong
             // 
             this.lbSoLuong.AutoSize = true;
-            this.lbSoLuong.BackColor = System.Drawing.Color.Navy;
+            this.lbSoLuong.BackColor = System.Drawing.Color.White;
             this.lbSoLuong.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbSoLuong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLuong.ForeColor = System.Drawing.Color.White;
+            this.lbSoLuong.ForeColor = System.Drawing.Color.Navy;
             this.lbSoLuong.Location = new System.Drawing.Point(169, 7);
             this.lbSoLuong.Margin = new System.Windows.Forms.Padding(7);
             this.lbSoLuong.Name = "lbSoLuong";
@@ -494,6 +428,73 @@ namespace GUI
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.BackgroundColor = System.Drawing.Color.White;
+            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiem.BorderRadius = 0;
+            this.btnTimKiem.BorderSize = 0;
+            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.search__1_;
+            this.btnTimKiem.Location = new System.Drawing.Point(853, 3);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(35, 39);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.TextColor = System.Drawing.Color.White;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnKham
+            // 
+            this.btnKham.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKham.Image = global::GUI.Properties.Resources.add;
+            this.btnKham.Name = "btnKham";
+            this.btnKham.Size = new System.Drawing.Size(241, 30);
+            this.btnKham.Text = "Đăng ký khám mới";
+            this.btnKham.Click += new System.EventHandler(this.btnKham_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = global::GUI.Properties.Resources.edit;
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(241, 30);
+            this.btnSua.Text = "Sửa thông tin";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnDoiPhong
+            // 
+            this.btnDoiPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnDoiPhong.Image = global::GUI.Properties.Resources.changing_room;
+            this.btnDoiPhong.Name = "btnDoiPhong";
+            this.btnDoiPhong.Size = new System.Drawing.Size(241, 30);
+            this.btnDoiPhong.Text = "Đổi phòng";
+            this.btnDoiPhong.Click += new System.EventHandler(this.đổiPhòngToolStripMenuItem_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.BackgroundColor = System.Drawing.Color.White;
+            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.BorderSize = 0;
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus;
+            this.btnThem.Location = new System.Drawing.Point(123, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(40, 41);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmQLBN
             // 

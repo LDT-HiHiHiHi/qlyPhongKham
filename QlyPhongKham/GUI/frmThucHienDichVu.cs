@@ -45,7 +45,26 @@ namespace GUI
 
         private void FrmThucHienDichVu_KeyDown(object sender, KeyEventArgs e)
         {
-            btnTimKiem_Click(sender, e);
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnTimKiem_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F5)
+            {
+                List<ThanhToanDV> list = bus_dv.getListCD_Today();
+                if (list != null)
+                {
+                    dgvCD.DataSource = list;
+                }
+                else
+                {
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add(new DataColumn("MACD", typeof(string)));
+                    dt.Columns.Add(new DataColumn("TENBN", typeof(string)));
+                    dt.Columns.Add(new DataColumn("DAY", typeof(DateTime)));
+                    dgvCD.DataSource = dt;
+                }
+            }
         }
 
         private void dgvCD_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -157,16 +176,6 @@ namespace GUI
                 return;
             }
             dgvCD.DataSource = bus_dv.timKiemCD_Today(txtTimKiem.Texts);
-        }
-
-        private void txtTimKiem_Click(object sender, EventArgs e)
-        {
-            this.KeyPreview = true;
-        }
-
-        private void txtTimKiem_Leave(object sender, EventArgs e)
-        {
-            this.KeyPreview = false;
         }
 
         private void frmThucHienDichVu_Activated(object sender, EventArgs e)

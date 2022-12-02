@@ -37,8 +37,8 @@ namespace GUI
             // 
             // btnXacNhan
             // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnXacNhan.BackgroundColor = System.Drawing.Color.MediumBlue;
+            this.btnXacNhan.BackColor = System.Drawing.Color.Navy;
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.Navy;
             this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnXacNhan.BorderRadius = 10;
             this.btnXacNhan.BorderSize = 0;
