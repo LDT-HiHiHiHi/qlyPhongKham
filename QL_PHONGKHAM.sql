@@ -260,9 +260,30 @@ VALUES
 ('DV001',N'XÉT NGHIỆM MÁU'),
 ('DV002',N'SIÊU ÂM'),
 ('DV003',N'CHỤP X QUANG'),
-('DV004',N'XÉT NGHIỆM NƯỚC TIỂU'),
-('DV005',N'KHÁM BỆNH LÂM SÀN'),
-('DV006',N'XÉT NGHIỆM ĐƯỜNG MÁU')
+('DV004',N'KHÁM BỆNH LÂM SÀN')
+
+
+INSERT CT_DICHVU
+VALUES
+('DV1','DV001',N'Xét nghiệm công thức máu toàn phần (CBC)'),
+('DV2','DV001',N'Xét nghiệm sinh hóa máu'),
+('DV3','DV002',N'Siêu âm 3D'),
+('DV4','DV002',N'Siêu âm 4D'),
+('DV5','DV002',N'Siêu âm Doppler'),
+('DV6','DV002',N'Siêu âm tim'),
+('DV7','DV002',N'Siêu âm trị liệu'),
+('DV8','DV002',N'Siêu âm ổ bụng'),
+('DV9','DV002',N'Siêu âm đầu dò'),
+('DV10','DV002',N'Siêu âm tử cung phần phụ'),
+('DV11','DV003',N'Chụp x quang xương cảng chân thẳng'),
+('DV12','DV003',N'Chụp x quang xương ức thẳng, nghiêng'),
+('DV13','DV003',N'Chụp x quang đỉnh phổi ưỡn'),
+('DV14','DV003',N'Chụp x quang mỏm trâm'),
+('DV15','DV003',N'Chụp x quang cột sống'),
+('DV16','DV003',N'Chụp x quang cánh tay'),
+('DV17','DV003',N'Chụp x quang khớp háng'),
+('DV18','DV003',N'Chụp x quang xương đùi'),
+('DV19','DV003',N'Chụp x quang khớp gối')
 
 SET DATEFORMAT DMY
 INSERT DONGIA_DICHVU
@@ -270,9 +291,7 @@ VALUES
 ('DV001','08/05/2022',160000),
 ('DV002','02/09/2022',180000),
 ('DV003','03/05/2021',190000),
-('DV004','06/05/2021',250000),
-('DV005','03/09/2022',200000),
-('DV006','03/09/2022',900000)
+('DV004','06/05/2021',250000)
 
 INSERT DMTHUOC
 VALUES
@@ -405,4 +424,4 @@ select * from DICHVU
 select * from DONGIA_DICHVU
 select * from DMTHUOC
 select * from CHITIETCD
-
+select * from CT_DICHVU
