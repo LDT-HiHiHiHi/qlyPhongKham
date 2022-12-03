@@ -236,5 +236,10 @@ namespace DAL
         {
             return qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).Select(a => a.CHANDOAN).FirstOrDefault();
         }
+
+        public List<CT_DICHVU> getListCTDV(string madv)
+        {
+            return qlpk.CT_DICHVUs.Where(t => t.MADV.Equals(madv)).ToList();
+        }
     }
 }

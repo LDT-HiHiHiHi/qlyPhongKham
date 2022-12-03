@@ -38,9 +38,9 @@ namespace BUS
         {
             return dal_kb.addSTT(pMaBS);
         }
-        public bool themChiTietDichVu(string mals, string macd, string madv,string mota)
+        public bool themChiTietDichVu(string mals, string macd, string madv, string mota)
         {
-            return dal_kb.themChiTietDichVu(mals, macd, madv,mota);
+            return dal_kb.themChiTietDichVu(mals, macd, madv, mota);
         }
         public List<ChiTietPhieuCD> getListCT(string macd)
         {
@@ -89,6 +89,10 @@ namespace BUS
         public string getChanDoan(string mals)
         {
             return dal_kb.getChanDoan(mals);
+        }
+        public List<CT_DICHVU> getListCTDV(string madv)
+        {
+            return dal_kb.getListCTDV(madv);
         }
     }
 }

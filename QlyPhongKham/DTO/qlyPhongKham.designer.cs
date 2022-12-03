@@ -84,6 +84,9 @@ namespace DTO
     partial void InsertDMTHUOC(DMTHUOC instance);
     partial void UpdateDMTHUOC(DMTHUOC instance);
     partial void DeleteDMTHUOC(DMTHUOC instance);
+    partial void InsertCT_DICHVU(CT_DICHVU instance);
+    partial void UpdateCT_DICHVU(CT_DICHVU instance);
+    partial void DeleteCT_DICHVU(CT_DICHVU instance);
     #endregion
 		
 		public qlyPhongKhamDataContext(string connection) : 
@@ -255,6 +258,14 @@ namespace DTO
 			get
 			{
 				return this.GetTable<DMTHUOC>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CT_DICHVU> CT_DICHVUs
+		{
+			get
+			{
+				return this.GetTable<CT_DICHVU>();
 			}
 		}
 		
@@ -2079,6 +2090,8 @@ namespace DTO
 		
 		private EntitySet<CHITIETCD> _CHITIETCDs;
 		
+		private EntitySet<CT_DICHVU> _CT_DICHVUs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2093,6 +2106,7 @@ namespace DTO
 		{
 			this._DONGIA_DICHVUs = new EntitySet<DONGIA_DICHVU>(new Action<DONGIA_DICHVU>(this.attach_DONGIA_DICHVUs), new Action<DONGIA_DICHVU>(this.detach_DONGIA_DICHVUs));
 			this._CHITIETCDs = new EntitySet<CHITIETCD>(new Action<CHITIETCD>(this.attach_CHITIETCDs), new Action<CHITIETCD>(this.detach_CHITIETCDs));
+			this._CT_DICHVUs = new EntitySet<CT_DICHVU>(new Action<CT_DICHVU>(this.attach_CT_DICHVUs), new Action<CT_DICHVU>(this.detach_CT_DICHVUs));
 			OnCreated();
 		}
 		
@@ -2162,6 +2176,19 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DICHVU_CT_DICHVU", Storage="_CT_DICHVUs", ThisKey="MADV", OtherKey="MADV")]
+		public EntitySet<CT_DICHVU> CT_DICHVUs
+		{
+			get
+			{
+				return this._CT_DICHVUs;
+			}
+			set
+			{
+				this._CT_DICHVUs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2201,6 +2228,18 @@ namespace DTO
 		}
 		
 		private void detach_CHITIETCDs(CHITIETCD entity)
+		{
+			this.SendPropertyChanging();
+			entity.DICHVU = null;
+		}
+		
+		private void attach_CT_DICHVUs(CT_DICHVU entity)
+		{
+			this.SendPropertyChanging();
+			entity.DICHVU = this;
+		}
+		
+		private void detach_CT_DICHVUs(CT_DICHVU entity)
 		{
 			this.SendPropertyChanging();
 			entity.DICHVU = null;
@@ -3823,6 +3862,157 @@ namespace DTO
 		{
 			this.SendPropertyChanging();
 			entity.DMTHUOC = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CT_DICHVU")]
+	public partial class CT_DICHVU : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MACTDV;
+		
+		private string _MADV;
+		
+		private string _TEN_CTDV;
+		
+		private EntityRef<DICHVU> _DICHVU;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMACTDVChanging(string value);
+    partial void OnMACTDVChanged();
+    partial void OnMADVChanging(string value);
+    partial void OnMADVChanged();
+    partial void OnTEN_CTDVChanging(string value);
+    partial void OnTEN_CTDVChanged();
+    #endregion
+		
+		public CT_DICHVU()
+		{
+			this._DICHVU = default(EntityRef<DICHVU>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MACTDV", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MACTDV
+		{
+			get
+			{
+				return this._MACTDV;
+			}
+			set
+			{
+				if ((this._MACTDV != value))
+				{
+					this.OnMACTDVChanging(value);
+					this.SendPropertyChanging();
+					this._MACTDV = value;
+					this.SendPropertyChanged("MACTDV");
+					this.OnMACTDVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MADV", DbType="VarChar(10)")]
+		public string MADV
+		{
+			get
+			{
+				return this._MADV;
+			}
+			set
+			{
+				if ((this._MADV != value))
+				{
+					if (this._DICHVU.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMADVChanging(value);
+					this.SendPropertyChanging();
+					this._MADV = value;
+					this.SendPropertyChanged("MADV");
+					this.OnMADVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TEN_CTDV", DbType="NVarChar(MAX)")]
+		public string TEN_CTDV
+		{
+			get
+			{
+				return this._TEN_CTDV;
+			}
+			set
+			{
+				if ((this._TEN_CTDV != value))
+				{
+					this.OnTEN_CTDVChanging(value);
+					this.SendPropertyChanging();
+					this._TEN_CTDV = value;
+					this.SendPropertyChanged("TEN_CTDV");
+					this.OnTEN_CTDVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DICHVU_CT_DICHVU", Storage="_DICHVU", ThisKey="MADV", OtherKey="MADV", IsForeignKey=true)]
+		public DICHVU DICHVU
+		{
+			get
+			{
+				return this._DICHVU.Entity;
+			}
+			set
+			{
+				DICHVU previousValue = this._DICHVU.Entity;
+				if (((previousValue != value) 
+							|| (this._DICHVU.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._DICHVU.Entity = null;
+						previousValue.CT_DICHVUs.Remove(this);
+					}
+					this._DICHVU.Entity = value;
+					if ((value != null))
+					{
+						value.CT_DICHVUs.Add(this);
+						this._MADV = value.MADV;
+					}
+					else
+					{
+						this._MADV = default(string);
+					}
+					this.SendPropertyChanged("DICHVU");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

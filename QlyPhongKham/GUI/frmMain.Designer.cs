@@ -59,7 +59,7 @@
             this.quảnLýToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(982, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,7 +68,7 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 30);
+            this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(982, 35);
@@ -90,7 +90,7 @@
             this.đăngXuấtToolStripMenuItem1});
             this.chứcNăngToolStripMenuItem.Image = global::GUI.Properties.Resources.software;
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(105, 26);
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
             this.chứcNăngToolStripMenuItem.Text = "Hệ thống";
             // 
             // thựcHiệnDịchVụToolStripMenuItem
@@ -170,7 +170,7 @@
             this.thêmNgườiDùngVàoNhómToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Image = global::GUI.Properties.Resources.clipboard;
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(93, 26);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
             // quảnLýBệnhNhânToolStripMenuItem

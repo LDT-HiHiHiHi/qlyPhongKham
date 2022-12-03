@@ -129,8 +129,8 @@ namespace GUI
 
         private void xemHìnhẢnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HINH = dgvCT.CurrentRow.Cells["HINHANH"].Value.ToString();
-            new frmXemHinhAnh().ShowDialog();
+            frm.anh = dgvCT.CurrentRow.Cells["HINHANH"].Value.ToString();
+            new frm().ShowDialog();
         }
 
         private void dgvCT_CellClick(object sender, DataGridViewCellEventArgs e)

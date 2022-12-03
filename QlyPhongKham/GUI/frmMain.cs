@@ -15,6 +15,7 @@ namespace GUI
         public static int childCount_PQ = 0;
         public static int childCount_MH = 0;
         public static int childCount_N = 0;
+        public static int childCount_NND = 0;
         public static int childCount_TK = 0;
         public static int childCount_BN = 0;
         public static int childCount_KB = 0;
@@ -152,7 +153,30 @@ namespace GUI
 
         private void thêmNgườiDùngVàoNhómToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            frmThemNguoiDung frm = new frmThemNguoiDung ();
+            frm.MdiParent = this;
+            if (childCount_N > 0)
+            {
+                frm.Text = frm.Text + " (" + childCount_N.ToString() + ")";
+            }
+            //child Form will now hold a reference value to the tab control
+            frm.TabCtrl = tabControl1;
+
+            //Add a Tabpage and enables it
+            TabPage tp = new TabPage();
+            tp.Parent = tabControl1;
+            tp.Text = frm.Text;
+            tp.Show();
+
+            //child Form will now hold a reference value to a tabpage
+            frm.TabPag = tp;
+
+            //Activate the MDI child form
+            frm.Show();
+            childCount_NND++;
+
+            //Activate the newly created Tabpage
+            tabControl1.SelectedTab = tp;
         }
 
         private void quảnLýNhómNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)

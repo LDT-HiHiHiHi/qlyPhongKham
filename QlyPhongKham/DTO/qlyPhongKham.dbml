@@ -97,6 +97,7 @@
       <Column Name="TENDV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="DICHVU_DONGIA_DICHVU" Member="DONGIA_DICHVUs" ThisKey="MADV" OtherKey="MADV" Type="DONGIA_DICHVU" />
       <Association Name="DICHVU_CHITIETCD" Member="CHITIETCDs" ThisKey="MADV" OtherKey="MADV" Type="CHITIETCD" />
+      <Association Name="DICHVU_CT_DICHVU" Member="CT_DICHVUs" ThisKey="MADV" OtherKey="MADV" Type="CT_DICHVU" />
     </Type>
   </Table>
   <Table Name="dbo.CHITIETCD" Member="CHITIETCDs">
@@ -174,6 +175,14 @@
       <Column Name="DONVITINH" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Association Name="DMTHUOC_CT_TOATHUOC" Member="CT_TOATHUOCs" ThisKey="MAT" OtherKey="MAT" Type="CT_TOATHUOC" />
       <Association Name="DMTHUOC_DONGIA_THUOC" Member="DONGIA_THUOCs" ThisKey="MAT" OtherKey="MAT" Type="DONGIA_THUOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CT_DICHVU" Member="CT_DICHVUs">
+    <Type Name="CT_DICHVU">
+      <Column Name="MACTDV" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MADV" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TEN_CTDV" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="DICHVU_CT_DICHVU" Member="DICHVU" ThisKey="MADV" OtherKey="MADV" Type="DICHVU" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.fn_PhanQuyen" Method="fn_PhanQuyen" IsComposable="true">

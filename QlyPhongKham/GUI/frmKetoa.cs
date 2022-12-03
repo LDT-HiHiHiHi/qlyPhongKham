@@ -159,17 +159,17 @@ namespace GUI
                 };
                 if(bus_kt.checkCTTT(matt,mat) > 0)
                 {
-                    int slcu = bus_kt.getSoLuong(matt, mat);
+                    //int slcu = bus_kt.getSoLuong(matt, mat);
                     if (bus_kt.updateCT(ct))
                     {
                         if(!bus_kt.capNhatThanhTien(matt))
                         {
                             Program.AlertMessage("Đã xảy ra lỗi cập nhật 1", MessageBoxIcon.Error);
                         }
-                        if (!bus_kt.capNhatSoLuong(mat,(tong - slcu))) 
-                        {
-                            Program.AlertMessage("Đã xảy ra lỗi cập nhật 2", MessageBoxIcon.Error);
-                        }    
+                        //if (!bus_kt.capNhatSoLuong(mat,(tong - slcu))) 
+                        //{
+                        //    Program.AlertMessage("Đã xảy ra lỗi cập nhật 2", MessageBoxIcon.Error);
+                        //}    
                         Program.AlertMessage("Cập nhật thành công !", MessageBoxIcon.Information);
                         this.OnLoad(e);
                         return;
@@ -184,10 +184,10 @@ namespace GUI
                         Program.AlertMessage("Đã xảy ra lỗi cập nhật 3", MessageBoxIcon.Error);
                     }
                     int slcu = bus_kt.getSoLuong(matt, mat);
-                    if (!bus_kt.capNhatSoLuong(mat, tong)) 
-                    {
-                        Program.AlertMessage("Đã xảy ra lỗi cập nhật 4", MessageBoxIcon.Error);
-                    }
+                    //if (!bus_kt.capNhatSoLuong(mat, tong)) 
+                    //{
+                    //    Program.AlertMessage("Đã xảy ra lỗi cập nhật 4", MessageBoxIcon.Error);
+                    //}
                     Program.AlertMessage("Thêm thành công", MessageBoxIcon.Information);
                     this.OnLoad(e);
                     return;
@@ -202,10 +202,10 @@ namespace GUI
                 {
                     Program.AlertMessage("Đã xảy ra lỗi cập nhật 5", MessageBoxIcon.Error);
                 }
-                if (!bus_kt.capNhatSoLuong(mat, tong)) 
-                {
-                    Program.AlertMessage("Đã xảy ra lỗi cập nhật 6", MessageBoxIcon.Error);
-                }
+                //if (!bus_kt.capNhatSoLuong(mat, tong)) 
+                //{
+                //    Program.AlertMessage("Đã xảy ra lỗi cập nhật 6", MessageBoxIcon.Error);
+                //}
                 Program.AlertMessage("Thêm mới thành công", MessageBoxIcon.Information);
                 this.OnLoad(e);
                 return;

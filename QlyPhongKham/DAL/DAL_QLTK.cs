@@ -38,5 +38,26 @@ namespace DAL
                 Username = nnd.TAIKHOAN.USERNAME
             }).ToList();
         }
+        public List<TaiKhoan> getDSTK(int pNhomNguoiDung)
+        {
+            return db.TAIKHOANs.GroupJoin(
+                db.NHOMNGUOIDUNGs,
+                tk => tk.ID,
+                nnd => nnd.ID_TK,
+                (tk, nnd) => new
+                {
+                    tk,
+                    nnd
+                }
+            ).SelectMany(
+                tttk => tttk.nnd.DefaultIfEmpty(),
+                (account, groupAccount) => new TaiKhoan
+                {
+                    IdTK = account.tk.ID,
+                    Username = account.tk.USERNAME
+                }
+            ).Where(tk => !db.NHOMNGUOIDUNGs.Where(nd => nd.ID_Q == pNhomNguoiDung).Any(nd => nd.ID_TK == tk.IdTK) && tk.Username != string.Empty).Distinct().ToList();
+
+        }
     }
 }

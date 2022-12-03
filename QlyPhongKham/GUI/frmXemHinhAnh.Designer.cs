@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class frmXemHinhAnh
+    partial class frm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,37 +29,37 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.hienThi = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.hienThi)).BeginInit();
+            this.pic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
-            // hienThi
+            // pic
             // 
-            this.hienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hienThi.Location = new System.Drawing.Point(0, 0);
-            this.hienThi.Name = "hienThi";
-            this.hienThi.Size = new System.Drawing.Size(982, 753);
-            this.hienThi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hienThi.TabIndex = 0;
-            this.hienThi.TabStop = false;
+            this.pic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic.Location = new System.Drawing.Point(0, 0);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(982, 753);
+            this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic.TabIndex = 0;
+            this.pic.TabStop = false;
             // 
-            // frmXemHinhAnh
+            // frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 753);
-            this.Controls.Add(this.hienThi);
-            this.Name = "frmXemHinhAnh";
+            this.Controls.Add(this.pic);
+            this.Name = "frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem ảnh";
             this.Load += new System.EventHandler(this.frmXemHinhAnh_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.hienThi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox hienThi;
+        private System.Windows.Forms.PictureBox pic;
     }
 }

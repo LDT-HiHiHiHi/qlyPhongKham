@@ -15,8 +15,11 @@ namespace GUI
     {
         public static string MALS;
         public static string tenBN;
+        public static string DV;
+        public static string TDV;
         BUS_KhamBenh bus_kb = new BUS_KhamBenh();
         BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
+        BUS_ThanhToanDV bus_tt = new BUS_ThanhToanDV();
         public frmKhamBenh()
         {
             InitializeComponent();
@@ -25,7 +28,7 @@ namespace GUI
 
         private void frmKhamBenh_Load(object sender, EventArgs e)
         {
-            btnThem.Enabled = btnXoa.Enabled = btnToaThuoc.Enabled = btnLuu.Enabled = false;
+            btnThem.Enabled = btnXoa.Enabled = btnToaThuoc.Enabled = btnLuu.Enabled = btnXem.Enabled = false;
             string idtk = bus_tk.getIDTK(frmLogin.USERNAME);
             dgvBenhNhan.DataSource = bus_kb.getDanhSachBN(idtk);
             cboDichVu.DataSource = bus_kb.getListDV();
@@ -85,6 +88,15 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            TDV = cboDichVu.Texts;
+            DV = bus_kb.getMaDV(cboDichVu.Texts);
+            new frmChiTietDV().ShowDialog();
+            if(!frmChiTietDV.flag)
+            {
+                return;
+            }    
+            string mt = frmChiTietDV.mota.TrimEnd(',',' ');
+            txtMoTa.Texts = mt;
             string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             string madv = bus_kb.getMaDV(cboDichVu.Texts);
             string mota = txtMoTa.Texts;
@@ -110,7 +122,7 @@ namespace GUI
                             Program.AlertMessage("Đã xảy ra lỗi cập nhật thành tiền !", MessageBoxIcon.Error);
                         }
                         Program.AlertMessage("Cập nhật thành công", MessageBoxIcon.Information);
-                        txtMoTa.Texts = string.Empty;
+                        txtMoTa.Texts = frmChiTietDV.mota = string.Empty;
                         if (bus_kb.checkPhieuTonTai(mals) > 0)
                         {
                             dgvCTDV.DataSource = bus_kb.getListCT(bus_kb.getMaCD(mals));
@@ -138,7 +150,7 @@ namespace GUI
                         Program.AlertMessage("Đã xảy ra lỗi cập nhật thành tiền !", MessageBoxIcon.Error);
                     }
                     Program.AlertMessage("Thêm thành công", MessageBoxIcon.Information);
-                    txtMoTa.Texts = string.Empty;
+                    txtMoTa.Texts = frmChiTietDV.mota = string.Empty;
                     if (bus_kb.checkPhieuTonTai(mals) > 0)
                     {
                         dgvCTDV.DataSource = bus_kb.getListCT(bus_kb.getMaCD(mals));
@@ -202,6 +214,24 @@ namespace GUI
             {
                 txtMoTa.Texts = mota;
             }    
+
+            string hinhanh = dgvCTDV.CurrentRow.Cells["HINHANH"].Value.ToString();
+            if(hinhanh.Equals("Chưa có"))
+            {
+                btnXem.Enabled = false;
+            }    
+            else
+            {
+                btnXem.Enabled = true;
+            }
+            if(bus_tt.getTrangThai(bus_kb.getMaCD(mals)))
+            {
+                btnXoa.Enabled = false;
+            }    
+            else
+            {
+                btnXoa.Enabled = true;
+            }    
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -209,33 +239,42 @@ namespace GUI
             string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             string macd = bus_kb.getMaCD(mals);
             string madv = bus_kb.getMaDV(cboDichVu.Texts);
-            if (bus_kb.xoaCTCD(macd,madv))
+            DialogResult r;
+            r = MessageBox.Show("Bạn có chắc chắn muốn xóa dịc vụ " + cboDichVu.Texts + " ?", "Thông báo",
+
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1);
+
+            if (r == DialogResult.Yes)
             {
-                if(!bus_kb.capNhatThanhTien(macd))
+                if (bus_kb.xoaCTCD(macd, madv))
                 {
-                    Program.AlertMessage("Đã xảy ra lỗi cập nhật thành tiền !", MessageBoxIcon.Error);
-                }    
-                Program.AlertMessage("Xóa thành công", MessageBoxIcon.Information);
-                btnXoa.Enabled = false;
-                txtMoTa.Texts = string.Empty;
-                if (bus_kb.checkPhieuTonTai(mals) > 0)
-                {
-                    dgvCTDV.DataSource = bus_kb.getListCT(bus_kb.getMaCD(mals));
+                    if (!bus_kb.capNhatThanhTien(macd))
+                    {
+                        Program.AlertMessage("Đã xảy ra lỗi cập nhật thành tiền !", MessageBoxIcon.Error);
+                    }
+                    Program.AlertMessage("Xóa thành công", MessageBoxIcon.Information);
+                    btnXoa.Enabled = false;
+                    txtMoTa.Texts = string.Empty;
+                    if (bus_kb.checkPhieuTonTai(mals) > 0)
+                    {
+                        dgvCTDV.DataSource = bus_kb.getListCT(bus_kb.getMaCD(mals));
+                    }
+                    else
+                    {
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add(new DataColumn("MACD", typeof(string)));
+                        dt.Columns.Add(new DataColumn("TENDV", typeof(string)));
+                        dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
+                        dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
+                        dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
+                        dt.Columns.Add(new DataColumn("HINHANH", typeof(string)));
+                        dgvCTDV.DataSource = dt;
+                    }
+                    return;
                 }
-                else
-                {
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add(new DataColumn("MACD", typeof(string)));
-                    dt.Columns.Add(new DataColumn("TENDV", typeof(string)));
-                    dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
-                    dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
-                    dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
-                    dt.Columns.Add(new DataColumn("HINHANH", typeof(string)));
-                    dgvCTDV.DataSource = dt;
-                }
-                return;
+                Program.AlertMessage("Đã xảy ra lỗi !", MessageBoxIcon.Error);
             }
-            Program.AlertMessage("Đã xảy ra lỗi !", MessageBoxIcon.Error);
         }
 
         private void cboDichVu_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -317,6 +356,12 @@ namespace GUI
             {
                 tabCtrl.Visible = false;
             }
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            frm.anh = dgvCTDV.CurrentRow.Cells["HINHANH"].Value.ToString();
+            new frm().ShowDialog();
         }
     }
 }

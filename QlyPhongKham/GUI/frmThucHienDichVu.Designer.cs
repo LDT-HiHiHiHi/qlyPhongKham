@@ -261,7 +261,7 @@ namespace GUI
             // 
             this.groupBox1.Controls.Add(this.dgvCT);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(595, 53);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(884, 698);
@@ -285,13 +285,13 @@ namespace GUI
             this.Column3});
             this.dgvCT.ContextMenuStrip = this.menu;
             this.dgvCT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCT.Location = new System.Drawing.Point(3, 30);
+            this.dgvCT.Location = new System.Drawing.Point(3, 26);
             this.dgvCT.Name = "dgvCT";
             this.dgvCT.ReadOnly = true;
             this.dgvCT.RowHeadersVisible = false;
             this.dgvCT.RowHeadersWidth = 51;
             this.dgvCT.RowTemplate.Height = 24;
-            this.dgvCT.Size = new System.Drawing.Size(878, 665);
+            this.dgvCT.Size = new System.Drawing.Size(878, 669);
             this.dgvCT.TabIndex = 0;
             this.dgvCT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCT_CellClick);
             // 
@@ -306,13 +306,12 @@ namespace GUI
             // 
             // MOTA
             // 
-            this.MOTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MOTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MOTA.DataPropertyName = "MOTA";
             this.MOTA.HeaderText = "Mô tả";
             this.MOTA.MinimumWidth = 6;
             this.MOTA.Name = "MOTA";
             this.MOTA.ReadOnly = true;
-            this.MOTA.Width = 98;
             // 
             // Column2
             // 
@@ -329,13 +328,12 @@ namespace GUI
             // 
             // KETQUA
             // 
-            this.KETQUA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.KETQUA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.KETQUA.DataPropertyName = "KETQUA";
             this.KETQUA.HeaderText = "Kết quả";
             this.KETQUA.MinimumWidth = 6;
             this.KETQUA.Name = "KETQUA";
             this.KETQUA.ReadOnly = true;
-            this.KETQUA.Width = 117;
             // 
             // HINHANH
             // 
@@ -453,7 +451,7 @@ namespace GUI
             this.txtKetQua.TabIndex = 4;
             this.txtKetQua.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtKetQua.Texts = "";
-            this.txtKetQua.UnderlinedStyle = false;
+            this.txtKetQua.UnderlinedStyle = true;
             this.txtKetQua._TextChanged += new System.EventHandler(this.txtKetQua__TextChanged);
             // 
             // label3
@@ -565,13 +563,13 @@ namespace GUI
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private textBoxCustom txtTimKiem;
         private CustomButton btnOpen;
+        private CustomControls.RJControls.RJDropdownMenu menu;
+        private System.Windows.Forms.ToolStripMenuItem btnXem;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn KETQUA;
         private System.Windows.Forms.DataGridViewTextBoxColumn HINHANH;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private CustomControls.RJControls.RJDropdownMenu menu;
-        private System.Windows.Forms.ToolStripMenuItem btnXem;
     }
 }

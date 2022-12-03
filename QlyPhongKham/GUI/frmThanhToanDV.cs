@@ -223,7 +223,7 @@ namespace GUI
             errorProvider1.Clear();
 
             DialogResult r;
-            r = MessageBox.Show("Bạn có chắc chắn xác nhận phiểu " + macd + " ?", "Thông báo",
+            r = MessageBox.Show("Bạn có chắc chắn muốn thanh toán " + macd + " ?", "Thông báo",
 
             MessageBoxButtons.YesNo, MessageBoxIcon.Question,
             MessageBoxDefaultButton.Button1);

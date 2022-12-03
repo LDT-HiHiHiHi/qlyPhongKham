@@ -19,5 +19,13 @@ namespace BUS
         {
             return dal_qltk.lstManHinh(pIdGr);
         }
+        public List<TaiKhoan> getDSTK(int pNhomNguoiDung)
+        {
+            return dal_qltk.getDSTK(pNhomNguoiDung);
+        }
+        public List<TaiKhoan> getDSNhomTK(int pNhomNguoiDung)
+        {
+            return dal_qltk.getDSNhomTK(pNhomNguoiDung);
+        }
     }
 }

@@ -48,6 +48,7 @@ namespace GUI
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cboDichVu = new CustomControls.RJControls.RJComboBox();
+            this.btnThem = new GUI.CustomButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMoTa = new GUI.textBoxCustom();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -64,9 +65,10 @@ namespace GUI
             this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnThem = new GUI.CustomButton();
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.menu2 = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -217,8 +219,8 @@ namespace GUI
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel2.SetColumnSpan(this.tableLayoutPanel3, 2);
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.56522F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.43478F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72F));
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbTenBn, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 1);
@@ -247,7 +249,7 @@ namespace GUI
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(472, 46);
+            this.label2.Size = new System.Drawing.Size(316, 46);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên bệnh nhân :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -260,14 +262,15 @@ namespace GUI
             this.lbTenBn.BorderRadius = 0;
             this.lbTenBn.BorderSize = 1;
             this.lbTenBn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTenBn.Enabled = false;
             this.lbTenBn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenBn.Location = new System.Drawing.Point(482, 4);
+            this.lbTenBn.Location = new System.Drawing.Point(326, 4);
             this.lbTenBn.Margin = new System.Windows.Forms.Padding(4);
             this.lbTenBn.Multiline = false;
             this.lbTenBn.Name = "lbTenBn";
             this.lbTenBn.Padding = new System.Windows.Forms.Padding(7);
             this.lbTenBn.PasswordChar = false;
-            this.lbTenBn.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.lbTenBn.PlaceholderColor = System.Drawing.Color.Black;
             this.lbTenBn.PlaceholderText = "";
             this.lbTenBn.Size = new System.Drawing.Size(380, 38);
             this.lbTenBn.TabIndex = 1;
@@ -281,7 +284,7 @@ namespace GUI
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(472, 51);
+            this.label3.Size = new System.Drawing.Size(316, 51);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên dịch vụ :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -294,11 +297,11 @@ namespace GUI
             this.tableLayoutPanel4.Controls.Add(this.cboDichVu, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnThem, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(481, 49);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(325, 49);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(666, 45);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(822, 45);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // cboDichVu
@@ -330,13 +333,33 @@ namespace GUI
             this.cboDichVu.Texts = "";
             this.cboDichVu.OnSelectedIndexChanged += new System.EventHandler(this.cboDichVu_OnSelectedIndexChanged);
             // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.BackgroundColor = System.Drawing.Color.White;
+            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.BorderSize = 0;
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus;
+            this.btnThem.Location = new System.Drawing.Point(459, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(41, 41);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(472, 50);
+            this.label4.Size = new System.Drawing.Size(316, 50);
             this.label4.TabIndex = 6;
             this.label4.Text = "Mô tả thực hiên dịch vụ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -344,21 +367,22 @@ namespace GUI
             // txtMoTa
             // 
             this.txtMoTa.BackColor = System.Drawing.Color.White;
-            this.txtMoTa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtMoTa.BorderColor = System.Drawing.Color.White;
             this.txtMoTa.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtMoTa.BorderRadius = 0;
             this.txtMoTa.BorderSize = 1;
-            this.txtMoTa.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtMoTa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMoTa.Enabled = false;
             this.txtMoTa.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoTa.Location = new System.Drawing.Point(482, 101);
+            this.txtMoTa.Location = new System.Drawing.Point(326, 101);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMoTa.Multiline = false;
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.Padding = new System.Windows.Forms.Padding(7);
             this.txtMoTa.PasswordChar = false;
-            this.txtMoTa.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMoTa.PlaceholderColor = System.Drawing.Color.Black;
             this.txtMoTa.PlaceholderText = "";
-            this.txtMoTa.Size = new System.Drawing.Size(380, 42);
+            this.txtMoTa.Size = new System.Drawing.Size(820, 42);
             this.txtMoTa.TabIndex = 7;
             this.txtMoTa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMoTa.Texts = "";
@@ -372,11 +396,11 @@ namespace GUI
             this.tableLayoutPanel5.Controls.Add(this.btnLuu, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnToaThuoc, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(481, 200);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(325, 200);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(666, 60);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(822, 60);
             this.tableLayoutPanel5.TabIndex = 8;
             // 
             // btnLuu
@@ -391,7 +415,7 @@ namespace GUI
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(483, 3);
+            this.btnLuu.Location = new System.Drawing.Point(639, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(180, 54);
             this.btnLuu.TabIndex = 0;
@@ -412,7 +436,7 @@ namespace GUI
             this.btnToaThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToaThuoc.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToaThuoc.ForeColor = System.Drawing.Color.White;
-            this.btnToaThuoc.Location = new System.Drawing.Point(297, 3);
+            this.btnToaThuoc.Location = new System.Drawing.Point(453, 3);
             this.btnToaThuoc.Name = "btnToaThuoc";
             this.btnToaThuoc.Size = new System.Drawing.Size(180, 54);
             this.btnToaThuoc.TabIndex = 1;
@@ -427,7 +451,7 @@ namespace GUI
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(3, 147);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(472, 50);
+            this.label5.Size = new System.Drawing.Size(316, 50);
             this.label5.TabIndex = 9;
             this.label5.Text = "Chẩn đoán";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -441,7 +465,7 @@ namespace GUI
             this.txtChanDoan.BorderSize = 1;
             this.txtChanDoan.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtChanDoan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChanDoan.Location = new System.Drawing.Point(482, 151);
+            this.txtChanDoan.Location = new System.Drawing.Point(326, 151);
             this.txtChanDoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtChanDoan.Multiline = false;
             this.txtChanDoan.Name = "txtChanDoan";
@@ -558,46 +582,46 @@ namespace GUI
             this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menu.IsMainMenu = false;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXoa});
+            this.btnXoa,
+            this.btnXem});
             this.menu.MenuItemHeight = 25;
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(184, 34);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.BackgroundColor = System.Drawing.Color.White;
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 10;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = global::GUI.Properties.Resources.plus;
-            this.btnThem.Location = new System.Drawing.Point(459, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(41, 41);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.menu.Size = new System.Drawing.Size(203, 64);
             // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(183, 30);
+            this.btnXoa.Size = new System.Drawing.Size(202, 30);
             this.btnXoa.Text = "Xóa dịch vụ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // menu2
+            // 
+            this.menu2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu2.IsMainMenu = false;
+            this.menu2.MenuItemHeight = 25;
+            this.menu2.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu2.Name = "menu2";
+            this.menu2.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btnXem
+            // 
+            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXem.Image = global::GUI.Properties.Resources.picture;
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(202, 30);
+            this.btnXem.Text = "Xem hình ảnh";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // frmKhamBenh
             // 
@@ -663,5 +687,7 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn KETQUA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA;
+        private System.Windows.Forms.ToolStripMenuItem btnXem;
+        private CustomControls.RJControls.RJDropdownMenu menu2;
     }
 }

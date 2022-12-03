@@ -11,9 +11,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmXemHinhAnh : Form
+    public partial class frm : Form_Edit
     {
-        public frmXemHinhAnh()
+        public static string anh;
+        public frm()
         {
             InitializeComponent();
         }
@@ -28,10 +29,9 @@ namespace GUI
 
         private void frmXemHinhAnh_Load(object sender, EventArgs e)
         {
-            string hinh = frmThucHienDichVu.HINH;
-            if (!hinh.Equals("Chưa có"))
+            if (!anh.Equals("Chưa có"))
             {
-                hienThi.Image = ByteToImg(frmThucHienDichVu.HINH);
+                pic.Image = ByteToImg(anh);
             }       
         }
     }
