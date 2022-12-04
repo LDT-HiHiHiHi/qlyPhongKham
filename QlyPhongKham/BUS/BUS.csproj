@@ -50,6 +50,7 @@
     <Compile Include="BUS_QLTK.cs" />
     <Compile Include="BUS_TaiKhoan.cs" />
     <Compile Include="BUS_ThanhToanDV.cs" />
+    <Compile Include="BUS_ThongTinCaNhan.cs" />
     <Compile Include="BUS_ThucHienDV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

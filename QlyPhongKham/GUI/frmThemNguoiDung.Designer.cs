@@ -42,6 +42,11 @@ namespace GUI
             this.cbNhoms = new CustomControls.RJControls.RJComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddOne = new GUI.CustomButton();
+            this.btnAddAll = new GUI.CustomButton();
+            this.btnRefesh = new GUI.CustomButton();
+            this.btnDelOne = new GUI.CustomButton();
+            this.btnDelAll = new GUI.CustomButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.drvNhom = new System.Windows.Forms.DataGridView();
             this.No_grA = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,11 +55,6 @@ namespace GUI
             this.Ten_grA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_grA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pw_nnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddOne = new GUI.CustomButton();
-            this.btnAddAll = new GUI.CustomButton();
-            this.btnRefesh = new GUI.CustomButton();
-            this.btnDelOne = new GUI.CustomButton();
-            this.btnDelAll = new GUI.CustomButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drvTK)).BeginInit();
@@ -238,7 +238,7 @@ namespace GUI
             this.tableLayoutPanel3.Controls.Add(this.btnDelOne, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.btnDelAll, 0, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 170);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 160);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel2.SetRowSpan(this.tableLayoutPanel3, 3);
@@ -247,8 +247,118 @@ namespace GUI
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(74, 320);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(74, 340);
             this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // btnAddOne
+            // 
+            this.btnAddOne.BackColor = System.Drawing.Color.Navy;
+            this.btnAddOne.BackgroundColor = System.Drawing.Color.Navy;
+            this.btnAddOne.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddOne.BorderRadius = 5;
+            this.btnAddOne.BorderSize = 0;
+            this.btnAddOne.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddOne.FlatAppearance.BorderSize = 0;
+            this.btnAddOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddOne.ForeColor = System.Drawing.Color.White;
+            this.btnAddOne.Image = global::GUI.Properties.Resources.arrow;
+            this.btnAddOne.Location = new System.Drawing.Point(5, 5);
+            this.btnAddOne.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddOne.Name = "btnAddOne";
+            this.btnAddOne.Size = new System.Drawing.Size(64, 58);
+            this.btnAddOne.TabIndex = 0;
+            this.btnAddOne.TextColor = System.Drawing.Color.White;
+            this.btnAddOne.UseVisualStyleBackColor = false;
+            this.btnAddOne.Click += new System.EventHandler(this.btnAddOne_Click);
+            // 
+            // btnAddAll
+            // 
+            this.btnAddAll.BackColor = System.Drawing.Color.Navy;
+            this.btnAddAll.BackgroundColor = System.Drawing.Color.Navy;
+            this.btnAddAll.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddAll.BorderRadius = 5;
+            this.btnAddAll.BorderSize = 0;
+            this.btnAddAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddAll.FlatAppearance.BorderSize = 0;
+            this.btnAddAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAll.ForeColor = System.Drawing.Color.White;
+            this.btnAddAll.Image = global::GUI.Properties.Resources.arrow__1_;
+            this.btnAddAll.Location = new System.Drawing.Point(5, 73);
+            this.btnAddAll.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddAll.Name = "btnAddAll";
+            this.btnAddAll.Size = new System.Drawing.Size(64, 58);
+            this.btnAddAll.TabIndex = 1;
+            this.btnAddAll.TextColor = System.Drawing.Color.White;
+            this.btnAddAll.UseVisualStyleBackColor = false;
+            this.btnAddAll.Click += new System.EventHandler(this.btnAddAll_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BackColor = System.Drawing.Color.Navy;
+            this.btnRefesh.BackgroundColor = System.Drawing.Color.Navy;
+            this.btnRefesh.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRefesh.BorderRadius = 5;
+            this.btnRefesh.BorderSize = 0;
+            this.btnRefesh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRefesh.FlatAppearance.BorderSize = 0;
+            this.btnRefesh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefesh.ForeColor = System.Drawing.Color.White;
+            this.btnRefesh.Image = global::GUI.Properties.Resources.arrow__4_;
+            this.btnRefesh.Location = new System.Drawing.Point(5, 141);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(64, 58);
+            this.btnRefesh.TabIndex = 2;
+            this.btnRefesh.TextColor = System.Drawing.Color.White;
+            this.btnRefesh.UseVisualStyleBackColor = false;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // btnDelOne
+            // 
+            this.btnDelOne.BackColor = System.Drawing.Color.Navy;
+            this.btnDelOne.BackgroundColor = System.Drawing.Color.Navy;
+            this.btnDelOne.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelOne.BorderRadius = 5;
+            this.btnDelOne.BorderSize = 0;
+            this.btnDelOne.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelOne.FlatAppearance.BorderSize = 0;
+            this.btnDelOne.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelOne.ForeColor = System.Drawing.Color.White;
+            this.btnDelOne.Image = global::GUI.Properties.Resources.arrow__2_;
+            this.btnDelOne.Location = new System.Drawing.Point(5, 209);
+            this.btnDelOne.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDelOne.Name = "btnDelOne";
+            this.btnDelOne.Size = new System.Drawing.Size(64, 58);
+            this.btnDelOne.TabIndex = 3;
+            this.btnDelOne.TextColor = System.Drawing.Color.White;
+            this.btnDelOne.UseVisualStyleBackColor = false;
+            this.btnDelOne.Click += new System.EventHandler(this.btnDelOne_Click);
+            // 
+            // btnDelAll
+            // 
+            this.btnDelAll.BackColor = System.Drawing.Color.Navy;
+            this.btnDelAll.BackgroundColor = System.Drawing.Color.Navy;
+            this.btnDelAll.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelAll.BorderRadius = 5;
+            this.btnDelAll.BorderSize = 0;
+            this.btnDelAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelAll.FlatAppearance.BorderSize = 0;
+            this.btnDelAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelAll.ForeColor = System.Drawing.Color.White;
+            this.btnDelAll.Image = global::GUI.Properties.Resources.arrow__3_;
+            this.btnDelAll.Location = new System.Drawing.Point(5, 277);
+            this.btnDelAll.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDelAll.Name = "btnDelAll";
+            this.btnDelAll.Size = new System.Drawing.Size(64, 58);
+            this.btnDelAll.TabIndex = 4;
+            this.btnDelAll.TextColor = System.Drawing.Color.White;
+            this.btnDelAll.UseVisualStyleBackColor = false;
+            this.btnDelAll.Click += new System.EventHandler(this.btnDelAll_Click);
             // 
             // groupBox2
             // 
@@ -339,106 +449,6 @@ namespace GUI
             this.Pw_nnd.Name = "Pw_nnd";
             this.Pw_nnd.ReadOnly = true;
             this.Pw_nnd.Visible = false;
-            // 
-            // btnAddOne
-            // 
-            this.btnAddOne.BackColor = System.Drawing.Color.White;
-            this.btnAddOne.BackgroundColor = System.Drawing.Color.White;
-            this.btnAddOne.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddOne.BorderRadius = 10;
-            this.btnAddOne.BorderSize = 0;
-            this.btnAddOne.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddOne.FlatAppearance.BorderSize = 0;
-            this.btnAddOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddOne.ForeColor = System.Drawing.Color.White;
-            this.btnAddOne.Image = global::GUI.Properties.Resources.right_chevron;
-            this.btnAddOne.Location = new System.Drawing.Point(3, 3);
-            this.btnAddOne.Name = "btnAddOne";
-            this.btnAddOne.Size = new System.Drawing.Size(68, 58);
-            this.btnAddOne.TabIndex = 0;
-            this.btnAddOne.TextColor = System.Drawing.Color.White;
-            this.btnAddOne.UseVisualStyleBackColor = false;
-            this.btnAddOne.Click += new System.EventHandler(this.btnAddOne_Click);
-            // 
-            // btnAddAll
-            // 
-            this.btnAddAll.BackColor = System.Drawing.Color.White;
-            this.btnAddAll.BackgroundColor = System.Drawing.Color.White;
-            this.btnAddAll.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddAll.BorderRadius = 10;
-            this.btnAddAll.BorderSize = 0;
-            this.btnAddAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddAll.FlatAppearance.BorderSize = 0;
-            this.btnAddAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAll.ForeColor = System.Drawing.Color.White;
-            this.btnAddAll.Image = global::GUI.Properties.Resources.right_chevron__1_;
-            this.btnAddAll.Location = new System.Drawing.Point(3, 67);
-            this.btnAddAll.Name = "btnAddAll";
-            this.btnAddAll.Size = new System.Drawing.Size(68, 58);
-            this.btnAddAll.TabIndex = 1;
-            this.btnAddAll.TextColor = System.Drawing.Color.White;
-            this.btnAddAll.UseVisualStyleBackColor = false;
-            this.btnAddAll.Click += new System.EventHandler(this.btnAddAll_Click);
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BackColor = System.Drawing.Color.White;
-            this.btnRefesh.BackgroundColor = System.Drawing.Color.White;
-            this.btnRefesh.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRefesh.BorderRadius = 10;
-            this.btnRefesh.BorderSize = 0;
-            this.btnRefesh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRefesh.FlatAppearance.BorderSize = 0;
-            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefesh.ForeColor = System.Drawing.Color.White;
-            this.btnRefesh.Image = global::GUI.Properties.Resources.reload;
-            this.btnRefesh.Location = new System.Drawing.Point(3, 131);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(68, 58);
-            this.btnRefesh.TabIndex = 2;
-            this.btnRefesh.TextColor = System.Drawing.Color.White;
-            this.btnRefesh.UseVisualStyleBackColor = false;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
-            // 
-            // btnDelOne
-            // 
-            this.btnDelOne.BackColor = System.Drawing.Color.White;
-            this.btnDelOne.BackgroundColor = System.Drawing.Color.White;
-            this.btnDelOne.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelOne.BorderRadius = 10;
-            this.btnDelOne.BorderSize = 0;
-            this.btnDelOne.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelOne.FlatAppearance.BorderSize = 0;
-            this.btnDelOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelOne.ForeColor = System.Drawing.Color.White;
-            this.btnDelOne.Image = global::GUI.Properties.Resources.left_chevron;
-            this.btnDelOne.Location = new System.Drawing.Point(3, 195);
-            this.btnDelOne.Name = "btnDelOne";
-            this.btnDelOne.Size = new System.Drawing.Size(68, 58);
-            this.btnDelOne.TabIndex = 3;
-            this.btnDelOne.TextColor = System.Drawing.Color.White;
-            this.btnDelOne.UseVisualStyleBackColor = false;
-            this.btnDelOne.Click += new System.EventHandler(this.btnDelOne_Click);
-            // 
-            // btnDelAll
-            // 
-            this.btnDelAll.BackColor = System.Drawing.Color.White;
-            this.btnDelAll.BackgroundColor = System.Drawing.Color.White;
-            this.btnDelAll.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelAll.BorderRadius = 10;
-            this.btnDelAll.BorderSize = 0;
-            this.btnDelAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelAll.FlatAppearance.BorderSize = 0;
-            this.btnDelAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelAll.ForeColor = System.Drawing.Color.White;
-            this.btnDelAll.Image = global::GUI.Properties.Resources.left_chevron__1_;
-            this.btnDelAll.Location = new System.Drawing.Point(3, 259);
-            this.btnDelAll.Name = "btnDelAll";
-            this.btnDelAll.Size = new System.Drawing.Size(68, 58);
-            this.btnDelAll.TabIndex = 4;
-            this.btnDelAll.TextColor = System.Drawing.Color.White;
-            this.btnDelAll.UseVisualStyleBackColor = false;
-            this.btnDelAll.Click += new System.EventHandler(this.btnDelAll_Click);
             // 
             // frmThemNguoiDung
             // 

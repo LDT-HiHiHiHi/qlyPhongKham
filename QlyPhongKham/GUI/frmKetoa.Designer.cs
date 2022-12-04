@@ -41,6 +41,8 @@ namespace GUI
             this.txtTimKiem = new GUI.textBoxCustom();
             this.btnTimKiem = new GUI.CustomButton();
             this.dgvThuoc = new System.Windows.Forms.DataGridView();
+            this.MAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvToaThuoc = new System.Windows.Forms.DataGridView();
@@ -64,8 +66,6 @@ namespace GUI
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.MAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuoc)).BeginInit();
@@ -229,6 +229,26 @@ namespace GUI
             this.dgvThuoc.Size = new System.Drawing.Size(415, 805);
             this.dgvThuoc.TabIndex = 3;
             this.dgvThuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuoc_CellClick);
+            // 
+            // MAT
+            // 
+            this.MAT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MAT.DataPropertyName = "MAT";
+            this.MAT.HeaderText = "Mã thuốc";
+            this.MAT.MinimumWidth = 6;
+            this.MAT.Name = "MAT";
+            this.MAT.ReadOnly = true;
+            this.MAT.Visible = false;
+            this.MAT.Width = 125;
+            // 
+            // TENT
+            // 
+            this.TENT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TENT.DataPropertyName = "TENT";
+            this.TENT.HeaderText = "Tên thuốc";
+            this.TENT.MinimumWidth = 6;
+            this.TENT.Name = "TENT";
+            this.TENT.ReadOnly = true;
             // 
             // tableLayoutPanel3
             // 
@@ -550,26 +570,6 @@ namespace GUI
             // 
             this.errorProvider3.ContainerControl = this;
             this.errorProvider3.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider3.Icon")));
-            // 
-            // MAT
-            // 
-            this.MAT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MAT.DataPropertyName = "MAT";
-            this.MAT.HeaderText = "Mã thuốc";
-            this.MAT.MinimumWidth = 6;
-            this.MAT.Name = "MAT";
-            this.MAT.ReadOnly = true;
-            this.MAT.Visible = false;
-            this.MAT.Width = 89;
-            // 
-            // TENT
-            // 
-            this.TENT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TENT.DataPropertyName = "TENT";
-            this.TENT.HeaderText = "Tên thuốc";
-            this.TENT.MinimumWidth = 6;
-            this.TENT.Name = "TENT";
-            this.TENT.ReadOnly = true;
             // 
             // frmKetoa
             // 

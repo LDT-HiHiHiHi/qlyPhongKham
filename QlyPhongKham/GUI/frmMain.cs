@@ -21,6 +21,7 @@ namespace GUI
         public static int childCount_KB = 0;
         public static int childCount_DV = 0;
         public static int childCount_TH = 0;
+        public static int childCount_TT = 0;
 
         public frmMain()
         {
@@ -386,6 +387,11 @@ namespace GUI
             recTab = new Rectangle(recTab.X, recTab.Y + 4, recTab.Width, recTab.Height - 4);
             e.Graphics.DrawString(tabName, fntTab, bshFore, recTab, sftTab);
 
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmThongTinCaNhan().ShowDialog();
         }
     }
 }
