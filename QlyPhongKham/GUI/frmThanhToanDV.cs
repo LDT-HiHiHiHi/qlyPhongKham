@@ -240,16 +240,6 @@ namespace GUI
             }
         }
 
-        private void txtTimKiem_Leave(object sender, EventArgs e)
-        {
-            this.KeyPreview = false;
-        }
-
-        private void txtTimKiem_Click(object sender, EventArgs e)
-        {
-            this.KeyPreview = true;
-        }
-
         private void frmThanhToanDV_Activated(object sender, EventArgs e)
         {
             //Activate the corresponding Tabpage

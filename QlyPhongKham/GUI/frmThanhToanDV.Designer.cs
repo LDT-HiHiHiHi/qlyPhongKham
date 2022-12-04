@@ -106,7 +106,7 @@ namespace GUI
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1476, 50);
             this.label1.TabIndex = 0;
-            this.label1.Text = "THANH TOÁN";
+            this.label1.Text = "THANH TOÁN DỊCH VỤ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel2

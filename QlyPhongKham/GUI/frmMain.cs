@@ -393,5 +393,33 @@ namespace GUI
         {
             new frmThongTinCaNhan().ShowDialog();
         }
+
+        private void xemThôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThanhToanTT frm = new frmThanhToanTT();
+            frm.MdiParent = this;
+            if (childCount_BN > 0)
+            {
+                frm.Text = frm.Text + " (" + childCount_BN.ToString() + ")";
+            }
+            //child Form will now hold a reference value to the tab control
+            frm.TabCtrl = tabControl1;
+
+            //Add a Tabpage and enables it
+            TabPage tp = new TabPage();
+            tp.Parent = tabControl1;
+            tp.Text = frm.Text;
+            tp.Show();
+
+            //child Form will now hold a reference value to a tabpage
+            frm.TabPag = tp;
+
+            //Activate the MDI child form
+            frm.Show();
+            childCount_TT++;
+
+            //Activate the newly created Tabpage
+            tabControl1.SelectedTab = tp;
+        }
     }
 }

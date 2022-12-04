@@ -90,7 +90,7 @@ namespace GUI
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 3);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(976, 40);
@@ -459,7 +459,7 @@ namespace GUI
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmThemNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThemNguoiDung";
+            this.Text = "Thêm người dùng vào nhóm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.frmThemNguoiDung_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmThemNguoiDung_FormClosing);

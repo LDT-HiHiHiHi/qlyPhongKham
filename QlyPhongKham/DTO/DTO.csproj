@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BenhNhan.cs" />
     <Compile Include="ChiTietPhieuCD.cs" />
+    <Compile Include="ChiTietTT.cs" />
     <Compile Include="GrTaiKhoan.cs" />
     <Compile Include="KPress.cs" />
     <Compile Include="PhanQuyen.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="SaveConfig.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="ThanhToanDV.cs" />
+    <Compile Include="ThanhToanTT.cs" />
     <Compile Include="THUOC.cs" />
     <Compile Include="ToaThuoc.cs" />
   </ItemGroup>
