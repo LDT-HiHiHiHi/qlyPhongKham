@@ -12,12 +12,12 @@ namespace DAL
 
         public THONGTINTAIKHOAN getThongTin(string id)
         {
-            return qlpk.THONGTINTAIKHOANs.Where(t => t.ID.Equals(id)).FirstOrDefault();
+            return qlpk.THONGTINTAIKHOANs.Where(t => t.ID_TAIKHOAN.Equals(id)).FirstOrDefault();
         }
 
         public int ckThongTin(string id)
         {
-            return qlpk.THONGTINTAIKHOANs.Where(t => t.ID.Equals(id)).Count();
+            return qlpk.THONGTINTAIKHOANs.Where(t => t.ID_TAIKHOAN.Equals(id)).Count();
         }
 
         public bool luuThongTin(THONGTINTAIKHOAN tt)
@@ -38,7 +38,7 @@ namespace DAL
         {
             try
             {
-                THONGTINTAIKHOAN a = qlpk.THONGTINTAIKHOANs.Where(t => t.ID.Equals(tt.ID)).FirstOrDefault();
+                THONGTINTAIKHOAN a = qlpk.THONGTINTAIKHOANs.Where(t => t.ID_TAIKHOAN.Equals(tt.ID_TAIKHOAN)).FirstOrDefault();
                 a.HOTEN = tt.HOTEN;
                 a.GTINH = tt.GTINH;
                 a.DCHI = tt.DCHI;

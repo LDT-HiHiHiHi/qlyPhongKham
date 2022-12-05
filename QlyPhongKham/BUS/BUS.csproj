@@ -42,6 +42,7 @@
     <Compile Include="BUS_db.cs" />
     <Compile Include="BUS_KeToa.cs" />
     <Compile Include="BUS_KhamBenh.cs" />
+    <Compile Include="BUS_LichSuKB.cs" />
     <Compile Include="BUS_Login.cs" />
     <Compile Include="BUS_ManHinh.cs" />
     <Compile Include="BUS_PhanQuyen.cs" />

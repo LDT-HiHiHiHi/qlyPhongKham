@@ -105,6 +105,12 @@
     <Compile Include="frmKhamBenh.Designer.cs">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLichSuKhamBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLichSuKhamBenh.Designer.cs">
+      <DependentUpon>frmLichSuKhamBenh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManHinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKhamBenh.resx">
       <DependentUpon>frmKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLichSuKhamBenh.resx">
+      <DependentUpon>frmLichSuKhamBenh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManHinh.resx">
       <DependentUpon>frmManHinh.cs</DependentUpon>

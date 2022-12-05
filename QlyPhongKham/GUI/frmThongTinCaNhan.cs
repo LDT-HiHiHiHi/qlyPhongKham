@@ -20,7 +20,6 @@ namespace GUI
             InitializeComponent();
         }
 
-
         private void frmThongTinCaNhan_Load(object sender, EventArgs e)
         {
             string id = bus_tk.getIDTK(frmLogin.USERNAME);
@@ -82,13 +81,14 @@ namespace GUI
             if(!rdbNam.Checked)
             {
                 gt = rdbNu.Text;
-            }    
+            }
             THONGTINTAIKHOAN tt = new THONGTINTAIKHOAN
             {
-                ID = id,
+                ID = "TK" + Program.phatSinhMaTuDong(),
+                ID_TAIKHOAN = id,
                 HOTEN = txtHoTen.Texts,
                 NGSINH = DateTime.Parse(txtNgaySinh.Text),
-                GTINH = gt,
+                GTINH = gt, 
                 SDT = txtSDT.Texts,
                 DCHI = txtDiaChi.Texts
             };

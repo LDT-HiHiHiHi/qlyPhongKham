@@ -24,11 +24,12 @@ namespace GUI
         {
             InitializeComponent();
             menu.PrimaryColor = Color.FromArgb(30, 144, 255);
+            menu2.PrimaryColor = Color.FromArgb(30, 144, 255);
         }
 
         private void frmKhamBenh_Load(object sender, EventArgs e)
         {
-            btnThem.Enabled = btnXoa.Enabled = btnToaThuoc.Enabled = btnLuu.Enabled = btnXem.Enabled = false;
+            btnThem.Enabled = btnXoa.Enabled = btnToaThuoc.Enabled = btnXemLS.Enabled = btnLuu.Enabled = btnXem.Enabled = false;
             string idtk = bus_tk.getIDTK(frmLogin.USERNAME);
             dgvBenhNhan.DataSource = bus_kb.getDanhSachBN(idtk);
             cboDichVu.DataSource = bus_kb.getListDV();
@@ -48,7 +49,7 @@ namespace GUI
 
         private void dgvBenhNhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnThem.Enabled = btnToaThuoc.Enabled = true;
+            btnThem.Enabled = btnToaThuoc.Enabled = btnXemLS.Enabled = true;
             string ten = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
             string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             lbTenBn.Texts = ten;
@@ -362,6 +363,14 @@ namespace GUI
         {
             frm.anh = dgvCTDV.CurrentRow.Cells["HINHANH"].Value.ToString();
             new frm().ShowDialog();
+        }
+
+        private void btnXemLS_Click(object sender, EventArgs e)
+        {
+            frmLichSuKhamBenh.tenbn = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
+            frmLichSuKhamBenh.mabn = dgvBenhNhan.CurrentRow.Cells["MABN"].Value.ToString();
+            new frmLichSuKhamBenh().ShowDialog();
+            btnXemLS.Enabled = false;
         }
     }
 }
