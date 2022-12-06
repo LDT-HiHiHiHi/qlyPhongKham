@@ -421,5 +421,11 @@ namespace GUI
             //Activate the newly created Tabpage
             tabControl1.SelectedTab = tp;
         }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmDoiMatKhau().ShowDialog();
+
+        }
     }
 }

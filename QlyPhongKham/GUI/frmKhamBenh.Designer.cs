@@ -41,6 +41,8 @@ namespace GUI
             this.LSKB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MABN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu2 = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.btnXemLS = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,10 +70,9 @@ namespace GUI
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.menu2 = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXemLS = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
+            this.menu2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -80,7 +81,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).BeginInit();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.menu2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -199,6 +199,27 @@ namespace GUI
             this.TENBN.MinimumWidth = 6;
             this.TENBN.Name = "TENBN";
             this.TENBN.ReadOnly = true;
+            // 
+            // menu2
+            // 
+            this.menu2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu2.IsMainMenu = false;
+            this.menu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnXemLS});
+            this.menu2.MenuItemHeight = 25;
+            this.menu2.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu2.Name = "menu2";
+            this.menu2.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu2.Size = new System.Drawing.Size(281, 62);
+            // 
+            // btnXemLS
+            // 
+            this.btnXemLS.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXemLS.Image = global::GUI.Properties.Resources.medical_checkup;
+            this.btnXemLS.Name = "btnXemLS";
+            this.btnXemLS.Size = new System.Drawing.Size(280, 30);
+            this.btnXemLS.Text = "Xem lịch sử khám bệnh";
+            this.btnXemLS.Click += new System.EventHandler(this.btnXemLS_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -616,26 +637,6 @@ namespace GUI
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
-            // menu2
-            // 
-            this.menu2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menu2.IsMainMenu = false;
-            this.menu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXemLS});
-            this.menu2.MenuItemHeight = 25;
-            this.menu2.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.menu2.Name = "menu2";
-            this.menu2.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu2.Size = new System.Drawing.Size(277, 62);
-            // 
-            // btnXemLS
-            // 
-            this.btnXemLS.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXemLS.Name = "btnXemLS";
-            this.btnXemLS.Size = new System.Drawing.Size(276, 30);
-            this.btnXemLS.Text = "Xem lịch sử khám bệnh";
-            this.btnXemLS.Click += new System.EventHandler(this.btnXemLS_Click);
-            // 
             // frmKhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -653,6 +654,7 @@ namespace GUI
             this.Load += new System.EventHandler(this.frmKhamBenh_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).EndInit();
+            this.menu2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -661,7 +663,6 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).EndInit();
             this.menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.menu2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

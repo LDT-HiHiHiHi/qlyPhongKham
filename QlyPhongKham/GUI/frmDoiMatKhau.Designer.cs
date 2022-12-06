@@ -40,8 +40,10 @@ namespace GUI
             this.txtRPW = new GUI.textBoxCustom();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -124,7 +126,7 @@ namespace GUI
             this.txtPW.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPW.Texts = "";
             this.txtPW.UnderlinedStyle = true;
-            this.txtPW.Leave += new System.EventHandler(this.txtPW_Leave);
+            this.txtPW._TextChanged += new System.EventHandler(this.txtPW__TextChanged);
             // 
             // txtRPW
             // 
@@ -154,13 +156,18 @@ namespace GUI
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.unlock;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.lock__1_;
             this.pictureBox1.Location = new System.Drawing.Point(206, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
             // 
             // frmDoiMatKhau
             // 
@@ -185,6 +192,7 @@ namespace GUI
             this.Load += new System.EventHandler(this.frmDoiMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +209,6 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

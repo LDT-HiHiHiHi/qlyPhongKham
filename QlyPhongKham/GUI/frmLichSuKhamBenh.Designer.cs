@@ -30,21 +30,13 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvCTDV = new System.Windows.Forms.DataGridView();
-            this.TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HINHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvToaThuoc = new System.Windows.Forms.DataGridView();
             this.MATT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,19 +55,28 @@ namespace GUI
             this.dgvBenhNhan = new System.Windows.Forms.DataGridView();
             this.MALS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LSKB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.A = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCTDV = new System.Windows.Forms.DataGridView();
+            this.TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HINHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).BeginInit();
-            this.menu.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvToaThuoc)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -121,114 +122,10 @@ namespace GUI
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(373, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1106, 230);
+            this.groupBox1.Size = new System.Drawing.Size(1106, 229);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách dịch vụ thực hiện";
-            // 
-            // dgvCTDV
-            // 
-            this.dgvCTDV.AllowUserToAddRows = false;
-            this.dgvCTDV.AllowUserToDeleteRows = false;
-            this.dgvCTDV.BackgroundColor = System.Drawing.Color.FloralWhite;
-            this.dgvCTDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCTDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCTDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TENDV,
-            this.HINHANH,
-            this.MACD,
-            this.MOTA,
-            this.KETQUA,
-            this.DONGIA});
-            this.dgvCTDV.ContextMenuStrip = this.menu;
-            this.dgvCTDV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCTDV.Location = new System.Drawing.Point(3, 26);
-            this.dgvCTDV.Name = "dgvCTDV";
-            this.dgvCTDV.ReadOnly = true;
-            this.dgvCTDV.RowHeadersVisible = false;
-            this.dgvCTDV.RowHeadersWidth = 51;
-            this.dgvCTDV.RowTemplate.Height = 24;
-            this.dgvCTDV.Size = new System.Drawing.Size(1100, 201);
-            this.dgvCTDV.TabIndex = 1;
-            this.dgvCTDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDV_CellClick);
-            // 
-            // TENDV
-            // 
-            this.TENDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TENDV.DataPropertyName = "TENDV";
-            this.TENDV.HeaderText = "Tên dịch vụ";
-            this.TENDV.MinimumWidth = 6;
-            this.TENDV.Name = "TENDV";
-            this.TENDV.ReadOnly = true;
-            this.TENDV.Width = 132;
-            // 
-            // HINHANH
-            // 
-            this.HINHANH.DataPropertyName = "HINHANH";
-            this.HINHANH.HeaderText = "Column1";
-            this.HINHANH.MinimumWidth = 6;
-            this.HINHANH.Name = "HINHANH";
-            this.HINHANH.ReadOnly = true;
-            this.HINHANH.Visible = false;
-            this.HINHANH.Width = 125;
-            // 
-            // MACD
-            // 
-            this.MACD.DataPropertyName = "MACD";
-            this.MACD.HeaderText = "MACD";
-            this.MACD.MinimumWidth = 6;
-            this.MACD.Name = "MACD";
-            this.MACD.ReadOnly = true;
-            this.MACD.Visible = false;
-            this.MACD.Width = 125;
-            // 
-            // MOTA
-            // 
-            this.MOTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MOTA.DataPropertyName = "MOTA";
-            this.MOTA.HeaderText = "Mô tả";
-            this.MOTA.MinimumWidth = 6;
-            this.MOTA.Name = "MOTA";
-            this.MOTA.ReadOnly = true;
-            // 
-            // KETQUA
-            // 
-            this.KETQUA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.KETQUA.DataPropertyName = "KETQUA";
-            this.KETQUA.HeaderText = "Kết quả";
-            this.KETQUA.MinimumWidth = 6;
-            this.KETQUA.Name = "KETQUA";
-            this.KETQUA.ReadOnly = true;
-            // 
-            // DONGIA
-            // 
-            this.DONGIA.DataPropertyName = "DONGIA";
-            this.DONGIA.HeaderText = "Column1";
-            this.DONGIA.MinimumWidth = 6;
-            this.DONGIA.Name = "DONGIA";
-            this.DONGIA.ReadOnly = true;
-            this.DONGIA.Visible = false;
-            this.DONGIA.Width = 125;
-            // 
-            // menu
-            // 
-            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menu.IsMainMenu = false;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXem});
-            this.menu.MenuItemHeight = 25;
-            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.menu.Name = "menu";
-            this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(199, 34);
-            // 
-            // btnXem
-            // 
-            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(198, 30);
-            this.btnXem.Text = "Xem hình ảnh";
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // groupBox2
             // 
@@ -236,9 +133,9 @@ namespace GUI
             this.groupBox2.Controls.Add(this.dgvToaThuoc);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(373, 289);
+            this.groupBox2.Location = new System.Drawing.Point(373, 288);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1106, 278);
+            this.groupBox2.Size = new System.Drawing.Size(1106, 277);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Toa thuốc";
@@ -264,7 +161,7 @@ namespace GUI
             this.dgvToaThuoc.RowHeadersVisible = false;
             this.dgvToaThuoc.RowHeadersWidth = 51;
             this.dgvToaThuoc.RowTemplate.Height = 24;
-            this.dgvToaThuoc.Size = new System.Drawing.Size(1100, 249);
+            this.dgvToaThuoc.Size = new System.Drawing.Size(1100, 248);
             this.dgvToaThuoc.TabIndex = 1;
             // 
             // MATT
@@ -313,7 +210,7 @@ namespace GUI
             this.SOVIEN.MinimumWidth = 6;
             this.SOVIEN.Name = "SOVIEN";
             this.SOVIEN.ReadOnly = true;
-            this.SOVIEN.Width = 106;
+            this.SOVIEN.Width = 139;
             // 
             // TONG
             // 
@@ -323,7 +220,7 @@ namespace GUI
             this.TONG.MinimumWidth = 6;
             this.TONG.Name = "TONG";
             this.TONG.ReadOnly = true;
-            this.TONG.Width = 99;
+            this.TONG.Width = 141;
             // 
             // tableLayoutPanel2
             // 
@@ -340,14 +237,14 @@ namespace GUI
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.lbCD, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 573);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 571);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1106, 177);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1106, 179);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // label2
@@ -419,6 +316,33 @@ namespace GUI
             this.dgvBenhNhan.AllowUserToDeleteRows = false;
             this.dgvBenhNhan.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dgvBenhNhan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBenhNhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBenhNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBenhNhan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MALS,
+            this.STT,
+            this.Column2,
+            this.Column4,
+            this.Column3});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBenhNhan.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBenhNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBenhNhan.Location = new System.Drawing.Point(3, 53);
+            this.dgvBenhNhan.Name = "dgvBenhNhan";
+            this.dgvBenhNhan.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -426,34 +350,7 @@ namespace GUI
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBenhNhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvBenhNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBenhNhan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MALS,
-            this.STT,
-            this.TENBN,
-            this.Column2,
-            this.Column3});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBenhNhan.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvBenhNhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBenhNhan.Location = new System.Drawing.Point(3, 53);
-            this.dgvBenhNhan.Name = "dgvBenhNhan";
-            this.dgvBenhNhan.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBenhNhan.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvBenhNhan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBenhNhan.RowHeadersVisible = false;
             this.dgvBenhNhan.RowHeadersWidth = 51;
             this.tableLayoutPanel1.SetRowSpan(this.dgvBenhNhan, 3);
@@ -480,17 +377,7 @@ namespace GUI
             this.STT.Name = "STT";
             this.STT.ReadOnly = true;
             this.STT.Visible = false;
-            this.STT.Width = 125;
-            // 
-            // TENBN
-            // 
-            this.TENBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TENBN.DataPropertyName = "TENBN";
-            this.TENBN.HeaderText = "Tên bệnh nhân";
-            this.TENBN.MinimumWidth = 6;
-            this.TENBN.Name = "TENBN";
-            this.TENBN.ReadOnly = true;
-            this.TENBN.Visible = false;
+            this.STT.Width = 74;
             // 
             // Column2
             // 
@@ -502,10 +389,22 @@ namespace GUI
             this.Column2.Visible = false;
             this.Column2.Width = 125;
             // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "TENBN";
+            this.Column4.HeaderText = "Column4";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            this.Column4.Width = 125;
+            // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.DataPropertyName = "NGAY";
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column3.HeaderText = "Ngày khám";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
@@ -527,6 +426,111 @@ namespace GUI
             this.A.Name = "A";
             this.A.Width = 125;
             // 
+            // dgvCTDV
+            // 
+            this.dgvCTDV.AllowUserToAddRows = false;
+            this.dgvCTDV.AllowUserToDeleteRows = false;
+            this.dgvCTDV.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.dgvCTDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCTDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TENDV,
+            this.HINHANH,
+            this.MACD,
+            this.MOTA,
+            this.KETQUA,
+            this.DONGIA});
+            this.dgvCTDV.ContextMenuStrip = this.menu;
+            this.dgvCTDV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCTDV.Location = new System.Drawing.Point(3, 26);
+            this.dgvCTDV.Name = "dgvCTDV";
+            this.dgvCTDV.ReadOnly = true;
+            this.dgvCTDV.RowHeadersVisible = false;
+            this.dgvCTDV.RowHeadersWidth = 51;
+            this.dgvCTDV.RowTemplate.Height = 24;
+            this.dgvCTDV.Size = new System.Drawing.Size(1100, 200);
+            this.dgvCTDV.TabIndex = 1;
+            this.dgvCTDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDV_CellClick);
+            // 
+            // TENDV
+            // 
+            this.TENDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TENDV.DataPropertyName = "TENDV";
+            this.TENDV.HeaderText = "Tên dịch vụ";
+            this.TENDV.MinimumWidth = 6;
+            this.TENDV.Name = "TENDV";
+            this.TENDV.ReadOnly = true;
+            this.TENDV.Width = 132;
+            // 
+            // HINHANH
+            // 
+            this.HINHANH.DataPropertyName = "HINHANH";
+            this.HINHANH.HeaderText = "Column1";
+            this.HINHANH.MinimumWidth = 6;
+            this.HINHANH.Name = "HINHANH";
+            this.HINHANH.ReadOnly = true;
+            this.HINHANH.Visible = false;
+            this.HINHANH.Width = 125;
+            // 
+            // MACD
+            // 
+            this.MACD.DataPropertyName = "MACD";
+            this.MACD.HeaderText = "MACD";
+            this.MACD.MinimumWidth = 6;
+            this.MACD.Name = "MACD";
+            this.MACD.ReadOnly = true;
+            this.MACD.Visible = false;
+            this.MACD.Width = 125;
+            // 
+            // MOTA
+            // 
+            this.MOTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MOTA.DataPropertyName = "MOTA";
+            this.MOTA.HeaderText = "Mô tả";
+            this.MOTA.MinimumWidth = 6;
+            this.MOTA.Name = "MOTA";
+            this.MOTA.ReadOnly = true;
+            // 
+            // KETQUA
+            // 
+            this.KETQUA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.KETQUA.DataPropertyName = "KETQUA";
+            this.KETQUA.HeaderText = "Kết quả";
+            this.KETQUA.MinimumWidth = 6;
+            this.KETQUA.Name = "KETQUA";
+            this.KETQUA.ReadOnly = true;
+            // 
+            // DONGIA
+            // 
+            this.DONGIA.DataPropertyName = "DONGIA";
+            this.DONGIA.HeaderText = "Column1";
+            this.DONGIA.MinimumWidth = 6;
+            this.DONGIA.Name = "DONGIA";
+            this.DONGIA.ReadOnly = true;
+            this.DONGIA.Visible = false;
+            this.DONGIA.Width = 125;
+            // 
+            // menu
+            // 
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.IsMainMenu = false;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnXem});
+            this.menu.MenuItemHeight = 25;
+            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu.Name = "menu";
+            this.menu.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu.Size = new System.Drawing.Size(215, 62);
+            // 
+            // btnXem
+            // 
+            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXem.Image = global::GUI.Properties.Resources.picture;
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(214, 30);
+            this.btnXem.Text = "Xem hình ảnh";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
             // frmLichSuKhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -540,12 +544,12 @@ namespace GUI
             this.Load += new System.EventHandler(this.frmLichSuKhamBenh_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).EndInit();
-            this.menu.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvToaThuoc)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).EndInit();
+            this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -580,12 +584,12 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn LSKB;
         private System.Windows.Forms.DataGridViewTextBoxColumn A;
         private System.Windows.Forms.DataGridView dgvBenhNhan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MALS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TENBN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private CustomControls.RJControls.RJDropdownMenu menu;
         private System.Windows.Forms.ToolStripMenuItem btnXem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MALS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

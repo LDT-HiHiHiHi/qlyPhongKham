@@ -37,6 +37,7 @@
             this.xemThôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phânQuyềnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +73,7 @@
             this.xemThôngTinCáNhânToolStripMenuItem,
             this.phânQuyềnToolStripMenuItem,
             this.toolStripSeparator3,
+            this.đổiMậtKhẩuToolStripMenuItem,
             this.thôngTinCáNhânToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem1});
             this.chứcNăngToolStripMenuItem.Image = global::GUI.Properties.Resources.software;
@@ -128,6 +130,14 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(253, 6);
+            // 
+            // đổiMậtKhẩuToolStripMenuItem
+            // 
+            this.đổiMậtKhẩuToolStripMenuItem.Image = global::GUI.Properties.Resources._lock;
+            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // thôngTinCáNhânToolStripMenuItem
             // 
@@ -270,5 +280,6 @@
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
     }
 }

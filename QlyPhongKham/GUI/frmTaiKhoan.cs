@@ -54,15 +54,6 @@ namespace GUI
             }    
         }
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string id = dgvTaiKhoan.CurrentRow.Cells["ID"].Value.ToString();
-            frmDoiMatKhau.USERNAME = bus_tk.getTenDangNhap(id);
-            new frmDoiMatKhau().ShowDialog();
-            this.frmTaiKhoan_Load(sender, e);
-            dgvTaiKhoan.DataSource = frmDoiMatKhau.LIST;
-        }
-
         private void dgvTaiKhoan_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dgvTaiKhoan.Columns[e.ColumnIndex].Index == 2)
