@@ -100,7 +100,7 @@
             // 
             this.txtPw.BackColor = System.Drawing.Color.White;
             this.txtPw.BorderColor = System.Drawing.Color.Black;
-            this.txtPw.BorderFocusColor = System.Drawing.Color.Gold;
+            this.txtPw.BorderFocusColor = System.Drawing.Color.Navy;
             this.txtPw.BorderRadius = 0;
             this.txtPw.BorderSize = 1;
             this.txtPw.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,7 +122,7 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.BorderColor = System.Drawing.Color.Black;
-            this.txtUsername.BorderFocusColor = System.Drawing.Color.Gold;
+            this.txtUsername.BorderFocusColor = System.Drawing.Color.Navy;
             this.txtUsername.BorderRadius = 0;
             this.txtUsername.BorderSize = 1;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,7 +167,7 @@
             // 
             this.btnLuu.BackColor = System.Drawing.Color.Navy;
             this.btnLuu.BackgroundColor = System.Drawing.Color.Navy;
-            this.btnLuu.BorderColor = System.Drawing.Color.Gold;
+            this.btnLuu.BorderColor = System.Drawing.Color.Navy;
             this.btnLuu.BorderRadius = 8;
             this.btnLuu.BorderSize = 1;
             this.btnLuu.FlatAppearance.BorderSize = 0;

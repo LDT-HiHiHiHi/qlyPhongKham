@@ -216,6 +216,10 @@ namespace GUI
 
         private void dgvToaThuoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(dgvToaThuoc.CurrentRow == null)
+            {
+                return;
+            }    
             btnLuu.Enabled = btnXoa.Enabled = true;
             txtSoVien.Texts = dgvToaThuoc.CurrentRow.Cells["SOVIEN"].Value.ToString();
             txtTenThuoc.Texts = dgvToaThuoc.CurrentRow.Cells["TENTT"].Value.ToString();

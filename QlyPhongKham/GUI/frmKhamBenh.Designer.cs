@@ -34,6 +34,7 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhamBenh));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvBenhNhan = new System.Windows.Forms.DataGridView();
@@ -60,16 +61,16 @@ namespace GUI
             this.txtChanDoan = new GUI.textBoxCustom();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCTDV = new System.Windows.Forms.DataGridView();
+            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HINHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
             this.menu2.SuspendLayout();
@@ -210,7 +211,7 @@ namespace GUI
             this.menu2.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu2.Name = "menu2";
             this.menu2.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu2.Size = new System.Drawing.Size(281, 62);
+            this.menu2.Size = new System.Drawing.Size(281, 34);
             // 
             // btnXemLS
             // 
@@ -299,7 +300,7 @@ namespace GUI
             this.lbTenBn.Size = new System.Drawing.Size(380, 38);
             this.lbTenBn.TabIndex = 1;
             this.lbTenBn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lbTenBn.Texts = "Lê Văn A";
+            this.lbTenBn.Texts = "";
             this.lbTenBn.UnderlinedStyle = true;
             // 
             // label3
@@ -543,10 +544,48 @@ namespace GUI
             this.dgvCTDV.TabIndex = 0;
             this.dgvCTDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDV_CellClick);
             // 
+            // menu
+            // 
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.IsMainMenu = false;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnXoa,
+            this.btnXem});
+            this.menu.MenuItemHeight = 25;
+            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu.Name = "menu";
+            this.menu.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu.Size = new System.Drawing.Size(203, 64);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(202, 30);
+            this.btnXoa.Text = "Xóa dịch vụ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnXem
+            // 
+            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXem.Image = global::GUI.Properties.Resources.picture;
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(202, 30);
+            this.btnXem.Text = "Xem hình ảnh";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
             // TENDV
             // 
             this.TENDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.TENDV.DataPropertyName = "TENDV";
+            dataGridViewCellStyle4.NullValue = "null";
+            this.TENDV.DefaultCellStyle = dataGridViewCellStyle4;
             this.TENDV.HeaderText = "Tên dịch vụ";
             this.TENDV.MinimumWidth = 6;
             this.TENDV.Name = "TENDV";
@@ -600,42 +639,6 @@ namespace GUI
             this.DONGIA.ReadOnly = true;
             this.DONGIA.Visible = false;
             this.DONGIA.Width = 125;
-            // 
-            // menu
-            // 
-            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menu.IsMainMenu = false;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXoa,
-            this.btnXem});
-            this.menu.MenuItemHeight = 25;
-            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.menu.Name = "menu";
-            this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(203, 64);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(202, 30);
-            this.btnXoa.Text = "Xóa dịch vụ";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnXem
-            // 
-            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXem.Image = global::GUI.Properties.Resources.picture;
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(202, 30);
-            this.btnXem.Text = "Xem hình ảnh";
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
             // frmKhamBenh
             // 
@@ -696,14 +699,14 @@ namespace GUI
         private CustomControls.RJControls.RJDropdownMenu menu;
         private System.Windows.Forms.ToolStripMenuItem btnXoa;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ToolStripMenuItem btnXem;
+        private CustomControls.RJControls.RJDropdownMenu menu2;
+        private System.Windows.Forms.ToolStripMenuItem btnXemLS;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HINHANH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MACD;
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn KETQUA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA;
-        private System.Windows.Forms.ToolStripMenuItem btnXem;
-        private CustomControls.RJControls.RJDropdownMenu menu2;
-        private System.Windows.Forms.ToolStripMenuItem btnXemLS;
     }
 }

@@ -49,6 +49,11 @@ namespace GUI
 
         private void dgvBenhNhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            frmChiTietDV.mota = string.Empty;
+            if(dgvBenhNhan.CurrentRow == null)
+            {
+                return;
+            }
             btnThem.Enabled = btnToaThuoc.Enabled = btnXemLS.Enabled = true;
             string ten = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
             string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
@@ -184,7 +189,7 @@ namespace GUI
                     Program.AlertMessage("Đã xảy ra lỗi cập nhật thành tiền !", MessageBoxIcon.Error);
                 }
                 Program.AlertMessage("Thêm thành công", MessageBoxIcon.Information);
-                txtMoTa.Texts = string.Empty;
+                txtMoTa.Texts= frmChiTietDV.mota     = string.Empty;
                 if (bus_kb.checkPhieuTonTai(mals) > 0)
                 {
                     dgvCTDV.DataSource = bus_kb.getListCT(bus_kb.getMaCD(mals));
@@ -196,7 +201,7 @@ namespace GUI
 
         private void dgvCTDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
+                string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             if (bus_kb.getTrangThaiBN(mals) == true)
             {
                 btnXoa.Enabled = false;
@@ -204,20 +209,27 @@ namespace GUI
             else
             {
                 btnXoa.Enabled = true;
-            }    
+            }
+            if (dgvCTDV.CurrentRow == null)
+            {
+                return;
+            }
             cboDichVu.Texts = dgvCTDV.CurrentRow.Cells["TENDV"].Value.ToString();
-            string mota =  dgvCTDV.CurrentRow.Cells["MOTA"].Value.ToString();
-            if(mota.Equals("Chưa có"))
+            string mota = dgvCTDV.CurrentRow.Cells["MOTA"].Value.ToString();
+            if (mota.Equals("Chưa có"))
             {
                 txtMoTa.Texts = string.Empty;
             }    
             else
             {
                 txtMoTa.Texts = mota;
-            }    
-
-            string hinhanh = dgvCTDV.CurrentRow.Cells["HINHANH"].Value.ToString();
-            if(hinhanh.Equals("Chưa có"))
+            }
+            if (dgvCTDV.CurrentRow == null)
+            {
+                return;
+            }
+             string hinhanh = dgvCTDV.CurrentRow.Cells["HINHANH"].Value.ToString();
+            if (hinhanh.Equals("Chưa có"))
             {
                 btnXem.Enabled = false;
             }    
@@ -225,14 +237,18 @@ namespace GUI
             {
                 btnXem.Enabled = true;
             }
-            if(bus_tt.getTrangThai(bus_kb.getMaCD(mals)))
+            string macd = bus_kb.getMaCD(mals);
+            if(macd != null)
             {
-                btnXoa.Enabled = false;
-            }    
-            else
-            {
-                btnXoa.Enabled = true;
-            }    
+                if (bus_tt.getTrangThai(macd))
+                {
+                    btnXoa.Enabled = false;
+                }
+                else
+                {
+                    btnXoa.Enabled = true;
+                }
+            }   
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -371,6 +387,11 @@ namespace GUI
             frmLichSuKhamBenh.mabn = dgvBenhNhan.CurrentRow.Cells["MABN"].Value.ToString();
             new frmLichSuKhamBenh().ShowDialog();
             btnXemLS.Enabled = false;
+        }
+
+        private void dgvCTDV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            return;
         }
     }
 }

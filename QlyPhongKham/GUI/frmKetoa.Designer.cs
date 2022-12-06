@@ -413,7 +413,7 @@ namespace GUI
             // 
             this.txtNgay.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtNgay.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNgay.BorderRadius = 5;
+            this.txtNgay.BorderRadius = 0;
             this.txtNgay.BorderSize = 1;
             this.txtNgay.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtNgay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -458,7 +458,7 @@ namespace GUI
             // 
             this.txtTenThuoc.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTenThuoc.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTenThuoc.BorderRadius = 5;
+            this.txtTenThuoc.BorderRadius = 0;
             this.txtTenThuoc.BorderSize = 1;
             this.txtTenThuoc.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtTenThuoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -516,7 +516,7 @@ namespace GUI
             // 
             this.txtSoVien.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtSoVien.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSoVien.BorderRadius = 5;
+            this.txtSoVien.BorderRadius = 0;
             this.txtSoVien.BorderSize = 1;
             this.txtSoVien.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtSoVien.Font = new System.Drawing.Font("Times New Roman", 12F);

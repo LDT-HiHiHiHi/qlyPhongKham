@@ -84,6 +84,8 @@ namespace CustomControls.RJControls
             this.ResumeLayout();
             AdjustComboBoxDimensions();
         }
+
+
         #endregion
 
         //Properties

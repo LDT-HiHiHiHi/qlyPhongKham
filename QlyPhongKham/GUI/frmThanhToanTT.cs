@@ -150,6 +150,10 @@ namespace GUI
             lbTrangThai.BackColor = Color.White;
 
             txtTongTien.Texts = string.Empty;
+            if(dgvTT.CurrentRow == null)
+            {
+                return;
+            }    
             string matt = dgvTT.CurrentRow.Cells["MATT"].Value.ToString();
             if (bus_tt.checkCTTT(matt) > 0)
             {

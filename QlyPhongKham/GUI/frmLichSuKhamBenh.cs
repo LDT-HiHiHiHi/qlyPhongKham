@@ -34,6 +34,10 @@ namespace GUI
 
         private void dgvBenhNhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(dgvBenhNhan.CurrentRow == null)
+            {
+                return;
+            }    
             string mals = dgvBenhNhan.CurrentRow.Cells["MALS"].Value.ToString();
             lbBS.Text = bus_ls.getTenBS(mals);
             string chandoan = bus_kb.getChanDoan(mals);
