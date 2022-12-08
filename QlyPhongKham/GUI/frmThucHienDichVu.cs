@@ -69,6 +69,8 @@ namespace GUI
 
         private void dgvCD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvCD.CurrentRow == null)
+                return; 
             string macd = dgvCD.CurrentRow.Cells["MACD"].Value.ToString();
             dgvCT.DataSource = bus_kb.getListCT(macd);
         }
@@ -135,6 +137,8 @@ namespace GUI
 
         private void dgvCT_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvCT.CurrentRow == null)
+                return;
             btnLuu.Enabled = btnXem.Enabled = btnOpen.Enabled = true;
             string hinh = dgvCT.CurrentRow.Cells["HINHANH"].Value.ToString();
             if (hinh.Equals("Chưa có"))

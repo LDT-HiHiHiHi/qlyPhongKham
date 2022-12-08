@@ -135,10 +135,13 @@ namespace GUI
 
         private void dgvCD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvCD.CurrentRow == null)
+                return;
+
             lbTrangThai.Text = string.Empty;
             lbTrangThai.ForeColor = Color.White;
             lbTrangThai.BackColor = Color.White;
-
+            
             txtTongTien.Texts = string.Empty;
             string macd = dgvCD.CurrentRow.Cells["MACD"].Value.ToString();
             if (bus_dv.checkCTCD(macd) > 0)

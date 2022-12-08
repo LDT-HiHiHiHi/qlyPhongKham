@@ -53,6 +53,8 @@ namespace GUI
 
         private void dgvListBN_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvListBN.CurrentRow == null)
+                return;
             ID = dgvListBN.CurrentRow.Cells["MABN"].Value.ToString();
             btnKham.Enabled = btnSua.Enabled = btnDoiPhong.Enabled = true;
         }

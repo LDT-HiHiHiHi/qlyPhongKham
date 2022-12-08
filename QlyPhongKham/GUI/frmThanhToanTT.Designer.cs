@@ -33,18 +33,15 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThanhToanTT));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new GUI.CustomButton();
             this.dgvTT = new System.Windows.Forms.DataGridView();
-            this.MATT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new GUI.textBoxCustom();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCT = new System.Windows.Forms.DataGridView();
@@ -65,6 +62,9 @@ namespace GUI
             this.label4 = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MATT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTT)).BeginInit();
@@ -204,37 +204,6 @@ namespace GUI
             this.dgvTT.Size = new System.Drawing.Size(580, 841);
             this.dgvTT.TabIndex = 4;
             this.dgvTT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTT_CellClick);
-            // 
-            // MATT
-            // 
-            this.MATT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.MATT.DataPropertyName = "MATT";
-            this.MATT.HeaderText = "Mã toa thuốc";
-            this.MATT.MinimumWidth = 6;
-            this.MATT.Name = "MATT";
-            this.MATT.ReadOnly = true;
-            this.MATT.Width = 141;
-            // 
-            // TENBN
-            // 
-            this.TENBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TENBN.DataPropertyName = "TENBN";
-            this.TENBN.HeaderText = "Tên bệnh nhân";
-            this.TENBN.MinimumWidth = 6;
-            this.TENBN.Name = "TENBN";
-            this.TENBN.ReadOnly = true;
-            // 
-            // DAY
-            // 
-            this.DAY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.DAY.DataPropertyName = "DAY";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.DAY.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DAY.HeaderText = "Ngày thực hiện";
-            this.DAY.MinimumWidth = 6;
-            this.DAY.Name = "DAY";
-            this.DAY.ReadOnly = true;
-            this.DAY.Width = 114;
             // 
             // txtTimKiem
             // 
@@ -545,6 +514,37 @@ namespace GUI
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // MATT
+            // 
+            this.MATT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.MATT.DataPropertyName = "MATT";
+            this.MATT.HeaderText = "Mã toa thuốc";
+            this.MATT.MinimumWidth = 6;
+            this.MATT.Name = "MATT";
+            this.MATT.ReadOnly = true;
+            this.MATT.Width = 141;
+            // 
+            // TENBN
+            // 
+            this.TENBN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TENBN.DataPropertyName = "TENBN";
+            this.TENBN.HeaderText = "Tên bệnh nhân";
+            this.TENBN.MinimumWidth = 6;
+            this.TENBN.Name = "TENBN";
+            this.TENBN.ReadOnly = true;
+            // 
+            // DAY
+            // 
+            this.DAY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DAY.DataPropertyName = "DAY";
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.DAY.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DAY.HeaderText = "Ngày kê toa";
+            this.DAY.MinimumWidth = 6;
+            this.DAY.Name = "DAY";
+            this.DAY.ReadOnly = true;
+            this.DAY.Width = 132;
+            // 
             // frmThanhToanTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -595,12 +595,12 @@ namespace GUI
         private System.Windows.Forms.Label lbTrangThai;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private textBoxCustom txtTimKiem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MATT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TENBN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DAY;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MATT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENBN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DAY;
     }
 }
