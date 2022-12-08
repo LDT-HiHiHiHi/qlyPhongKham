@@ -201,7 +201,11 @@ namespace GUI
 
         private void dgvCTDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
+            if(dgvBenhNhan.CurrentRow == null)
+            {
+                return;
+            }    
+            string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             if (bus_kb.getTrangThaiBN(mals) == true)
             {
                 btnXoa.Enabled = false;
@@ -332,7 +336,8 @@ namespace GUI
                     {
                         btnThem.Enabled = btnLuu.Enabled = true;
                     }
-                    return;
+                    this.OnLoad(e);
+                    return;      
                 }
                 Program.AlertMessage("Đã xảy ra lỗi" + ten, MessageBoxIcon.Error);
             }

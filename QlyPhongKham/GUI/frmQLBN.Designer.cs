@@ -283,7 +283,7 @@ namespace GUI
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(242, 94);
+            this.menu.Size = new System.Drawing.Size(242, 122);
             // 
             // tableLayoutPanel3
             // 
@@ -470,7 +470,7 @@ namespace GUI
             // btnDoiPhong
             // 
             this.btnDoiPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnDoiPhong.Image = global::GUI.Properties.Resources.changing_room;
+            this.btnDoiPhong.Image = global::GUI.Properties.Resources.sync__2_;
             this.btnDoiPhong.Name = "btnDoiPhong";
             this.btnDoiPhong.Size = new System.Drawing.Size(241, 30);
             this.btnDoiPhong.Text = "Đổi phòng";

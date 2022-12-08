@@ -38,10 +38,10 @@ namespace GUI
             this.TenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodeGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnThem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnThem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSua = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.drvThongTinNhom)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -135,31 +135,31 @@ namespace GUI
             this.contextMenuStrip1.Size = new System.Drawing.Size(162, 94);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // btnThem
-            // 
-            this.btnThem.Image = global::GUI.Properties.Resources.add;
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(161, 26);
-            this.btnThem.Text = "Thêm nhóm";
-            this.btnThem.Click += new System.EventHandler(this.thêmNhómToolStripMenuItem_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(158, 6);
             // 
-            // btnXoa
-            // 
-            this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(161, 26);
-            this.btnXoa.Text = "Xóa nhóm";
-            this.btnXoa.Click += new System.EventHandler(this.xóaNhómToolStripMenuItem_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(158, 6);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Image = global::GUI.Properties.Resources.plus__1_;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(161, 26);
+            this.btnThem.Text = "Thêm nhóm";
+            this.btnThem.Click += new System.EventHandler(this.thêmNhómToolStripMenuItem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = global::GUI.Properties.Resources.x_button4;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(161, 26);
+            this.btnXoa.Text = "Xóa nhóm";
+            this.btnXoa.Click += new System.EventHandler(this.xóaNhómToolStripMenuItem_Click);
             // 
             // btnSua
             // 

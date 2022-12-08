@@ -26,6 +26,10 @@ namespace BUS
         {
             return dal_kb.STT(pMaBS);
         }
+        public int soLuong(string pMaBS)
+        {
+            return dal_kb.soluong(pMaBS);
+        }
         public List<BenhNhan> getDanhSachBN(string idtk)
         {
             return dal_kb.getDanhSachBN(idtk);

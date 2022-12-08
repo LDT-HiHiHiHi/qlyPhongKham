@@ -88,6 +88,10 @@ namespace GUI
 
         private void dgvCTDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(dgvCTDV.CurrentRow == null)
+            {
+                return;
+            }    
             string hinhanh = dgvCTDV.CurrentRow.Cells["HINHANH"].Value.ToString();
             if (hinhanh.Equals("Chưa có"))
             {

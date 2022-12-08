@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvManHinh = new System.Windows.Forms.DataGridView();
             this.IDMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@
             this.txtIDMH = new GUI.textBoxCustom();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenMH = new GUI.textBoxCustom();
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLuu = new GUI.CustomButton();
             this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -59,14 +59,6 @@
             this.xóaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(176, 30);
-            // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.delete__1_;
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -248,10 +240,18 @@
             this.txtTenMH.Texts = "";
             this.txtTenMH.UnderlinedStyle = true;
             // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.x_button;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnLuu.BackgroundColor = System.Drawing.Color.MediumBlue;
+            this.btnLuu.BackColor = System.Drawing.Color.Navy;
+            this.btnLuu.BackgroundColor = System.Drawing.Color.Navy;
             this.btnLuu.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnLuu.BorderRadius = 5;
             this.btnLuu.BorderSize = 0;
@@ -260,13 +260,12 @@
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Image = global::GUI.Properties.Resources.diskette__4_;
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.Location = new System.Drawing.Point(485, 96);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 10, 30, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnLuu.Size = new System.Drawing.Size(161, 40);
+            this.btnLuu.Size = new System.Drawing.Size(161, 50);
             this.btnLuu.TabIndex = 29;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextColor = System.Drawing.Color.White;

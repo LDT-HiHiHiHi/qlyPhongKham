@@ -387,15 +387,15 @@ namespace GUI
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(118, 34);
+            this.menu.Size = new System.Drawing.Size(171, 34);
             // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
+            this.btnXoa.Image = global::GUI.Properties.Resources.x_button3;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(117, 30);
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Size = new System.Drawing.Size(170, 30);
+            this.btnXoa.Text = "Xóa thuốc";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // label2

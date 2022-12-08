@@ -134,7 +134,7 @@ namespace GUI
         {
             string maphong = cboPhong.SelectedValue();
             string mabs = bus_kb.getMaBacSi(maphong);
-            int stt = bus_kb.STT(mabs);
+            int stt = bus_kb.soLuong(mabs);
             lbSoLuong.Text = stt.ToString();
         }
 

@@ -37,6 +37,15 @@ namespace GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvCTDV = new System.Windows.Forms.DataGridView();
+            this.TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HINHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvToaThuoc = new System.Windows.Forms.DataGridView();
             this.MATT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,23 +69,14 @@ namespace GUI
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LSKB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.A = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCTDV = new System.Windows.Forms.DataGridView();
-            this.TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HINHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).BeginInit();
+            this.menu.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvToaThuoc)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).BeginInit();
-            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -122,10 +122,115 @@ namespace GUI
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(373, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1106, 229);
+            this.groupBox1.Size = new System.Drawing.Size(1106, 228);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách dịch vụ thực hiện";
+            // 
+            // dgvCTDV
+            // 
+            this.dgvCTDV.AllowUserToAddRows = false;
+            this.dgvCTDV.AllowUserToDeleteRows = false;
+            this.dgvCTDV.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.dgvCTDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCTDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TENDV,
+            this.HINHANH,
+            this.MACD,
+            this.MOTA,
+            this.KETQUA,
+            this.DONGIA});
+            this.dgvCTDV.ContextMenuStrip = this.menu;
+            this.dgvCTDV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCTDV.Location = new System.Drawing.Point(3, 26);
+            this.dgvCTDV.Name = "dgvCTDV";
+            this.dgvCTDV.ReadOnly = true;
+            this.dgvCTDV.RowHeadersVisible = false;
+            this.dgvCTDV.RowHeadersWidth = 51;
+            this.dgvCTDV.RowTemplate.Height = 24;
+            this.dgvCTDV.Size = new System.Drawing.Size(1100, 199);
+            this.dgvCTDV.TabIndex = 1;
+            this.dgvCTDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDV_CellClick);
+            // 
+            // TENDV
+            // 
+            this.TENDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TENDV.DataPropertyName = "TENDV";
+            this.TENDV.HeaderText = "Tên dịch vụ";
+            this.TENDV.MinimumWidth = 6;
+            this.TENDV.Name = "TENDV";
+            this.TENDV.ReadOnly = true;
+            this.TENDV.Width = 132;
+            // 
+            // HINHANH
+            // 
+            this.HINHANH.DataPropertyName = "HINHANH";
+            this.HINHANH.HeaderText = "Column1";
+            this.HINHANH.MinimumWidth = 6;
+            this.HINHANH.Name = "HINHANH";
+            this.HINHANH.ReadOnly = true;
+            this.HINHANH.Visible = false;
+            this.HINHANH.Width = 125;
+            // 
+            // MACD
+            // 
+            this.MACD.DataPropertyName = "MACD";
+            this.MACD.HeaderText = "MACD";
+            this.MACD.MinimumWidth = 6;
+            this.MACD.Name = "MACD";
+            this.MACD.ReadOnly = true;
+            this.MACD.Visible = false;
+            this.MACD.Width = 125;
+            // 
+            // MOTA
+            // 
+            this.MOTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MOTA.DataPropertyName = "MOTA";
+            this.MOTA.HeaderText = "Mô tả";
+            this.MOTA.MinimumWidth = 6;
+            this.MOTA.Name = "MOTA";
+            this.MOTA.ReadOnly = true;
+            // 
+            // KETQUA
+            // 
+            this.KETQUA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.KETQUA.DataPropertyName = "KETQUA";
+            this.KETQUA.HeaderText = "Kết quả";
+            this.KETQUA.MinimumWidth = 6;
+            this.KETQUA.Name = "KETQUA";
+            this.KETQUA.ReadOnly = true;
+            // 
+            // DONGIA
+            // 
+            this.DONGIA.DataPropertyName = "DONGIA";
+            this.DONGIA.HeaderText = "Column1";
+            this.DONGIA.MinimumWidth = 6;
+            this.DONGIA.Name = "DONGIA";
+            this.DONGIA.ReadOnly = true;
+            this.DONGIA.Visible = false;
+            this.DONGIA.Width = 125;
+            // 
+            // menu
+            // 
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.IsMainMenu = false;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnXem});
+            this.menu.MenuItemHeight = 25;
+            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu.Name = "menu";
+            this.menu.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu.Size = new System.Drawing.Size(203, 34);
+            // 
+            // btnXem
+            // 
+            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXem.Image = global::GUI.Properties.Resources.picture;
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(202, 30);
+            this.btnXem.Text = "Xem hình ảnh";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // groupBox2
             // 
@@ -133,7 +238,7 @@ namespace GUI
             this.groupBox2.Controls.Add(this.dgvToaThuoc);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(373, 288);
+            this.groupBox2.Location = new System.Drawing.Point(373, 287);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1106, 277);
             this.groupBox2.TabIndex = 4;
@@ -210,7 +315,7 @@ namespace GUI
             this.SOVIEN.MinimumWidth = 6;
             this.SOVIEN.Name = "SOVIEN";
             this.SOVIEN.ReadOnly = true;
-            this.SOVIEN.Width = 139;
+            this.SOVIEN.Width = 106;
             // 
             // TONG
             // 
@@ -220,7 +325,7 @@ namespace GUI
             this.TONG.MinimumWidth = 6;
             this.TONG.Name = "TONG";
             this.TONG.ReadOnly = true;
-            this.TONG.Width = 141;
+            this.TONG.Width = 99;
             // 
             // tableLayoutPanel2
             // 
@@ -237,14 +342,14 @@ namespace GUI
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.lbCD, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 571);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 570);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1106, 179);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1106, 180);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // label2
@@ -255,7 +360,7 @@ namespace GUI
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(362, 50);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tên bác sĩ";
+            this.label2.Text = "Tên bác sĩ :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
@@ -266,7 +371,7 @@ namespace GUI
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(362, 50);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Tên bệnh nhân";
+            this.label3.Text = "Tên bệnh nhân :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbBS
@@ -297,7 +402,7 @@ namespace GUI
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(362, 50);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Chẩn đoán";
+            this.label6.Text = "Chẩn đoán :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbCD
@@ -377,7 +482,7 @@ namespace GUI
             this.STT.Name = "STT";
             this.STT.ReadOnly = true;
             this.STT.Visible = false;
-            this.STT.Width = 74;
+            this.STT.Width = 125;
             // 
             // Column2
             // 
@@ -426,111 +531,6 @@ namespace GUI
             this.A.Name = "A";
             this.A.Width = 125;
             // 
-            // dgvCTDV
-            // 
-            this.dgvCTDV.AllowUserToAddRows = false;
-            this.dgvCTDV.AllowUserToDeleteRows = false;
-            this.dgvCTDV.BackgroundColor = System.Drawing.Color.FloralWhite;
-            this.dgvCTDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCTDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCTDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TENDV,
-            this.HINHANH,
-            this.MACD,
-            this.MOTA,
-            this.KETQUA,
-            this.DONGIA});
-            this.dgvCTDV.ContextMenuStrip = this.menu;
-            this.dgvCTDV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCTDV.Location = new System.Drawing.Point(3, 26);
-            this.dgvCTDV.Name = "dgvCTDV";
-            this.dgvCTDV.ReadOnly = true;
-            this.dgvCTDV.RowHeadersVisible = false;
-            this.dgvCTDV.RowHeadersWidth = 51;
-            this.dgvCTDV.RowTemplate.Height = 24;
-            this.dgvCTDV.Size = new System.Drawing.Size(1100, 200);
-            this.dgvCTDV.TabIndex = 1;
-            this.dgvCTDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDV_CellClick);
-            // 
-            // TENDV
-            // 
-            this.TENDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TENDV.DataPropertyName = "TENDV";
-            this.TENDV.HeaderText = "Tên dịch vụ";
-            this.TENDV.MinimumWidth = 6;
-            this.TENDV.Name = "TENDV";
-            this.TENDV.ReadOnly = true;
-            this.TENDV.Width = 132;
-            // 
-            // HINHANH
-            // 
-            this.HINHANH.DataPropertyName = "HINHANH";
-            this.HINHANH.HeaderText = "Column1";
-            this.HINHANH.MinimumWidth = 6;
-            this.HINHANH.Name = "HINHANH";
-            this.HINHANH.ReadOnly = true;
-            this.HINHANH.Visible = false;
-            this.HINHANH.Width = 125;
-            // 
-            // MACD
-            // 
-            this.MACD.DataPropertyName = "MACD";
-            this.MACD.HeaderText = "MACD";
-            this.MACD.MinimumWidth = 6;
-            this.MACD.Name = "MACD";
-            this.MACD.ReadOnly = true;
-            this.MACD.Visible = false;
-            this.MACD.Width = 125;
-            // 
-            // MOTA
-            // 
-            this.MOTA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MOTA.DataPropertyName = "MOTA";
-            this.MOTA.HeaderText = "Mô tả";
-            this.MOTA.MinimumWidth = 6;
-            this.MOTA.Name = "MOTA";
-            this.MOTA.ReadOnly = true;
-            // 
-            // KETQUA
-            // 
-            this.KETQUA.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.KETQUA.DataPropertyName = "KETQUA";
-            this.KETQUA.HeaderText = "Kết quả";
-            this.KETQUA.MinimumWidth = 6;
-            this.KETQUA.Name = "KETQUA";
-            this.KETQUA.ReadOnly = true;
-            // 
-            // DONGIA
-            // 
-            this.DONGIA.DataPropertyName = "DONGIA";
-            this.DONGIA.HeaderText = "Column1";
-            this.DONGIA.MinimumWidth = 6;
-            this.DONGIA.Name = "DONGIA";
-            this.DONGIA.ReadOnly = true;
-            this.DONGIA.Visible = false;
-            this.DONGIA.Width = 125;
-            // 
-            // menu
-            // 
-            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menu.IsMainMenu = false;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXem});
-            this.menu.MenuItemHeight = 25;
-            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.menu.Name = "menu";
-            this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(215, 62);
-            // 
-            // btnXem
-            // 
-            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXem.Image = global::GUI.Properties.Resources.picture;
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(214, 30);
-            this.btnXem.Text = "Xem hình ảnh";
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
-            // 
             // frmLichSuKhamBenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -544,12 +544,12 @@ namespace GUI
             this.Load += new System.EventHandler(this.frmLichSuKhamBenh_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).EndInit();
+            this.menu.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvToaThuoc)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDV)).EndInit();
-            this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -99,7 +99,7 @@ namespace GUI
             this.txtSDT.BorderSize = 1;
             this.txtSDT.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(189, 316);
+            this.txtSDT.Location = new System.Drawing.Point(189, 323);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Multiline = false;
             this.txtSDT.Name = "txtSDT";
@@ -118,7 +118,7 @@ namespace GUI
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label5.Location = new System.Drawing.Point(3, 312);
+            this.label5.Location = new System.Drawing.Point(3, 319);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.label5.Size = new System.Drawing.Size(179, 50);
@@ -134,7 +134,7 @@ namespace GUI
             this.txtDiaChi.BorderSize = 1;
             this.txtDiaChi.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(189, 266);
+            this.txtDiaChi.Location = new System.Drawing.Point(189, 273);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Multiline = false;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -157,7 +157,7 @@ namespace GUI
             this.txtNgaySinh.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtNgaySinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtNgaySinh.Location = new System.Drawing.Point(188, 164);
+            this.txtNgaySinh.Location = new System.Drawing.Point(188, 171);
             this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.txtNgaySinh.MinimumSize = new System.Drawing.Size(4, 35);
             this.txtNgaySinh.Name = "txtNgaySinh";
@@ -176,6 +176,7 @@ namespace GUI
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -197,7 +198,7 @@ namespace GUI
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label1.Location = new System.Drawing.Point(3, 106);
+            this.label1.Location = new System.Drawing.Point(3, 113);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.label1.Size = new System.Drawing.Size(179, 50);
@@ -209,7 +210,7 @@ namespace GUI
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 156);
+            this.label2.Location = new System.Drawing.Point(3, 163);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.label2.Size = new System.Drawing.Size(179, 50);
@@ -221,7 +222,7 @@ namespace GUI
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label3.Location = new System.Drawing.Point(3, 206);
+            this.label3.Location = new System.Drawing.Point(3, 213);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.label3.Size = new System.Drawing.Size(179, 56);
@@ -233,7 +234,7 @@ namespace GUI
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label4.Location = new System.Drawing.Point(3, 262);
+            this.label4.Location = new System.Drawing.Point(3, 269);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.label4.Size = new System.Drawing.Size(179, 50);
@@ -249,7 +250,7 @@ namespace GUI
             this.txtHoTen.BorderSize = 1;
             this.txtHoTen.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(189, 110);
+            this.txtHoTen.Location = new System.Drawing.Point(189, 117);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Multiline = false;
             this.txtHoTen.Name = "txtHoTen";
@@ -273,7 +274,7 @@ namespace GUI
             this.tableLayoutPanel3.Controls.Add(this.rdbNu, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(188, 209);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(188, 216);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -323,7 +324,7 @@ namespace GUI
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(382, 382);
+            this.btnLuu.Location = new System.Drawing.Point(382, 389);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 20, 50, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(150, 50);

@@ -33,8 +33,8 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhamBenh));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhamBenh));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvBenhNhan = new System.Windows.Forms.DataGridView();
@@ -43,7 +43,6 @@ namespace GUI
             this.MABN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu2 = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXemLS = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@ namespace GUI
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cboDichVu = new CustomControls.RJControls.RJComboBox();
-            this.btnThem = new GUI.CustomButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMoTa = new GUI.textBoxCustom();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -61,16 +59,18 @@ namespace GUI
             this.txtChanDoan = new GUI.textBoxCustom();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCTDV = new System.Windows.Forms.DataGridView();
-            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
-            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.TENDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HINHANH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MACD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MOTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KETQUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DONGIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnXemLS = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnThem = new GUI.CustomButton();
+            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
             this.menu2.SuspendLayout();
@@ -213,15 +213,6 @@ namespace GUI
             this.menu2.PrimaryColor = System.Drawing.Color.Empty;
             this.menu2.Size = new System.Drawing.Size(281, 34);
             // 
-            // btnXemLS
-            // 
-            this.btnXemLS.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXemLS.Image = global::GUI.Properties.Resources.medical_checkup;
-            this.btnXemLS.Name = "btnXemLS";
-            this.btnXemLS.Size = new System.Drawing.Size(280, 30);
-            this.btnXemLS.Text = "Xem lịch sử khám bệnh";
-            this.btnXemLS.Click += new System.EventHandler(this.btnXemLS_Click);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -357,26 +348,6 @@ namespace GUI
             this.cboDichVu.TabIndex = 0;
             this.cboDichVu.Texts = "";
             this.cboDichVu.OnSelectedIndexChanged += new System.EventHandler(this.cboDichVu_OnSelectedIndexChanged);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.BackgroundColor = System.Drawing.Color.White;
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 10;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = global::GUI.Properties.Resources.plus;
-            this.btnThem.Location = new System.Drawing.Point(459, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(41, 41);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label4
             // 
@@ -544,42 +515,6 @@ namespace GUI
             this.dgvCTDV.TabIndex = 0;
             this.dgvCTDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDV_CellClick);
             // 
-            // menu
-            // 
-            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menu.IsMainMenu = false;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXoa,
-            this.btnXem});
-            this.menu.MenuItemHeight = 25;
-            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.menu.Name = "menu";
-            this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(203, 64);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXoa.Image = global::GUI.Properties.Resources.delete__1_;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(202, 30);
-            this.btnXoa.Text = "Xóa dịch vụ";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnXem
-            // 
-            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.btnXem.Image = global::GUI.Properties.Resources.picture;
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(202, 30);
-            this.btnXem.Text = "Xem hình ảnh";
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
-            // 
             // TENDV
             // 
             this.TENDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -639,6 +574,71 @@ namespace GUI
             this.DONGIA.ReadOnly = true;
             this.DONGIA.Visible = false;
             this.DONGIA.Width = 125;
+            // 
+            // menu
+            // 
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.IsMainMenu = false;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnXoa,
+            this.btnXem});
+            this.menu.MenuItemHeight = 25;
+            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu.Name = "menu";
+            this.menu.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu.Size = new System.Drawing.Size(215, 92);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // btnXemLS
+            // 
+            this.btnXemLS.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXemLS.Image = global::GUI.Properties.Resources.medical_checkup;
+            this.btnXemLS.Name = "btnXemLS";
+            this.btnXemLS.Size = new System.Drawing.Size(280, 30);
+            this.btnXemLS.Text = "Xem lịch sử khám bệnh";
+            this.btnXemLS.Click += new System.EventHandler(this.btnXemLS_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.BackgroundColor = System.Drawing.Color.White;
+            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.BorderSize = 0;
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::GUI.Properties.Resources.plus;
+            this.btnThem.Location = new System.Drawing.Point(459, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(41, 41);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXoa.Image = global::GUI.Properties.Resources.x_button1;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(214, 30);
+            this.btnXoa.Text = "Xóa dịch vụ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnXem
+            // 
+            this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnXem.Image = global::GUI.Properties.Resources.picture;
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(214, 30);
+            this.btnXem.Text = "Xem hình ảnh";
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // frmKhamBenh
             // 

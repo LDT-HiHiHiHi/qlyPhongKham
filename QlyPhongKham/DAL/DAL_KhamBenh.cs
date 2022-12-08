@@ -35,10 +35,14 @@ namespace DAL
         {
             return qlpk.LS_KHAMBENHs.Where(t => t.MABS.Equals(pMaBS) && t.NGKHAM.Equals(DateTime.Today)).Count();
         }
+        public int soluong(string pMaBS)
+        {
+            return qlpk.LS_KHAMBENHs.Where(t => t.MABS.Equals(pMaBS) && t.NGKHAM.Equals(DateTime.Today) && t.TRANGTHAI == false).Count();
+        }
         public List<BenhNhan> getDanhSachBN(string idtk)
         {
             string mabs = qlpk.BACSIs.Where(t => t.IDTK.Equals(idtk)).Select(a => a.MABS).FirstOrDefault();
-            return qlpk.LS_KHAMBENHs.Where(t => t.MABS.Equals(mabs) && t.NGKHAM.Equals(DateTime.Today)).Join(qlpk.BENHNHANs, ls => ls.MABN, bn => bn.MABN, (ls, bn) => new BenhNhan
+            return qlpk.LS_KHAMBENHs.Where(t => t.MABS.Equals(mabs) && t.NGKHAM.Equals(DateTime.Today) && t.TRANGTHAI == false).Join(qlpk.BENHNHANs, ls => ls.MABN, bn => bn.MABN, (ls, bn) => new BenhNhan
             {
                 MABN = bn.MABN,
                 LSKB = ls.MALS,

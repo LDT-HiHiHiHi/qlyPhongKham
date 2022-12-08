@@ -145,7 +145,7 @@
             this.customButton1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.customButton1.Location = new System.Drawing.Point(458, 260);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(150, 40);
+            this.customButton1.Size = new System.Drawing.Size(150, 45);
             this.customButton1.TabIndex = 19;
             this.customButton1.TabStop = false;
             this.customButton1.Text = "Đóng";
@@ -167,7 +167,7 @@
             this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangNhap.Location = new System.Drawing.Point(298, 260);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(150, 40);
+            this.btnDangNhap.Size = new System.Drawing.Size(150, 45);
             this.btnDangNhap.TabIndex = 16;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.TextColor = System.Drawing.Color.White;
