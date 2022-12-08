@@ -9,4 +9,4 @@ Lưu hình sql: https://tuandc.com/lap-trinh/luu-truc-tiep-hinh-anh-vao-csdl-ban
 
 Tabcontrol: https://www.codeproject.com/Articles/12514/Multi-Document-Interface-MDI-tab-page-browsing-wit
 
-Sao lưu & khôi phục : c-sharpcorner.com/UploadFile/rohatash/restore-sql-server-backup-file-with-C-Sharp/?fbclid=IwAR2nLOWP15ObXEnVnxtkHmqTNAz6RWfiy-DwgQy6N9fx_0h2SHMAehYppxQ
+Sao lưu & khôi phục : https://www.c-sharpcorner.com/UploadFile/rohatash/restore-sql-server-backup-file-with-C-Sharp/?fbclid=IwAR2nLOWP15ObXEnVnxtkHmqTNAz6RWfiy-DwgQy6N9fx_0h2SHMAehYppxQ
