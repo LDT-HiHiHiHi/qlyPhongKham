@@ -34,21 +34,18 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.thêmTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đặtLạiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTimKiem = new GUI.textBoxCustom();
+            this.btnTimKiem = new GUI.CustomButton();
             this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTimKiem = new GUI.CustomButton();
-            this.thêmTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đặtLạiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -61,22 +58,25 @@ namespace GUI
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thêmTàiKhoảnToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.xóaTàiKhoảnToolStripMenuItem,
-            this.toolStripSeparator3,
             this.đặtLạiMậtKhẩuToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(192, 94);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 84);
             // 
-            // toolStripSeparator2
+            // thêmTàiKhoảnToolStripMenuItem
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(188, 6);
+            this.thêmTàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.plus__1_1;
+            this.thêmTàiKhoảnToolStripMenuItem.Name = "thêmTàiKhoảnToolStripMenuItem";
+            this.thêmTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.thêmTàiKhoảnToolStripMenuItem.Text = "Thêm tài khoản";
+            this.thêmTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thêmTàiKhoảnToolStripMenuItem_Click);
             // 
-            // toolStripSeparator3
+            // đặtLạiMậtKhẩuToolStripMenuItem
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(188, 6);
+            this.đặtLạiMậtKhẩuToolStripMenuItem.Image = global::GUI.Properties.Resources.sync__1_;
+            this.đặtLạiMậtKhẩuToolStripMenuItem.Name = "đặtLạiMậtKhẩuToolStripMenuItem";
+            this.đặtLạiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.đặtLạiMậtKhẩuToolStripMenuItem.Text = "Đặt lại mật khẩu";
+            this.đặtLạiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đặtLạiMậtKhẩuToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -161,6 +161,26 @@ namespace GUI
             this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
             this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.BackgroundColor = System.Drawing.Color.White;
+            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiem.BorderRadius = 0;
+            this.btnTimKiem.BorderSize = 0;
+            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Image = global::GUI.Properties.Resources.search__1_;
+            this.btnTimKiem.Location = new System.Drawing.Point(519, 3);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(35, 39);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.TextColor = System.Drawing.Color.White;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // dgvTaiKhoan
             // 
             this.dgvTaiKhoan.AllowUserToAddRows = false;
@@ -235,49 +255,6 @@ namespace GUI
             this.MK.Name = "MK";
             this.MK.ReadOnly = true;
             // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.Color.White;
-            this.btnTimKiem.BackgroundColor = System.Drawing.Color.White;
-            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiem.BorderRadius = 0;
-            this.btnTimKiem.BorderSize = 0;
-            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Image = global::GUI.Properties.Resources.search__1_;
-            this.btnTimKiem.Location = new System.Drawing.Point(519, 3);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(35, 39);
-            this.btnTimKiem.TabIndex = 2;
-            this.btnTimKiem.TextColor = System.Drawing.Color.White;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // thêmTàiKhoảnToolStripMenuItem
-            // 
-            this.thêmTàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.plus__1_1;
-            this.thêmTàiKhoảnToolStripMenuItem.Name = "thêmTàiKhoảnToolStripMenuItem";
-            this.thêmTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.thêmTàiKhoảnToolStripMenuItem.Text = "Thêm tài khoản";
-            this.thêmTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thêmTàiKhoảnToolStripMenuItem_Click);
-            // 
-            // xóaTàiKhoảnToolStripMenuItem
-            // 
-            this.xóaTàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.x_button2;
-            this.xóaTàiKhoảnToolStripMenuItem.Name = "xóaTàiKhoảnToolStripMenuItem";
-            this.xóaTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.xóaTàiKhoảnToolStripMenuItem.Text = "Xóa tài khoản";
-            // 
-            // đặtLạiMậtKhẩuToolStripMenuItem
-            // 
-            this.đặtLạiMậtKhẩuToolStripMenuItem.Image = global::GUI.Properties.Resources.sync__1_;
-            this.đặtLạiMậtKhẩuToolStripMenuItem.Name = "đặtLạiMậtKhẩuToolStripMenuItem";
-            this.đặtLạiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.đặtLạiMậtKhẩuToolStripMenuItem.Text = "Đặt lại mật khẩu";
-            this.đặtLạiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đặtLạiMậtKhẩuToolStripMenuItem_Click);
-            // 
             // frmTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -310,12 +287,9 @@ namespace GUI
         private CustomButton btnTimKiem;
         private System.Windows.Forms.DataGridView dgvTaiKhoan;
         private System.Windows.Forms.ToolStripMenuItem thêmTàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem xóaTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENDN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MK;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem đặtLạiMậtKhẩuToolStripMenuItem;
     }
 }

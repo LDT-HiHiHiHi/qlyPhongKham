@@ -20,7 +20,6 @@ namespace GUI
         public frmTaiKhoan()
         {
             InitializeComponent();
-            xóaTàiKhoảnToolStripMenuItem.Enabled = false;
             dgvTaiKhoan.DataSource = bus_tk.getListTK();
         }
 
@@ -47,11 +46,7 @@ namespace GUI
 
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            xóaTàiKhoảnToolStripMenuItem.Enabled = đặtLạiMậtKhẩuToolStripMenuItem.Enabled = true;
-            if(dgvTaiKhoan.CurrentRow.Cells["ID"].Value.ToString().Equals("TK001"))
-            {
-                xóaTàiKhoảnToolStripMenuItem.Enabled = false;
-            }    
+            đặtLạiMậtKhẩuToolStripMenuItem.Enabled = true;
         }
 
         private void dgvTaiKhoan_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
