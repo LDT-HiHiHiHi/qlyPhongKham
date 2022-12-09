@@ -46,7 +46,7 @@ namespace GUI
 
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            đặtLạiMậtKhẩuToolStripMenuItem.Enabled = true;
+                đặtLạiMậtKhẩuToolStripMenuItem.Enabled = true;
         }
 
         private void dgvTaiKhoan_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

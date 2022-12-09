@@ -6,8 +6,4 @@ C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\bin\Debug\DAL.pdb
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\bin\Debug\DTO.pdb
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\obj\Debug\BUS.dll
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\obj\Debug\BUS.pdb
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\bin\Debug\DAL.dll.config
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\bin\Debug\DTO.dll.config
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache

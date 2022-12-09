@@ -11,6 +11,12 @@ namespace DTO
         public LichSu() { }
         DateTime? ngay;
 
-        public DateTime? NGAY { get => ngay; set => ngay = value; }
+        public DateTime? NGAY
+        {
+            get { return ngay; }
+            set { ngay = value; }
+        }
+
+        //public DateTime? NGAY { get => ngay; set => ngay = value; }
     }
 }
