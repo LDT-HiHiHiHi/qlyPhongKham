@@ -54,6 +54,7 @@ namespace GUI
             this.TONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.inToaThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNgay = new GUI.textBoxCustom();
             this.label3 = new System.Windows.Forms.Label();
@@ -382,21 +383,31 @@ namespace GUI
             this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menu.IsMainMenu = false;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXoa});
+            this.btnXoa,
+            this.inToaThuốcToolStripMenuItem});
             this.menu.MenuItemHeight = 25;
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(171, 34);
+            this.menu.Size = new System.Drawing.Size(215, 92);
             // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btnXoa.Image = global::GUI.Properties.Resources.x_button3;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(170, 30);
+            this.btnXoa.Size = new System.Drawing.Size(214, 30);
             this.btnXoa.Text = "Xóa thuốc";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // inToaThuốcToolStripMenuItem
+            // 
+            this.inToaThuốcToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.inToaThuốcToolStripMenuItem.Image = global::GUI.Properties.Resources.report__1_;
+            this.inToaThuốcToolStripMenuItem.Name = "inToaThuốcToolStripMenuItem";
+            this.inToaThuốcToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.inToaThuốcToolStripMenuItem.Text = "In toa thuốc";
+            this.inToaThuốcToolStripMenuItem.Click += new System.EventHandler(this.inToaThuốcToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -630,5 +641,6 @@ namespace GUI
         private System.Windows.Forms.ToolStripMenuItem btnXoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn MAT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENT;
+        private System.Windows.Forms.ToolStripMenuItem inToaThuốcToolStripMenuItem;
     }
 }

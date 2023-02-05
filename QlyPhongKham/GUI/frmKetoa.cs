@@ -14,6 +14,7 @@ namespace GUI
     public partial class frmKetoa : Form
     {
         BUS_KeToa bus_kt = new BUS_KeToa();
+        BUS_LichSuKB bus_ls = new BUS_LichSuKB();
         public frmKetoa()
         {
             InitializeComponent();
@@ -257,6 +258,32 @@ namespace GUI
         private void txtTimKiem_Leave(object sender, EventArgs e)
         {
             this.KeyPreview = false;
+        }
+
+        private void inToaThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LS_KHAMBENH ls = bus_kt.getLS(frmKhamBenh.MALS);
+
+            List<object> _lstSp = new List<object>();
+
+            foreach (DataGridViewRow r in dgvToaThuoc.Rows)
+            {
+                _lstSp.Add(new
+                {
+                    tent = r.Cells["TENTT"].Value.ToString(),
+                    sovien = r.Cells["SOVIEN"].Value.ToString(),
+                    tongsl = r.Cells["TONG"].Value.ToString()
+                });
+            }
+                DateTime? ngay = ls.NGKHAM;
+                string ngayCus = ngay.Value.Day + "/" + ngay.Value.Month + "/" + ngay.Value.Year;
+
+                List<string[]> data = new List<string[]>();
+                data.Add(new string[] { "tenbn", "tenbs", "chandoan", "ngay"});
+                data.Add(new string[] { frmKhamBenh.tenBN, bus_ls.getTenBS(frmKhamBenh.MALS), ls.CHANDOAN, ngayCus });
+
+                // Show thông tin
+                new Reports<object>().export_Word("reportToaThuoc.docx", "ListSP", _lstSp, data);
         }
     }
 }

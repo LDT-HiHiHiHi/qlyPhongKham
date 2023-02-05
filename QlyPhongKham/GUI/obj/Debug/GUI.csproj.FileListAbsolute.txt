@@ -36,3 +36,4 @@ C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\DTO.dll.config
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\qlyPhongKham\QlyPhongKham\GUI\bin\Debug\DAL.dll.config

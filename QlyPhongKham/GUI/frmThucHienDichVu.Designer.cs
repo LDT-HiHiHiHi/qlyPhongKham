@@ -56,6 +56,7 @@ namespace GUI
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
             this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inPhiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnLuu = new GUI.CustomButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -359,21 +360,31 @@ namespace GUI
             this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menu.IsMainMenu = false;
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnXem});
+            this.btnXem,
+            this.inPhiếuToolStripMenuItem});
             this.menu.MenuItemHeight = 25;
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "rjDropdownMenu1";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(203, 34);
+            this.menu.Size = new System.Drawing.Size(215, 92);
             // 
             // btnXem
             // 
             this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btnXem.Image = global::GUI.Properties.Resources.picture;
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(202, 30);
+            this.btnXem.Size = new System.Drawing.Size(214, 30);
             this.btnXem.Text = "Xem hình ảnh";
             this.btnXem.Click += new System.EventHandler(this.xemHìnhẢnhToolStripMenuItem_Click);
+            // 
+            // inPhiếuToolStripMenuItem
+            // 
+            this.inPhiếuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.inPhiếuToolStripMenuItem.Image = global::GUI.Properties.Resources.report__1_2;
+            this.inPhiếuToolStripMenuItem.Name = "inPhiếuToolStripMenuItem";
+            this.inPhiếuToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.inPhiếuToolStripMenuItem.Text = "In phiếu";
+            this.inPhiếuToolStripMenuItem.Click += new System.EventHandler(this.inPhiếuToolStripMenuItem_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -571,5 +582,6 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn KETQUA;
         private System.Windows.Forms.DataGridViewTextBoxColumn HINHANH;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.ToolStripMenuItem inPhiếuToolStripMenuItem;
     }
 }

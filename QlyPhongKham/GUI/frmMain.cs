@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 namespace GUI
 {
     public partial class frmMain : Form
@@ -22,6 +25,8 @@ namespace GUI
         public static int childCount_DV = 0;
         public static int childCount_TH = 0;
         public static int childCount_TT = 0;
+        private bool bFileStatus = true;
+        HoTro ht = new HoTro();
 
         public frmMain()
         {
@@ -81,7 +86,7 @@ namespace GUI
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             DialogResult r;
+            DialogResult r;
             r = MessageBox.Show("Bạn có chắc chắn muốn thoát ? ", "Thông báo",
 
             MessageBoxButtons.YesNo, MessageBoxIcon.Question,
@@ -100,10 +105,10 @@ namespace GUI
         {
             frmPhanQuyen frm = new frmPhanQuyen();
             frm.MdiParent = this;
-            if(childCount_PQ > 0)
+            if (childCount_PQ > 0)
             {
                 frm.Text = frm.Text + " (" + childCount_PQ.ToString() + ")";
-            }    
+            }
             //child Form will now hold a reference value to the tab control
             frm.TabCtrl = tabControl1;
 
@@ -154,7 +159,7 @@ namespace GUI
 
         private void thêmNgườiDùngVàoNhómToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThemNguoiDung frm = new frmThemNguoiDung ();
+            frmThemNguoiDung frm = new frmThemNguoiDung();
             frm.MdiParent = this;
             if (childCount_N > 0)
             {
@@ -426,6 +431,88 @@ namespace GUI
         {
             new frmDoiMatKhau().ShowDialog();
 
+        }
+
+        private void saoLưuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool bBackUpStatus = true;
+
+            Cursor.Current = Cursors.WaitCursor;
+
+            if (Directory.Exists(@"c:\SQLBackup"))
+            {
+                if (File.Exists(@"c:\SQLBackup\QL_PHONGTRO_KL.bak"))
+                {
+                    if (MessageBox.Show(@"Bạn có muốn thay thế không?", "Sao Lưu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        File.Delete(@"c:\SQLBackup\QL_PHONGTRO_KL.bak");
+                    }
+                    else
+                        bBackUpStatus = false;
+                }
+            }
+            else
+                Directory.CreateDirectory(@"c:\SQLBackup");
+
+            if (bFileStatus)
+            {
+                //Connect to DB
+                SqlConnection connect;
+                //string con = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QL_QL_PHONGKHAM;User ID=sa;Password=123";
+                connect = new SqlConnection(HoTro.con);
+                connect.Open();
+                //----------------------------------------------------------------------------------------------------
+
+                //Execute SQL---------------
+                SqlCommand command;
+                command = new SqlCommand(@"backup database QL_PHONGKHAM to disk ='c:\SQLBackup\QL_PHONGKHAM.bak' with init,stats=10", connect);
+                command.ExecuteNonQuery();
+                //-------------------------------------------------------------------------------------------------------------------------------
+
+                connect.Close();
+
+                MessageBox.Show("Sao lưu cơ sở dữ liệu đã được thực hiện thành công", "Sao Lưu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void khôiPhụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            try
+            {
+                if (File.Exists(@"c:\SQLBackup\QL_PHONGKHAM.bak"))
+                {
+                    if (MessageBox.Show("Bạn có muốn khôi phục không ?", "Khôi Phục", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //Connect SQL-----------
+                        SqlConnection connect;
+                        string con = "Data Source = TRANHUYNH\\TRANHUYNH; Initial Catalog=master ;Integrated Security = True;";
+                        connect = new SqlConnection(HoTro.con);
+                        connect.Open();
+                        //-----------------------------------------------------------------------------------------
+
+                        //Excute SQL----------------
+                        SqlCommand command;
+                        command = new SqlCommand("use master ALTER DATABASE QL_PHONGKHAM SET Single_User WITH Rollback Immediate", connect);
+                        command.ExecuteNonQuery();
+                        command = new SqlCommand(@"restore database QL_PHONGKHAM from disk = 'c:\SQLBackup\QL_PHONGKHAM.bak'", connect);
+                        command.ExecuteNonQuery();
+                        //--------------------------------------------------------------------------------------------------------
+                        connect.Close();
+
+                        MessageBox.Show("Cơ sở dữ liệu đã được khôi phục", "Khôi Phục", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                    MessageBox.Show(@"Không thực hiện bất kỳ chứng thực nào ở trên (hoặc không đúng đường dẫn)", "Khôi Phục", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
         }
     }
 }

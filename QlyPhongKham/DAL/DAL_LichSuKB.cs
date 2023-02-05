@@ -32,5 +32,13 @@ namespace DAL
         {
             return qlpk.TOATHUOCs.Where(t => t.MALS.Equals(mals)).Select(a => a.MATT).FirstOrDefault();
         }
+        public string getLS(string macd)
+        {
+            return qlpk.PHIEUCHIDINHs.Where(t => t.MACD.Equals(macd)).Select(a=>a.MALS).FirstOrDefault();
+        }
+        public string getLS2(string matt)
+        {
+            return qlpk.TOATHUOCs.Where(t => t.MATT.Equals(matt)).Select(a => a.MALS).FirstOrDefault();
+        }
     }
 }

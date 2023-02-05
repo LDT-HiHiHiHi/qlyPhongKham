@@ -204,5 +204,10 @@ namespace DAL
                 return false;
             }
         }
+
+        public LS_KHAMBENH getLS(string mals)
+        {
+            return qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).FirstOrDefault();
+        }
     }
 }

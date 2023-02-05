@@ -81,5 +81,10 @@ namespace BUS
         {
             return dal_kt.xoaCT(matt, mat);
         }
+
+        public LS_KHAMBENH getLS(string mals)
+        {
+            return dal_kt.getLS(mals);
+        }
     }
 }

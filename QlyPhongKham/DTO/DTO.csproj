@@ -44,6 +44,7 @@
     <Compile Include="ChiTietPhieuCD.cs" />
     <Compile Include="ChiTietTT.cs" />
     <Compile Include="GrTaiKhoan.cs" />
+    <Compile Include="HoTro.cs" />
     <Compile Include="KPress.cs" />
     <Compile Include="LichSu.cs" />
     <Compile Include="PhanQuyen.cs" />

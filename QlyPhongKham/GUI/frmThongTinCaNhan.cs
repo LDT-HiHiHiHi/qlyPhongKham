@@ -45,7 +45,7 @@ namespace GUI
         {
             if(string.IsNullOrEmpty(txtHoTen.Texts))
             {
-                errorProvider1.SetError(txtHoTen, "Vui ;òng nhập họ tên");
+                errorProvider1.SetError(txtHoTen, "Vui lòng nhập họ tên");
                 txtHoTen.Focus();
                 return;
             }
@@ -53,7 +53,7 @@ namespace GUI
 
             if (string.IsNullOrEmpty(txtDiaChi.Texts))
             {
-                errorProvider2.SetError(txtDiaChi, "Vui ;òng nhập họ tên");
+                errorProvider2.SetError(txtDiaChi, "Vui lòng nhập họ tên");
                 txtDiaChi.Focus();
                 return;
             }
@@ -61,7 +61,7 @@ namespace GUI
 
             if (string.IsNullOrEmpty(txtSDT.Texts))
             {
-                errorProvider2.SetError(txtSDT, "Vui ;òng nhập họ tên");
+                errorProvider2.SetError(txtSDT, "Vui lòng nhập họ tên");
                 txtSDT.Focus();
                 return;
             }

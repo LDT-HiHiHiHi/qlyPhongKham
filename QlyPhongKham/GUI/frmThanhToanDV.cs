@@ -15,6 +15,8 @@ namespace GUI
     {
         BUS_ThanhToanDV bus_dv = new BUS_ThanhToanDV();
         BUS_KhamBenh bus_kb = new BUS_KhamBenh();
+        BUS_KeToa bus_kt = new BUS_KeToa();
+        BUS_LichSuKB bus_ls = new BUS_LichSuKB();
         private int? currentSelectionStart;
         private object val;
         public frmThanhToanDV()
@@ -235,6 +237,29 @@ namespace GUI
             {
                 if(bus_dv.capNhatTrangThai(macd))
                 {
+
+                    string macds = dgvCD.CurrentRow.Cells["MACD"].Value.ToString();
+                    LS_KHAMBENH ls = bus_kt.getLS(bus_ls.getLS(macds));
+
+                    List<object> _lstSp = new List<object>();
+
+                    foreach (DataGridViewRow r1 in dgvCT.Rows)
+                    {
+                        _lstSp.Add(new
+                        {
+                            tent = r1.Cells["Column1"].Value.ToString(),
+                            sovien = string.Format("{0:#,##0}", r1.Cells["Column2"].Value)
+                        });
+                    }
+                    DateTime? ngay = ls.NGKHAM;
+                    string ngayCus = ngay.Value.Day + "/" + ngay.Value.Month + "/" + ngay.Value.Year;
+
+                    List<string[]> data = new List<string[]>();
+                    data.Add(new string[] { "tenbn", "tenbs", "ngay", "TongGia"});
+                    data.Add(new string[] { dgvCD.CurrentRow.Cells["TENBN"].Value.ToString(), bus_ls.getTenBS(bus_ls.getLS(macds)), ngayCus, string.Format("{0:#,##0}", bus_dv.getTongTien(macds)) });
+
+                    // Show thông tin
+                    new Reports<object>().export_Word("reportTTDV.docx", "ListSP", _lstSp, data);
                     Program.AlertMessage("Thanh toán thành công", MessageBoxIcon.Information);
                     this.OnLoad(e);
                     return;

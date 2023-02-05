@@ -34,6 +34,9 @@
             this.dổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saoLưuVàKhôiPhụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saoLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.khôiPhụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thựcHiệnDịchVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kêToaThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +73,8 @@
             this.hellloToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dổiMậtKhẩuToolStripMenuItem,
             this.thôngTinCáNhânToolStripMenuItem1,
-            this.đăngXuấtToolStripMenuItem});
+            this.đăngXuấtToolStripMenuItem,
+            this.saoLưuVàKhôiPhụcToolStripMenuItem});
             this.hellloToolStripMenuItem.Image = global::GUI.Properties.Resources.google;
             this.hellloToolStripMenuItem.Name = "hellloToolStripMenuItem";
             this.hellloToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
@@ -101,6 +105,32 @@
             this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // saoLưuVàKhôiPhụcToolStripMenuItem
+            // 
+            this.saoLưuVàKhôiPhụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saoLưuToolStripMenuItem,
+            this.khôiPhụcToolStripMenuItem});
+            this.saoLưuVàKhôiPhụcToolStripMenuItem.Image = global::GUI.Properties.Resources.database__3_;
+            this.saoLưuVàKhôiPhụcToolStripMenuItem.Name = "saoLưuVàKhôiPhụcToolStripMenuItem";
+            this.saoLưuVàKhôiPhụcToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
+            this.saoLưuVàKhôiPhụcToolStripMenuItem.Text = "Sao lưu và khôi phục";
+            // 
+            // saoLưuToolStripMenuItem
+            // 
+            this.saoLưuToolStripMenuItem.Image = global::GUI.Properties.Resources.backup;
+            this.saoLưuToolStripMenuItem.Name = "saoLưuToolStripMenuItem";
+            this.saoLưuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saoLưuToolStripMenuItem.Text = "Sao lưu";
+            this.saoLưuToolStripMenuItem.Click += new System.EventHandler(this.saoLưuToolStripMenuItem_Click);
+            // 
+            // khôiPhụcToolStripMenuItem
+            // 
+            this.khôiPhụcToolStripMenuItem.Image = global::GUI.Properties.Resources.restore;
+            this.khôiPhụcToolStripMenuItem.Name = "khôiPhụcToolStripMenuItem";
+            this.khôiPhụcToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.khôiPhụcToolStripMenuItem.Text = "Khôi phục";
+            this.khôiPhụcToolStripMenuItem.Click += new System.EventHandler(this.khôiPhụcToolStripMenuItem_Click);
             // 
             // chứcNăngToolStripMenuItem
             // 
@@ -284,5 +314,8 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhómNgườiDùngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saoLưuVàKhôiPhụcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saoLưuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem khôiPhụcToolStripMenuItem;
     }
 }

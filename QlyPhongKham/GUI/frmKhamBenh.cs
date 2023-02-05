@@ -20,6 +20,8 @@ namespace GUI
         BUS_KhamBenh bus_kb = new BUS_KhamBenh();
         BUS_TaiKhoan bus_tk = new BUS_TaiKhoan();
         BUS_ThanhToanDV bus_tt = new BUS_ThanhToanDV();
+        BUS_KeToa bus_kt = new BUS_KeToa();
+        BUS_LichSuKB bus_ls = new BUS_LichSuKB();
         public frmKhamBenh()
         {
             InitializeComponent();
@@ -397,6 +399,32 @@ namespace GUI
         private void dgvCTDV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             return;
+        }
+
+        private void inPhiếuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
+            LS_KHAMBENH ls = bus_kt.getLS(mals);
+
+            List<object> _lstSp = new List<object>();
+
+            foreach (DataGridViewRow r in dgvCTDV.Rows)
+            {
+                _lstSp.Add(new
+                {
+                    tent = r.Cells["TENDV"].Value.ToString(),
+                    sovien = r.Cells["MOTA"].Value.ToString(),
+                });
+            }
+            DateTime? ngay = ls.NGKHAM;
+            string ngayCus = ngay.Value.Day + "/" + ngay.Value.Month + "/" + ngay.Value.Year;
+
+            List<string[]> data = new List<string[]>();
+            data.Add(new string[] { "tenbn", "tenbs", "ngay" });
+            data.Add(new string[] { dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString(), bus_ls.getTenBS(mals), ngayCus });
+
+            // Show thông tin
+            new Reports<object>().export_Word("reportDichVu.docx", "ListSP", _lstSp, data);
         }
     }
 }
