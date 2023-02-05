@@ -389,14 +389,14 @@ namespace GUI
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(215, 92);
+            this.menu.Size = new System.Drawing.Size(187, 64);
             // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btnXoa.Image = global::GUI.Properties.Resources.x_button3;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(214, 30);
+            this.btnXoa.Size = new System.Drawing.Size(186, 30);
             this.btnXoa.Text = "Xóa thuốc";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -405,7 +405,7 @@ namespace GUI
             this.inToaThuốcToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.inToaThuốcToolStripMenuItem.Image = global::GUI.Properties.Resources.report__1_;
             this.inToaThuốcToolStripMenuItem.Name = "inToaThuốcToolStripMenuItem";
-            this.inToaThuốcToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.inToaThuốcToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
             this.inToaThuốcToolStripMenuItem.Text = "In toa thuốc";
             this.inToaThuốcToolStripMenuItem.Click += new System.EventHandler(this.inToaThuốcToolStripMenuItem_Click);
             // 
