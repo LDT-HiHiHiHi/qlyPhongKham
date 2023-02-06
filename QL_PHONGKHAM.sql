@@ -251,7 +251,7 @@ SET DATEFORMAT DMY
 INSERT BENHNHAN 
 VALUES
 ('BN01',N'Vũ Hương Ly','09/01/2001',N'Nữ',N'18 Hoài Đức','0965320413'),
-('BN02',N'Phạm Hải Yến','02/07/2001',N'Nữ','19 Cầu Giấy','0965320423'),
+('BN02',N'Phạm Hải Yến','02/07/2001',N'Nữ',N'19 Cầu Giấy','0965320423'),
 ('BN03',N'Phan Nhật Ánh','05/07/2001',N'Nữ',N'654 Đà nẵng','0975320423'),
 ('BN04',N'Phan Nhật Anh','05/09/2001',N'Nữ',N'650 Đà nẵng','0565320423'),
 ('BN05',N'Vũ Kim Lan','05/06/2001',N'Nữ',N'658 Quy Nhơn','0964520423'),
