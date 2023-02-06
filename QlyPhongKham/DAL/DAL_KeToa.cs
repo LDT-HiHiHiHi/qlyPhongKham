@@ -209,5 +209,12 @@ namespace DAL
         {
             return qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).FirstOrDefault();
         }
+
+        public bool checkSoLuong(string mat, int? sl)
+        {
+            if (qlpk.DMTHUOCs.Where(t => t.MAT.Equals(mat)).Select(a => a.SOLUONG).FirstOrDefault() < sl)
+                return false;
+            return true;
+        }
     }
 }

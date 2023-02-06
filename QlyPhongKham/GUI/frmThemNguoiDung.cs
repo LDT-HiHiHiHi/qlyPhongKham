@@ -27,6 +27,8 @@ namespace GUI
 
             // null value
             drvTK.DefaultCellStyle.NullValue = drvNhom.DefaultCellStyle.NullValue = "no entry";
+
+            menu.PrimaryColor = Color.FromArgb(30, 144, 255);
         }
 
         private void frmThemNguoiDung_Activated(object sender, EventArgs e)
@@ -53,6 +55,7 @@ namespace GUI
 
         private void frmThemNguoiDung_Load(object sender, EventArgs e)
         {
+            btnThem.Enabled = false;
             this.cbNhoms.ValueMember = "MAQUYEN";
             this.cbNhoms.DisplayMember = "TENQUYEN";
             this.cbNhoms.DataSource = bus_qlnnd.getGrs();
@@ -122,6 +125,31 @@ namespace GUI
             }
 
             LoadDrv();
+        }
+
+        private void drvNhom_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (drvNhom.CurrentRow == null)
+                return;
+            if(cbNhoms.Texts.Equals("BACSI"))
+            {
+                btnThem.Enabled = true;
+            }    
+        }
+
+        private void drvTK_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (drvTK.CurrentRow == null)
+                return;
+        }
+
+        private void thêmBấcSĩToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThemBacSi.username = drvNhom.CurrentRow.Cells["Username_grA"].Value.ToString();
+            frmThemBacSi.idtk = drvNhom.CurrentRow.Cells["IDTK_grA"].Value.ToString();
+            new frmThemBacSi().ShowDialog();
+
+            btnThem.Enabled = false;
         }
     }
 }

@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,6 +56,8 @@ namespace GUI
             this.Ten_grA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_grA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pw_nnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
+            this.btnThem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drvTK)).BeginInit();
@@ -62,6 +65,7 @@ namespace GUI
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drvNhom)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -136,6 +140,7 @@ namespace GUI
             this.drvTK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.drvTK.Size = new System.Drawing.Size(435, 635);
             this.drvTK.TabIndex = 1;
+            this.drvTK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drvTK_CellClick);
             this.drvTK.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.drvTK_RowPostPaint);
             // 
             // No
@@ -388,6 +393,7 @@ namespace GUI
             this.Ten_grA,
             this.Id_grA,
             this.Pw_nnd});
+            this.drvNhom.ContextMenuStrip = this.menu;
             this.drvNhom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.drvNhom.Location = new System.Drawing.Point(3, 23);
             this.drvNhom.Name = "drvNhom";
@@ -398,6 +404,7 @@ namespace GUI
             this.drvNhom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.drvNhom.Size = new System.Drawing.Size(437, 635);
             this.drvNhom.TabIndex = 2;
+            this.drvNhom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drvNhom_CellClick);
             this.drvNhom.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.drvNhom_RowPostPaint);
             // 
             // No_grA
@@ -450,6 +457,26 @@ namespace GUI
             this.Pw_nnd.ReadOnly = true;
             this.Pw_nnd.Visible = false;
             // 
+            // menu
+            // 
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.IsMainMenu = false;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnThem});
+            this.menu.MenuItemHeight = 25;
+            this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.menu.Name = "rjDropdownMenu1";
+            this.menu.PrimaryColor = System.Drawing.Color.Empty;
+            this.menu.Size = new System.Drawing.Size(211, 62);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(210, 30);
+            this.btnThem.Text = "Thêm bác sĩ";
+            this.btnThem.Click += new System.EventHandler(this.thêmBấcSĩToolStripMenuItem_Click);
+            // 
             // frmThemNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -471,6 +498,7 @@ namespace GUI
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.drvNhom)).EndInit();
+            this.menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -503,5 +531,7 @@ namespace GUI
         private CustomButton btnRefesh;
         private CustomButton btnDelOne;
         private CustomButton btnDelAll;
+        private CustomControls.RJControls.RJDropdownMenu menu;
+        private System.Windows.Forms.ToolStripMenuItem btnThem;
     }
 }

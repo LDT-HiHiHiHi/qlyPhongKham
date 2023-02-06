@@ -237,7 +237,7 @@ namespace GUI
             {
                 if(bus_dv.capNhatTrangThai(macd))
                 {
-
+                    Program.AlertMessage("Thanh toán thành công", MessageBoxIcon.Information);
                     string macds = dgvCD.CurrentRow.Cells["MACD"].Value.ToString();
                     LS_KHAMBENH ls = bus_kt.getLS(bus_ls.getLS(macds));
 
@@ -260,7 +260,7 @@ namespace GUI
 
                     // Show thông tin
                     new Reports<object>().export_Word("reportTTDV.docx", "ListSP", _lstSp, data);
-                    Program.AlertMessage("Thanh toán thành công", MessageBoxIcon.Information);
+                    
                     this.OnLoad(e);
                     return;
                 }
@@ -287,6 +287,23 @@ namespace GUI
             if (!tabCtrl.HasChildren)
             {
                 tabCtrl.Visible = false;
+            }
+        }
+
+        private void txtTimKiem__TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTimKiem.Texts))
+            {
+                this.OnLoad(e);
+                return;
+            }
+            if (checkBox.Checked)
+            {
+                dgvCD.DataSource = bus_dv.timKiemCD(txtTimKiem.Texts);
+            }
+            else
+            {
+                dgvCD.DataSource = bus_dv.timKiemCD_Today(txtTimKiem.Texts);
             }
         }
     }

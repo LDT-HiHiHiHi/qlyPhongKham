@@ -60,13 +60,13 @@ namespace GUI
             this.thêmTàiKhoảnToolStripMenuItem,
             this.đặtLạiMậtKhẩuToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 84);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(192, 56);
             // 
             // thêmTàiKhoảnToolStripMenuItem
             // 
             this.thêmTàiKhoảnToolStripMenuItem.Image = global::GUI.Properties.Resources.plus__1_1;
             this.thêmTàiKhoảnToolStripMenuItem.Name = "thêmTàiKhoảnToolStripMenuItem";
-            this.thêmTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.thêmTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.thêmTàiKhoảnToolStripMenuItem.Text = "Thêm tài khoản";
             this.thêmTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thêmTàiKhoảnToolStripMenuItem_Click);
             // 
@@ -74,7 +74,7 @@ namespace GUI
             // 
             this.đặtLạiMậtKhẩuToolStripMenuItem.Image = global::GUI.Properties.Resources.sync__1_;
             this.đặtLạiMậtKhẩuToolStripMenuItem.Name = "đặtLạiMậtKhẩuToolStripMenuItem";
-            this.đặtLạiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.đặtLạiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.đặtLạiMậtKhẩuToolStripMenuItem.Text = "Đặt lại mật khẩu";
             this.đặtLạiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đặtLạiMậtKhẩuToolStripMenuItem_Click);
             // 
@@ -158,6 +158,7 @@ namespace GUI
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTimKiem.Texts = "";
             this.txtTimKiem.UnderlinedStyle = false;
+            this.txtTimKiem._TextChanged += new System.EventHandler(this.txtTimKiem__TextChanged);
             this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
             this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 

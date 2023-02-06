@@ -208,5 +208,16 @@ namespace GUI
                 tabCtrl.Visible = false;
             }
         }
+
+        private void txtTimKiem__TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTimKiem.Texts))
+            {
+                this.OnLoad(e);
+                return;
+            }
+            DataTable ds = bus_qlbn.timKiemBN(txtTimKiem.Texts);
+            dgvListBN.DataSource = ds;
+        }
     }
 }

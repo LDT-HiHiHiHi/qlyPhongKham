@@ -245,5 +245,10 @@ namespace DAL
         {
             return qlpk.CT_DICHVUs.Where(t => t.MADV.Equals(madv)).ToList();
         }
+
+        public int checkBacSi(string idtk)
+        {
+           return qlpk.BACSIs.Where(t => t.IDTK.Equals(idtk)).Select(a => a.MABS).Count();
+        }
     }
 }

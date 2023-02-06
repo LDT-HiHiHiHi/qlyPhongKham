@@ -240,7 +240,7 @@ namespace GUI
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(373, 287);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1106, 277);
+            this.groupBox2.Size = new System.Drawing.Size(1106, 276);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Toa thuốc";
@@ -266,7 +266,7 @@ namespace GUI
             this.dgvToaThuoc.RowHeadersVisible = false;
             this.dgvToaThuoc.RowHeadersWidth = 51;
             this.dgvToaThuoc.RowTemplate.Height = 24;
-            this.dgvToaThuoc.Size = new System.Drawing.Size(1100, 248);
+            this.dgvToaThuoc.Size = new System.Drawing.Size(1100, 247);
             this.dgvToaThuoc.TabIndex = 1;
             // 
             // MATT
@@ -342,14 +342,14 @@ namespace GUI
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.lbCD, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 570);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(373, 569);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1106, 180);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1106, 181);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // label2
@@ -540,7 +540,7 @@ namespace GUI
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmLichSuKhamBenh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLichSuKhamBenh";
+            this.Text = "Lịch sử khám bệnh";
             this.Load += new System.EventHandler(this.frmLichSuKhamBenh_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

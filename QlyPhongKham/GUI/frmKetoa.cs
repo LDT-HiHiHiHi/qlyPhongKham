@@ -146,9 +146,15 @@ namespace GUI
             errorProvider2.Clear();
             string mat = bus_kt.getMaT(txtTenThuoc.Texts);
             int tong = sl * sb * songay;
+
+            if(!bus_kt.checkSoLuong(mat,tong))
+            {
+                Program.AlertMessage("Không đủ thuốc", MessageBoxIcon.Error);
+                return;
+            }    
+
             if (bus_kt.checkTT(mals) > 0)
             {
-                
                 string matt = bus_kt.getMaToaThuoc(mals);
                 CT_TOATHUOC ct = new CT_TOATHUOC
                 {
@@ -272,6 +278,7 @@ namespace GUI
                 {
                     tent = r.Cells["TENTT"].Value.ToString(),
                     sovien = r.Cells["SOVIEN"].Value.ToString(),
+                    sobuoi = r.Cells["SOBUOI"].Value.ToString(),
                     tongsl = r.Cells["TONG"].Value.ToString()
                 });
             }
@@ -279,11 +286,21 @@ namespace GUI
                 string ngayCus = ngay.Value.Day + "/" + ngay.Value.Month + "/" + ngay.Value.Year;
 
                 List<string[]> data = new List<string[]>();
-                data.Add(new string[] { "tenbn", "tenbs", "chandoan", "ngay"});
+                data.Add(new string[] { "tenbn", "tenbs", "chandoan", "ngay", });
                 data.Add(new string[] { frmKhamBenh.tenBN, bus_ls.getTenBS(frmKhamBenh.MALS), ls.CHANDOAN, ngayCus });
 
                 // Show thông tin
                 new Reports<object>().export_Word("reportToaThuoc.docx", "ListSP", _lstSp, data);
+        }
+
+        private void txtTimKiem__TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTimKiem.Texts))
+            {
+                dgvThuoc.DataSource = bus_kt.getListThuoc();
+                return;
+            }
+            dgvThuoc.DataSource = bus_kt.timKiemThuoc(txtTimKiem.Texts);
         }
     }
 }

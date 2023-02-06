@@ -9,7 +9,7 @@ namespace DAL
     public class DAL_QLBN
     {
         qlyPhongKhamDataContext qlpk = new qlyPhongKhamDataContext();
-        
+
         public List<PHONG> getListPhong()
         {
             return qlpk.PHONGs.ToList();
@@ -69,16 +69,30 @@ namespace DAL
         public string getMaBS(string mabn)
         {
             string mals = qlpk.LS_KHAMBENHs.Where(t => t.MABN.Equals(mabn) && t.NGKHAM.Equals(DateTime.Today)).Select(a => a.MALS).FirstOrDefault();
-            return qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).Select(a=>a.MABS).FirstOrDefault();
+            return qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).Select(a => a.MABS).FirstOrDefault();
         }
         public bool suaPhong(LS_KHAMBENH ls)
         {
             try
             {
-                string mals = qlpk.LS_KHAMBENHs.Where(t => t.MABN.Equals(ls.MABN) && t.NGKHAM.Equals(DateTime.Today)).Select(a=>a.MALS).FirstOrDefault();
+                string mals = qlpk.LS_KHAMBENHs.Where(t => t.MABN.Equals(ls.MABN) && t.NGKHAM.Equals(DateTime.Today)).Select(a => a.MALS).FirstOrDefault();
                 LS_KHAMBENH bn = qlpk.LS_KHAMBENHs.Where(t => t.MALS.Equals(mals)).FirstOrDefault();
                 bn.MABS = ls.MABS;
                 bn.STT = ls.STT;
+                qlpk.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool themBacSi(BACSI bs)
+        {
+            try
+            {
+                qlpk.BACSIs.InsertOnSubmit(bs);
                 qlpk.SubmitChanges();
                 return true;
             }

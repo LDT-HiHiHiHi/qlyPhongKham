@@ -70,7 +70,7 @@ namespace GUI
             this.menu = new CustomControls.RJControls.RJDropdownMenu(this.components);
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inPhiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnIn = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
@@ -612,19 +612,19 @@ namespace GUI
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnXoa,
             this.btnXem,
-            this.inPhiếuToolStripMenuItem});
+            this.btnIn});
             this.menu.MenuItemHeight = 25;
             this.menu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.menu.Name = "menu";
             this.menu.PrimaryColor = System.Drawing.Color.Empty;
-            this.menu.Size = new System.Drawing.Size(215, 122);
+            this.menu.Size = new System.Drawing.Size(203, 94);
             // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btnXoa.Image = global::GUI.Properties.Resources.x_button1;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(214, 30);
+            this.btnXoa.Size = new System.Drawing.Size(202, 30);
             this.btnXoa.Text = "Xóa dịch vụ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -633,18 +633,18 @@ namespace GUI
             this.btnXem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btnXem.Image = global::GUI.Properties.Resources.picture;
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(214, 30);
+            this.btnXem.Size = new System.Drawing.Size(202, 30);
             this.btnXem.Text = "Xem hình ảnh";
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
-            // inPhiếuToolStripMenuItem
+            // btnIn
             // 
-            this.inPhiếuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.inPhiếuToolStripMenuItem.Image = global::GUI.Properties.Resources.report__1_1;
-            this.inPhiếuToolStripMenuItem.Name = "inPhiếuToolStripMenuItem";
-            this.inPhiếuToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
-            this.inPhiếuToolStripMenuItem.Text = "In phiếu";
-            this.inPhiếuToolStripMenuItem.Click += new System.EventHandler(this.inPhiếuToolStripMenuItem_Click);
+            this.btnIn.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnIn.Image = global::GUI.Properties.Resources.report__1_1;
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(202, 30);
+            this.btnIn.Text = "In phiếu";
+            this.btnIn.Click += new System.EventHandler(this.inPhiếuToolStripMenuItem_Click);
             // 
             // errorProvider1
             // 
@@ -719,6 +719,6 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTA;
         private System.Windows.Forms.DataGridViewTextBoxColumn KETQUA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DONGIA;
-        private System.Windows.Forms.ToolStripMenuItem inPhiếuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnIn;
     }
 }

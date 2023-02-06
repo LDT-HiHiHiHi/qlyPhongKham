@@ -51,7 +51,7 @@ namespace GUI
             this.Controls.Add(this.pic);
             this.Name = "frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Xem ảnh";
+            this.Text = "Hình ảnh";
             this.Load += new System.EventHandler(this.frmXemHinhAnh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);

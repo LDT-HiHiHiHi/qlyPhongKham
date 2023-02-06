@@ -28,7 +28,7 @@ namespace GUI
 
         private void frmThucHienDichVu_Load(object sender, EventArgs e)
         {
-            btnLuu.Enabled = btnXem.Enabled = btnOpen.Enabled = false;
+            btnLuu.Enabled = btnXem.Enabled = btnOpen.Enabled = btnIn.Enabled = false;
             List<ThanhToanDV> list = bus_dv.getListCD_Today();
             if (list != null)
             {
@@ -141,7 +141,7 @@ namespace GUI
         {
             if (dgvCT.CurrentRow == null)
                 return;
-            btnLuu.Enabled = btnXem.Enabled = btnOpen.Enabled = true;
+            btnLuu.Enabled = btnXem.Enabled = btnOpen.Enabled = btnIn.Enabled = true;
             string hinh = dgvCT.CurrentRow.Cells["HINHANH"].Value.ToString();
             if (hinh.Equals("Chưa có"))
             {
@@ -156,6 +156,8 @@ namespace GUI
             {
                 txtKetQua.Texts = kq;
             }    
+
+
         }
 
         private void txtHinhAnh__TextChanged(object sender, EventArgs e)
@@ -208,20 +210,17 @@ namespace GUI
 
         private void inPhiếuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             string macds = dgvCD.CurrentRow.Cells["MACD"].Value.ToString();
             LS_KHAMBENH ls = bus_kt.getLS(bus_ls.getLS(macds));
 
             List<object> _lstSp = new List<object>();
 
-            foreach (DataGridViewRow r in dgvCT.Rows)
-            {
                 _lstSp.Add(new
                 {
-                    tent = r.Cells["TENDV"].Value.ToString(),
-                    sovien = r.Cells["KETQUA"].Value.ToString(),
+                    tent = dgvCT.CurrentRow.Cells["TENDV"].Value.ToString(),
+                    sovien = dgvCT.CurrentRow.Cells["KETQUA"].Value.ToString()
                 });
-            }
+
             DateTime? ngay = ls.NGKHAM;
             string ngayCus = ngay.Value.Day + "/" + ngay.Value.Month + "/" + ngay.Value.Year;
 
@@ -231,6 +230,7 @@ namespace GUI
 
             // Show thông tin
             new Reports<object>().export_Word("reportKQ.docx", "ListSP", _lstSp, data);
+            btnIn.Enabled = false;
         }
     }
 }

@@ -162,6 +162,7 @@ namespace GUI
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTimKiem.Texts = "";
             this.txtTimKiem.UnderlinedStyle = false;
+            this.txtTimKiem._TextChanged += new System.EventHandler(this.txtTimKiem__TextChanged);
             this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
             this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
@@ -417,7 +418,7 @@ namespace GUI
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(518, 45);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Sô ngày điều trị cần thiết";
+            this.label2.Text = "Số ngày điều trị cần thiết";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNgay

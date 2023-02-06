@@ -86,5 +86,10 @@ namespace BUS
         {
             return dal_kt.getLS(mals);
         }
+
+        public bool checkSoLuong(string mat, int? sl)
+        {
+            return dal_kt.checkSoLuong(mat, sl);
+        }
     }
 }

@@ -98,5 +98,9 @@ namespace BUS
         {
             return dal_kb.getListCTDV(madv);
         }
+        public int checkBacSi(string idtk)
+        {
+            return dal_kb.checkBacSi(idtk);
+        }
     }
 }

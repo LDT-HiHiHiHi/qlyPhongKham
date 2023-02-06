@@ -200,7 +200,7 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(489, 417);
             this.Name = "frmThemTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThemTaiKhoan";
+            this.Text = "Thêm tài khoản";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

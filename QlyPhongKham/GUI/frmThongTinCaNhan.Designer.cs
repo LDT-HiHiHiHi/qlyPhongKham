@@ -361,7 +361,7 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "frmThongTinCaNhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThongTinCaNhan";
+            this.Text = "Thông tin cá nhân";
             this.Load += new System.EventHandler(this.frmThongTinCaNhan_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

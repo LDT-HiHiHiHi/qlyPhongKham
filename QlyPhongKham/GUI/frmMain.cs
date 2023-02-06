@@ -25,6 +25,7 @@ namespace GUI
         public static int childCount_DV = 0;
         public static int childCount_TH = 0;
         public static int childCount_TT = 0;
+        public static int childCount_TT1 = 0;
         private bool bFileStatus = true;
         HoTro ht = new HoTro();
 
@@ -458,7 +459,6 @@ namespace GUI
             {
                 //Connect to DB
                 SqlConnection connect;
-                //string con = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QL_QL_PHONGKHAM;User ID=sa;Password=123";
                 connect = new SqlConnection(HoTro.con);
                 connect.Open();
                 //----------------------------------------------------------------------------------------------------
@@ -471,7 +471,7 @@ namespace GUI
 
                 connect.Close();
 
-                MessageBox.Show("Sao lưu cơ sở dữ liệu đã được thực hiện thành công", "Sao Lưu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sao lưu cơ sở dữ liệu thành công", "Sao Lưu", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -488,7 +488,6 @@ namespace GUI
                     {
                         //Connect SQL-----------
                         SqlConnection connect;
-                        string con = "Data Source = TRANHUYNH\\TRANHUYNH; Initial Catalog=master ;Integrated Security = True;";
                         connect = new SqlConnection(HoTro.con);
                         connect.Open();
                         //-----------------------------------------------------------------------------------------
@@ -506,13 +505,41 @@ namespace GUI
                     }
                 }
                 else
-                    MessageBox.Show(@"Không thực hiện bất kỳ chứng thực nào ở trên (hoặc không đúng đường dẫn)", "Khôi Phục", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(@"Khôi phục thất bại (Hoặc không tìm thấy đường dẫn)", "Khôi Phục", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception exp)
             {
                 MessageBox.Show(exp.Message);
             }
+        }
+
+        private void quảnLýDanhMụcThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDanhMucThuoc frm = new frmDanhMucThuoc();
+            frm.MdiParent = this;
+            if (childCount_BN > 0)
+            {
+                frm.Text = frm.Text + " (" + childCount_BN.ToString() + ")";
+            }
+            //child Form will now hold a reference value to the tab control
+            frm.TabCtrl = tabControl1;
+
+            //Add a Tabpage and enables it
+            TabPage tp = new TabPage();
+            tp.Parent = tabControl1;
+            tp.Text = frm.Text;
+            tp.Show();
+
+            //child Form will now hold a reference value to a tabpage
+            frm.TabPag = tp;
+
+            //Activate the MDI child form
+            frm.Show();
+            childCount_TT1++;
+
+            //Activate the newly created Tabpage
+            tabControl1.SelectedTab = tp;
         }
     }
 }

@@ -127,5 +127,17 @@ namespace GUI
         {
             this.KeyPreview = false;
         }
+
+        private void txtTimKiem__TextChanged(object sender, EventArgs e)
+        {
+            string user = txtTimKiem.Texts;
+            if (string.IsNullOrEmpty(user))
+            {
+                txtTimKiem.Focus();
+                this.OnLoad(e);
+                return;
+            }
+            dgvTaiKhoan.DataSource = bus_tk.timKiemTaiKhoan(user);
+        }
     }
 }

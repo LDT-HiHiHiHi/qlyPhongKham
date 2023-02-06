@@ -31,7 +31,7 @@ namespace GUI
 
         private void frmKhamBenh_Load(object sender, EventArgs e)
         {
-            btnThem.Enabled = btnXoa.Enabled = btnToaThuoc.Enabled = btnXemLS.Enabled = btnLuu.Enabled = btnXem.Enabled = false;
+            btnThem.Enabled = btnXoa.Enabled = btnToaThuoc.Enabled = btnXemLS.Enabled = btnLuu.Enabled = btnXem.Enabled  = btnIn.Enabled = false;
             string idtk = bus_tk.getIDTK(frmLogin.USERNAME);
             dgvBenhNhan.DataSource = bus_kb.getDanhSachBN(idtk);
             cboDichVu.DataSource = bus_kb.getListDV();
@@ -56,7 +56,7 @@ namespace GUI
             {
                 return;
             }
-            btnThem.Enabled = btnToaThuoc.Enabled = btnXemLS.Enabled = true;
+            btnThem.Enabled = btnToaThuoc.Enabled = btnXemLS.Enabled = btnIn.Enabled = true;
             string ten = dgvBenhNhan.CurrentRow.Cells["TENBN"].Value.ToString();
             string mals = dgvBenhNhan.CurrentRow.Cells["LSKB"].Value.ToString();
             lbTenBn.Texts = ten;
@@ -338,6 +338,14 @@ namespace GUI
                     {
                         btnThem.Enabled = btnLuu.Enabled = true;
                     }
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add(new DataColumn("MACD", typeof(string)));
+                    dt.Columns.Add(new DataColumn("TENDV", typeof(string)));
+                    dt.Columns.Add(new DataColumn("MOTA", typeof(string)));
+                    dt.Columns.Add(new DataColumn("KETQUA", typeof(string)));
+                    dt.Columns.Add(new DataColumn("DONGIA", typeof(double)));
+                    dt.Columns.Add(new DataColumn("HINHANH", typeof(string)));
+                    dgvCTDV.DataSource = dt;
                     this.OnLoad(e);
                     return;      
                 }
@@ -414,7 +422,7 @@ namespace GUI
                 {
                     tent = r.Cells["TENDV"].Value.ToString(),
                     sovien = r.Cells["MOTA"].Value.ToString(),
-                });
+                }) ;
             }
             DateTime? ngay = ls.NGKHAM;
             string ngayCus = ngay.Value.Day + "/" + ngay.Value.Month + "/" + ngay.Value.Year;
@@ -425,6 +433,7 @@ namespace GUI
 
             // Show thông tin
             new Reports<object>().export_Word("reportDichVu.docx", "ListSP", _lstSp, data);
+            btnIn.Enabled = false;
         }
     }
 }

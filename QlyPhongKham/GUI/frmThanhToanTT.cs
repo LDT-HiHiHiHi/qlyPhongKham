@@ -217,6 +217,7 @@ namespace GUI
                             Program.AlertMessage("Đã xảy ra lỗi", MessageBoxIcon.Error);
                         }    
                     }
+                    Program.AlertMessage("Thanh toán thành công", MessageBoxIcon.Information);
 
                     string macds = dgvTT.CurrentRow.Cells["MATT"].Value.ToString();
                     LS_KHAMBENH ls = bus_kt.getLS(bus_ls.getLS2(macds));
@@ -225,11 +226,15 @@ namespace GUI
 
                     foreach (DataGridViewRow r1 in dgvCT.Rows)
                     {
+                        double a = double.Parse(r1.Cells["SOLUONG"].Value.ToString());
+                        double b = double.Parse(r1.Cells["Column2"].Value.ToString());
+                        double c = a * b;
                         _lstSp.Add(new
                         {
                             tent = r1.Cells["TENT"].Value.ToString(),
                             sovien = r1.Cells["SOLUONG"].Value.ToString(),
-                            tongsl = string.Format("{0:#,##0}", r1.Cells["Column2"].Value)
+                            tongsl = string.Format("{0:#,##0}", r1.Cells["Column2"].Value),
+                            tien = string.Format("{0:#,##0}", c)
                         });
                     }
                     DateTime? ngay = ls.NGKHAM;
@@ -241,13 +246,21 @@ namespace GUI
 
                     // Show thông tin
                     new Reports<object>().export_Word("reportTT.docx", "ListSP", _lstSp, data);
-
-                    Program.AlertMessage("Thanh toán thành công", MessageBoxIcon.Information);
                     this.OnLoad(e);
                     return;
                 }
                 Program.AlertMessage("Đã xảy ra lỗi thanh toán", MessageBoxIcon.Error);
             }
+        }
+
+        private void txtTimKiem__TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtTimKiem.Texts))
+            {
+                this.OnLoad(e);
+                return;
+            }
+            dgvTT.DataSource = bus_tt.timKiemTT_Today(txtTimKiem.Texts);
         }
     }
 }

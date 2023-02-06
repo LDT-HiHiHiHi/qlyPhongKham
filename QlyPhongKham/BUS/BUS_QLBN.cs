@@ -65,5 +65,10 @@ namespace BUS
         {
             return dal_qlbn.getMaBS(mabn);
         }
+        public bool themBacSi(BACSI bs)
+        {
+            return dal_qlbn.themBacSi(bs);
+        }
+
     }
 }

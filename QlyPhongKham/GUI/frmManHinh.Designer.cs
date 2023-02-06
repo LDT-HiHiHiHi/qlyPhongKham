@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvManHinh = new System.Windows.Forms.DataGridView();
             this.IDMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@
             this.txtIDMH = new GUI.textBoxCustom();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenMH = new GUI.textBoxCustom();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLuu = new GUI.CustomButton();
             this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -59,6 +59,14 @@
             this.xóaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(176, 30);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.x_button;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -240,14 +248,6 @@
             this.txtTenMH.Texts = "";
             this.txtTenMH.UnderlinedStyle = true;
             // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Image = global::GUI.Properties.Resources.x_button;
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.xóaToolStripMenuItem.Text = "Xóa màn hình";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
-            // 
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.Navy;
@@ -281,7 +281,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmManHinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Màn hình";
+            this.Text = "Quản lý màn hình";
             this.Activated += new System.EventHandler(this.frmManHinh_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmManHinh_FormClosing);
             this.Load += new System.EventHandler(this.frmManHinh_Load);
