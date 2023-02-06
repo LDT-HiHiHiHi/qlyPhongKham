@@ -361,7 +361,7 @@ namespace GUI
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(884, 292);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(884, 300);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // btnThanhToan
@@ -374,10 +374,11 @@ namespace GUI
             this.btnThanhToan.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnThanhToan.FlatAppearance.BorderSize = 0;
             this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
             this.btnThanhToan.Location = new System.Drawing.Point(591, 203);
             this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Padding = new System.Windows.Forms.Padding(1);
             this.btnThanhToan.Size = new System.Drawing.Size(185, 50);
             this.btnThanhToan.TabIndex = 9;
             this.btnThanhToan.Text = "Thanh toán";

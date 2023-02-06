@@ -277,8 +277,7 @@ namespace GUI
                 _lstSp.Add(new
                 {
                     tent = r.Cells["TENTT"].Value.ToString(),
-                    sovien = r.Cells["SOVIEN"].Value.ToString(),
-                    sobuoi = r.Cells["SOBUOI"].Value.ToString(),
+                    sovien = "Mỗi ngày dùng " + r.Cells["SOBUOI"].Value.ToString() +" lần, mỗi lần " +  r.Cells["SOVIEN"].Value.ToString() +" viên",
                     tongsl = r.Cells["TONG"].Value.ToString()
                 });
             }

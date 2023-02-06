@@ -420,7 +420,7 @@ namespace GUI
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(185, 50);
             this.btnThanhToan.TabIndex = 9;
-            this.btnThanhToan.Text = "Thanh toán dịch vụ";
+            this.btnThanhToan.Text = "Thanh toán ";
             this.btnThanhToan.TextColor = System.Drawing.Color.White;
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
