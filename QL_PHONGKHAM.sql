@@ -257,11 +257,11 @@ VALUES
 ('BN05',N'Vũ Kim Lan','05/06/2001',N'Nữ',N'658 Quy Nhơn','0964520423'),
 ('BN06',N'Bùi Minh Tuấn','06/02/2001',N'Nữ',N'658 Cầu Giấy','0989320423'),
 ('BN07',N'Vũ Chí Minh','09/01/2001',N'Nam',N'45 Hoài Đức','0989320445'),
-('BN07',N'Phạm Minh Bình','02/07/2001',N'Nam',N'58 Cầu Giấy','0989320345'),
-('BN08',N'Phạm Minh Chí','02/09/2001',N'Nam',N'163 Lê Trọng Tấn','0989320341'),
-('BN08',N'Trần Chí Thành','02/07/2001',N'Nam',N'76 Nguyễn Trãi','0989320341'),
-('BN09',N'Trần Chí Bình','02/08/2001',N'Nam',N'78 Nguyễn Trãi','0989320741'),
-('BN10',N'Trần Vĩ Hào','02/05/2001',N'Nam',N'110 Nguyễn Trãi','0669320341')
+('BN08',N'Phạm Minh Bình','02/07/2001',N'Nam',N'58 Cầu Giấy','0989320345'),
+('BN09',N'Phạm Minh Chí','02/09/2001',N'Nam',N'163 Lê Trọng Tấn','0989320341'),
+('BN010',N'Trần Chí Thành','02/07/2001',N'Nam',N'76 Nguyễn Trãi','0989320341'),
+('BN011',N'Trần Chí Bình','02/08/2001',N'Nam',N'78 Nguyễn Trãi','0989320741'),
+('BN12',N'Trần Vĩ Hào','02/05/2001',N'Nam',N'110 Nguyễn Trãi','0669320341')
 
 
 SET DATEFORMAT DMY
